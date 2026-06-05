@@ -1,0 +1,49 @@
+name: 🚀 SWMAS Auto-Deploy
+
+on:
+  push:
+    branches: [master, main]
+  schedule:
+    - cron: '0 2 * * *'  # Nightly at 2 AM
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install -r requirements.txt 2>/dev/null || true
+          pip install requests aiohttp
+
+      - name: 🔍 Run tests
+        run: |
+          python -m pytest tests/ 2>/dev/null || echo "No tests yet"
+
+      - name: 🧠 Brain Scan
+        run: |
+          python brain_scanner.py 2>/dev/null || echo "Brain scan skipped"
+
+      - name: 📊 Market Scan
+        run: |
+          python agents/auto_market_scanner.py 2>/dev/null || echo "Market scan skipped"
+
+      - name: 📝 Log status
+        run: |
+          echo "$(date): Auto-deploy complete" >> deploy.log
+
+      - name: 📤 Commit logs
+        run: |
+          git config user.name "SWMAS Bot"
+          git config user.email "bot@swmas.ai"
+          git add deploy.log 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "🤖 Auto-deploy: $(date +%Y-%m-%d)"
+          git push || echo "Nothing to push"

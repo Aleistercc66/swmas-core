@@ -1,0 +1,51 @@
+# SWMAS Core — Git Ignore
+
+# Large files / logs
+*.log
+*.log.*
+logs/
+*.jsonl
+*.db
+*.db-journal
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data files
+swarm_general/data/
+swarm_general/logs/
+*.sqlite
+*.sqlite3
+
+# Downloads
+downloads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Obsidian vault (keep structure, ignore large files)
+.obsidian/cache/
+
+# Temporary
+tmp/
+temp/
+*.tmp
