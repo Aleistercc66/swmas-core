@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎯 Unified Master Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 2px solid #e94560;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header h1 {
+            font-size: 1.5em;
+            color: #e94560;
+            text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+            margin-bottom: 5px;
+        }
+        
+        .header .timestamp {
+            color: #888;
+            font-size: 0.75em;
+        }
+        
+        .header .connection {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            margin-top: 5px;
+        }
+        
+        .connection.online {
+            background: #00ff88;
+            color: #000;
+        }
+        
+        .connection.offline {
+            background: #ff0055;
+            color: #fff;
+        }
+        
+        .connection.cached {
+            background: #ffaa00;
+            color: #000;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+        
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .card {
+            background: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(15,52,96,0.8) 100%);
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid rgba(42,42,74,0.6);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        @media (min-width: 768px) {
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+            }
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(42,42,74,0.6);
+        }
+        
+        .card-header .icon {
+            font-size: 1.8em;
+        }
+        
+        .card-header h2 {
+            font-size: 1.1em;
+            color: #fff;
+            flex: 1;
+        }
+        
+        .card-header .status {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .status-online {
+            background: #00ff88;
+            color: #000;
+        }
+        
+        .status-active {
+            background: #00d9ff;
+            color: #000;
+        }
+        
+        .status-warning {
+            background: #ffaa00;
+            color: #000;
+        }
+        
+        .status-error {
+            background: #ff0055;
+            color: #fff;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(26,26,58,0.5);
+        }
+        
+        .metric:last-child {
+            border-bottom: none;
+        }
+        
+        .metric-label {
+            color: #888;
+            font-size: 0.85em;
+        }
+        
+        .metric-value {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .metric-value.positive {
+            color: #00ff88;
+        }
+        
+        .metric-value.negative {
+            color: #ff0055;
+        }
+        
+        .metric-value.warning {
+            color: #ffaa00;
+        }
+        
+        .token-list, .agent-list {
+            max-height: 180px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        
+        .token-item, .agent-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(26,26,58,0.5);
+        }
+        
+        .token-item:last-child, .agent-item:last-child {
+            border-bottom: none;
+        }
+        
+        .token-symbol {
+            font-weight: bold;
+            color: #fff;
+            font-size: 0.9em;
+        }
+        
+        .token-price {
+            color: #888;
+            font-size: 0.8em;
+        }
+        
+        .token-change {
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        
+        .token-change.up {
+            color: #00ff88;
+        }
+        
+        .token-change.down {
+            color: #ff0055;
+        }
+        
+        .agent-name {
+            font-weight: bold;
+            color: #fff;
+            font-size: 0.85em;
+        }
+        
+        .agent-pid {
+            color: #888;
+            font-size: 0.7em;
+            display: block;
+        }
+        
+        .agent-stats {
+            text-align: right;
+            font-size: 0.8em;
+        }
+        
+        .agent-cpu {
+            color: #00d9ff;
+        }
+        
+        .agent-mem {
+            color: #ffaa00;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 18px;
+            background: rgba(26,26,58,0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 0.8em;
+            color: #888;
+        }
+        
+        .commands {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .command-btn {
+            background: rgba(42,42,74,0.6);
+            border: 1px solid rgba(58,58,90,0.6);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .command-btn:hover {
+            background: #e94560;
+            border-color: #e94560;
+        }
+        
+        .refresh-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            color: #fff;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.5);
+            transition: all 0.3s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .refresh-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(233, 69, 96, 0.7);
+        }
+        
+        .refresh-btn.spinning {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px 20px;
+            color: #888;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(233, 69, 96, 0.3);
+            border-top: 4px solid #e94560;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px 20px;
+            color: #ff0055;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 30px 20px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .section-title {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            color: #888;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(26,26,46,0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #e94560;
+            border-radius: 3px;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.2em;
+            }
+            
+            .card {
+                padding: 12px;
+            }
+            
+            .card-header .icon {
+                font-size: 1.5em;
+            }
+            
+            .metric-value {
+                font-size: 1em;
+            }
+            
+            .refresh-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2em;
+            }
+        }
+        
+        /* PWA support */
+        .install-banner {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.5);
+            z-index: 999;
+        }
+        
+        .install-banner.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Unified Master Dashboard</h1>
+        <div class="timestamp" id="timestamp">Loading...</div>
+        <div class="connection offline" id="connection">Offline</div>
+    </div>
+    
+    <div class="grid" id="dashboard">
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <div>Loading dashboard data...</div>
+        </div>
+    </div>
+    
+    <button class="refresh-btn" id="refreshBtn" onclick="refreshDashboard()">🔄</button>
+    
+    <div class="install-banner" id="installBanner" onclick="installPWA()">
+        📲 Install as App
+    </div>
+    
+    <script>
+        // Configuration
+        const API_URL = 'http://43.98.199.136:8080/api/dashboard';
+        const REFRESH_INTERVAL = 30000; // 30 seconds
+        const OFFLINE_KEY = 'dashboard_cache';
+        
+        let autoRefreshInterval;
+        let isOnline = false;
+        let deferredPrompt;
+        
+        // Service Worker for offline support
+        if ('serviceWorker' in navigator) {
+            const swCode = `
+                self.addEventListener('install', e => self.skipWaiting());
+                self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
+                self.addEventListener('fetch', e => {
+                    e.respondWith(fetch(e.request).catch(() => {
+                        return new Response('Offline', { status: 503 });
+                    }));
+                });
+            `;
+            
+            const blob = new Blob([swCode], { type: 'application/javascript' });
+            const swUrl = URL.createObjectURL(blob);
+            
+            navigator.serviceWorker.register(swUrl).catch(() => {});
+        }
+        
+        // PWA install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('installBanner').classList.add('show');
+        });
+        
+        function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(() => {
+                    document.getElementById('installBanner').classList.remove('show');
+                    deferredPrompt = null;
+                });
+            }
+        }
+        
+        // Data fetching
+        async function fetchDashboardData() {
+            try {
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 10000);
+                
+                const response = await fetch(API_URL, {
+                    signal: controller.signal,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                clearTimeout(timeout);
+                
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                
+                const data = await response.json();
+                
+                // Cache for offline use
+                localStorage.setItem(OFFLINE_KEY, JSON.stringify({
+                    data: data,
+                    timestamp: new Date().toISOString()
+                }));
+                
+                isOnline = true;
+                updateConnectionStatus('online');
+                
+                return data;
+                
+            } catch (error) {
+                console.error('Fetch error:', error);
+                
+                // Try to load from cache
+                const cached = localStorage.getItem(OFFLINE_KEY);
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    isOnline = false;
+                    updateConnectionStatus('cached', parsed.timestamp);
+                    return parsed.data;
+                }
+                
+                isOnline = false;
+                updateConnectionStatus('offline');
+                return null;
+            }
+        }
+        
+        function updateConnectionStatus(status, cachedTime) {
+            const el = document.getElementById('connection');
+            el.className = 'connection ' + status;
+            
+            if (status === 'online') {
+                el.textContent = '🟢 Live';
+            } else if (status === 'cached') {
+                const time = new Date(cachedTime).toLocaleTimeString();
+                el.textContent = '🟡 Cached (' + time + ')';
+            } else {
+                el.textContent = '🔴 Offline';
+            }
+        }
+        
+        // Render functions
+        function renderDashboard(data) {
+            if (!data) {
+                document.getElementById('dashboard').innerHTML = 
+                    '<div class="error">❌ Error loading dashboard.<br>Server may be down.</div>';
+                return;
+            }
+            
+            document.getElementById('timestamp').textContent = 
+                'Last update: ' + (data.timestamp || 'Unknown');
+            
+            const grid = document.getElementById('dashboard');
+            grid.innerHTML = '';
+            
+            // Crypto Section
+            if (data.crypto) {
+                grid.innerHTML += renderCryptoCard(data.crypto);
+            }
+            
+            // CashOut Section
+            if (data.cashout) {
+                grid.innerHTML += renderCashoutCard(data.cashout);
+            }
+            
+            // Swarm Section
+            if (data.swarm) {
+                grid.innerHTML += renderSwarmCard(data.swarm);
+            }
+            
+            // Agents Section
+            if (data.agents) {
+                grid.innerHTML += renderAgentsCard(data.agents);
+            }
+            
+            // System Section
+            if (data.system) {
+                grid.innerHTML += renderSystemCard(data.system);
+            }
+            
+            // Telegram Section
+            if (data.telegram) {
+                grid.innerHTML += renderTelegramCard(data.telegram);
+            }
+        }
+        
+        function renderCryptoCard(crypto) {
+            const statusClass = crypto.status.includes('ACTIVE') ? 'status-active' : 
+                               crypto.status.includes('ONLINE') ? 'status-online' : 'status-error';
+            
+            let tokensHtml = '';
+            if (crypto.data.top_tokens && crypto.data.top_tokens.length > 0) {
+                tokensHtml = '<div class="section-title">🔥 Top Tokens</div>' +
+                    crypto.data.top_tokens.map(token => {
+                        const changeClass = token.change > 0 ? 'up' : 'down';
+                        const arrow = token.change > 0 ? '🟢' : '🔴';
+                        return `<div class="token-item">
+                            <div>
+                                <span class="token-symbol">${token.token}</span>
+                                <span class="token-price">$${token.price?.toFixed(6) || '0.00'}</span>
+                            </div>
+                            <span class="token-change ${changeClass}">${arrow} ${token.change > 0 ? '+' : ''}${token.change?.toFixed(1) || '0.0'}%</span>
+                        </div>`;
+                    }).join('');
+            } else {
+                tokensHtml = '<div class="empty-state">No token data available</div>';
+            }
+            
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="icon">📈</span>
+                        <h2>CRYPTO MARKETS</h2>
+                        <span class="status ${statusClass}">${crypto.status}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">💰 SOL Price</span>
+                        <span class="metric-value">$${crypto.data.sol_price?.toFixed(2) || '0.00'}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">📊 24h Change</span>
+                        <span class="metric-value ${crypto.data.sol_change > 0 ? 'positive' : 'negative'}">
+                            ${crypto.data.sol_change > 0 ? '+' : ''}${crypto.data.sol_change?.toFixed(1) || '0.0'}%
+                        </span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">📈 Pairs</span>
+                        <span class="metric-value">${crypto.data.pairs_count || 0}</span>
+                    </div>
+                    <div class="token-list">${tokensHtml}</div>
+                </div>
+            `;
+        }
+        
+        function renderCashoutCard(cash) {
+            const statusClass = cash.status.includes('ACTIVE') ? 'status-active' : 'status-error';
+            
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="icon">💰</span>
+                        <h2>CASHOUT SYSTEM</h2>
+                        <span class="status ${statusClass}">${cash.status}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">📊 Tracked Bets</span>
+                        <span class="metric-value">${cash.data.tracked_bets || 0}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">⚽ Active Matches</span>
+                        <span class="metric-value">${cash.data.active_matches || 0}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">🏢 Bookmakers</span>
+                        <span class="metric-value">${(cash.data.bookmakers || []).join(', ') || 'None'}</span>
+                    </div>
+                    <div class="commands">
+                        <span class="command-btn">/cashout track</span>
+                        <span class="command-btn">/cashout list</span>
+                        <span class="command-btn">/cashout check</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderSwarmCard(swarm) {
+            const statusClass = swarm.status.includes('ACTIVE') ? 'status-active' : 'status-error';
+            const score = swarm.data.score || 0;
+            const progress = Math.min((score / 10) * 100, 100);
+            
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="icon">🐝</span>
+                        <h2>SWARM INTELLIGENCE</h2>
+                        <span class="status ${statusClass}">${swarm.status}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">🧬 Generation</span>
+                        <span class="metric-value">${swarm.data.generation || 0}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">⭐ Score</span>
+                        <span class="metric-value">${score.toFixed(2)}/10.0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${progress}%"></div>
+                    </div>
+                    <div class="progress-text">Progress: ${progress.toFixed(0)}%</div>
+                    <div class="metric">
+                        <span class="metric-label">💰 Actions</span>
+                        <span class="metric-value">${swarm.data.actions || 0}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">📈 Opportunities</span>
+                        <span class="metric-value">${swarm.data.opportunities || 0}</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderAgentsCard(agents) {
+            const statusClass = agents.status.includes('ACTIVE') ? 'status-active' : 'status-error';
+            
+            let agentsHtml = '';
+            if (agents.data.agents && agents.data.agents.length > 0) {
+                agentsHtml = '<div class="agent-list">' +
+                    agents.data.agents.slice(0, 6).map(agent => `
+                        <div class="agent-item">
+                            <div>
+                                <span class="agent-name">${agent.name}</span>
+                                <span class="agent-pid">PID: ${agent.pid}</span>
+                            </div>
+                            <div class="agent-stats">
+                                <span class="agent-cpu">CPU: ${agent.cpu}%</span>
+                                <span class="agent-mem"> MEM: ${agent.mem}%</span>
+                            </div>
+                        </div>
+                    `).join('') + '</div>';
+            } else {
+                agentsHtml = '<div class="empty-state">No agents running</div>';
+            }
+            
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="icon">🤖</span>
+                        <h2>AGENT SWARM</h2>
+                        <span class="status ${statusClass}">${agents.status}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">📊 Active Agents</span>
+                        <span class="metric-value">${agents.data.active_agents || 0}</span>
+                    </div>
+                    ${agentsHtml}
+                </div>
+            `;
+        }
+        
+        function renderSystemCard(sys) {
+            const statusClass = sys.status.includes('HEALTHY') ? 'status-online' : 
+                               sys.status.includes('ACTIVE') ? 'status-active' : 'status-warning';
+            
+            const cpuClass = sys.data.cpu < 70 ? 'positive' : sys.data.cpu < 90 ? 'warning' : 'negative';
+            const memClass = sys.data.memory < 80 ? 'positive' : 'negative';
+            const diskClass = sys.data.disk < 80 ? 'positive' : 'warning';
+            
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="icon">💻</span>
+                        <h2>SYSTEM HEALTH</h2>
+                        <span class="status ${statusClass}">${sys.status}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">🖥️ CPU</span>
+                        <span class="metric-value ${cpuClass}">${sys.data.cpu?.toFixed(1) || '0.0'}%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">🧠 Memory</span>
+                        <span class="metric-value ${memClass}">${sys.data.memory?.toFixed(1) || '0.0'}%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">💾 Disk</span>
+                        <span class="metric-value ${diskClass}">${sys.data.disk || 0}%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">⚙️ Processes</span>
+                        <span class="metric-value">${sys.data.processes || 0}</span>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function renderTelegramCard(tel) {
+            const statusClass = tel.status.includes('ONLINE') ? 'status-online' : 'status-error';
+            
+            return `
+                <div class="card">
+                    <div class="card-header">
+                        <span class="icon">📱</span>
+                        <h2>TELEGRAM BOT</h2>
+                        <span class="status ${statusClass}">${tel.status}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">🤖 Bot</span>
+                        <span class="metric-value">${tel.data.bot || 'Unknown'}</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">📋 Handlers</span>
+                        <span class="metric-value">${tel.data.handlers || 0}</span>
+                    </div>
+                    <div class="section-title">Commands</div>
+                    <div class="commands">
+                        ${(tel.data.commands || []).map(cmd => `<span class="command-btn">${cmd}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Refresh functionality
+        async function refreshDashboard() {
+            const btn = document.getElementById('refreshBtn');
+            btn.classList.add('spinning');
+            
+            const data = await fetchDashboardData();
+            renderDashboard(data);
+            
+            btn.classList.remove('spinning');
+        }
+        
+        function startAutoRefresh() {
+            autoRefreshInterval = setInterval(refreshDashboard, REFRESH_INTERVAL);
+        }
+        
+        function stopAutoRefresh() {
+            clearInterval(autoRefreshInterval);
+        }
+        
+        // Visibility handling
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopAutoRefresh();
+            } else {
+                refreshDashboard();
+                startAutoRefresh();
+            }
+        });
+        
+        // Touch support for mobile refresh
+        let touchStartY = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        });
+        
+        document.addEventListener('touchend', (e) => {
+            const touchEndY = e.changedTouches[0].clientY;
+            if (touchEndY - touchStartY > 100 && window.scrollY === 0) {
+                refreshDashboard();
+            }
+        });
+        
+        // Initial load
+        refreshDashboard();
+        startAutoRefresh();
+        
+        // Online/offline events
+        window.addEventListener('online', () => {
+            updateConnectionStatus('online');
+            refreshDashboard();
+        });
+        
+        window.addEventListener('offline', () => {
+            updateConnectionStatus('offline');
+        });
+    </script>
+</body>
+</html>

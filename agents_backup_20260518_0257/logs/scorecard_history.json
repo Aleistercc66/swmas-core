@@ -1,0 +1,163 @@
+[
+  {
+    "timestamp": "2026-05-07T11:28:24.712860",
+    "expectancy": 61.93,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 14
+  },
+  {
+    "timestamp": "2026-05-07T18:28:25.367362",
+    "expectancy": 37.54,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 1
+  },
+  {
+    "timestamp": "2026-05-07T18:58:25.923419",
+    "expectancy": 23.88,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 2
+  },
+  {
+    "timestamp": "2026-05-07T19:28:26.461232",
+    "expectancy": 23.88,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 2
+  },
+  {
+    "timestamp": "2026-05-07T19:58:27.132982",
+    "expectancy": 19.87,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 3
+  },
+  {
+    "timestamp": "2026-05-07T20:28:27.686283",
+    "expectancy": 19.87,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 3
+  },
+  {
+    "timestamp": "2026-05-07T20:58:28.275756",
+    "expectancy": 19.87,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 3
+  },
+  {
+    "timestamp": "2026-05-07T21:28:28.902320",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-07T21:58:29.472050",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-07T22:28:30.025329",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-07T22:58:30.701529",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-07T23:28:31.263343",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-07T23:58:31.851671",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-08T00:28:32.401023",
+    "expectancy": 2136.24,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 4
+  },
+  {
+    "timestamp": "2026-05-08T00:58:32.978107",
+    "expectancy": 3016.22,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 6
+  },
+  {
+    "timestamp": "2026-05-08T01:28:33.515749",
+    "expectancy": 3016.22,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 6
+  },
+  {
+    "timestamp": "2026-05-08T01:58:34.082411",
+    "expectancy": 3016.22,
+    "win_rate": 100.0,
+    "max_dd": 0,
+    "total_trades": 6
+  },
+  {
+    "timestamp": "2026-05-08T05:51:46.412777",
+    "expectancy": -48.7,
+    "win_rate": 0.0,
+    "max_dd": 0.49,
+    "total_trades": 1
+  },
+  {
+    "timestamp": "2026-05-08T06:21:47.079180",
+    "expectancy": -48.7,
+    "win_rate": 0.0,
+    "max_dd": 0.49,
+    "total_trades": 1
+  },
+  {
+    "timestamp": "2026-05-08T06:51:47.619584",
+    "expectancy": -48.7,
+    "win_rate": 0.0,
+    "max_dd": 0.49,
+    "total_trades": 1
+  },
+  {
+    "timestamp": "2026-05-08T07:21:48.172081",
+    "expectancy": -48.7,
+    "win_rate": 0.0,
+    "max_dd": 0.49,
+    "total_trades": 1
+  },
+  {
+    "timestamp": "2026-05-08T07:51:48.710093",
+    "expectancy": -48.7,
+    "win_rate": 0.0,
+    "max_dd": 0.49,
+    "total_trades": 1
+  },
+  {
+    "timestamp": "2026-05-08T08:21:49.276343",
+    "expectancy": -48.7,
+    "win_rate": 0.0,
+    "max_dd": 0.49,
+    "total_trades": 1
+  }
+]

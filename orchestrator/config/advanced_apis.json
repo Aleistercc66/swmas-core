@@ -1,0 +1,63 @@
+{
+  "birdeye": {
+    "enabled": false,
+    "api_key": "",
+    "endpoint": "https://public-api.birdeye.so",
+    "description": "Real-time Solana DEX pricing, wallet data, token security",
+    "integration_difficulty": "Easy",
+    "value": "Best for Solana DEX-native pricing, new tokens, memecoins"
+  },
+  "helius": {
+    "enabled": false,
+    "api_key": "",
+    "endpoint": "https://mainnet.helius-rpc.com",
+    "rpc_url": "",
+    "description": "Solana RPC with gRPC streams, mempool, transactions",
+    "integration_difficulty": "Medium",
+    "value": "Best for on-chain transactions, NFT data, real-time streams"
+  },
+  "bitquery": {
+    "enabled": false,
+    "api_key": "",
+    "endpoint": "https://streaming.bitquery.io",
+    "description": "GraphQL + WebSocket + Kafka + gRPC for 40+ chains",
+    "integration_difficulty": "Hard",
+    "value": "Best for cross-chain analytics, custom queries, streaming"
+  },
+  "nansen": {
+    "enabled": false,
+    "api_key": "",
+    "description": "Whale tracking, wallet labeling, smart money flows",
+    "integration_difficulty": "Medium",
+    "value": "Best for whale intelligence, entity tracking"
+  },
+  "coinstats": {
+    "enabled": false,
+    "api_key": "",
+    "description": "All-in-one: market, wallet, DeFi, portfolio + MCP",
+    "integration_difficulty": "Easy",
+    "value": "Best for unified crypto API with AI agent support"
+  },
+  "altfins": {
+    "enabled": false,
+    "api_key": "",
+    "description": "150+ pre-computed indicators, 130+ trading signals",
+    "integration_difficulty": "Easy",
+    "value": "Best for technical analysis and signal generation"
+  },
+  "covalent": {
+    "enabled": false,
+    "api_key": "",
+    "endpoint": "https://api.covalenthq.com",
+    "description": "Unified API for 200+ chains",
+    "integration_difficulty": "Easy",
+    "value": "Best for multi-chain analytics and historical data"
+  },
+  "dune": {
+    "enabled": false,
+    "api_key": "",
+    "description": "SQL-based on-chain analytics platform",
+    "integration_difficulty": "Medium",
+    "value": "Best for custom on-chain dashboards and metrics"
+  }
+}

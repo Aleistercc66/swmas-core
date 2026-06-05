@@ -1,0 +1,193 @@
+{
+  "batches": [
+    {
+      "trades": [
+        {
+          "symbol": "BAMBIS",
+          "pnl_pct": -42.895008098954506,
+          "exit_reason": "STOP LOSS (-43%)",
+          "timestamp": "2026-06-04T00:48:22.961238",
+          "won": false
+        },
+        {
+          "symbol": "BAMBIS",
+          "pnl_pct": -42.895008098954506,
+          "exit_reason": "STOP LOSS (-43%)",
+          "timestamp": "2026-06-04T00:48:24.001137",
+          "won": false
+        },
+        {
+          "symbol": "BADDIES",
+          "pnl_pct": -52.10992907801418,
+          "exit_reason": "STOP LOSS (-52%)",
+          "timestamp": "2026-06-04T01:01:07.025581",
+          "won": false
+        },
+        {
+          "symbol": "DICKBUTT",
+          "pnl_pct": -32.091447925486875,
+          "exit_reason": "STOP LOSS (-32%)",
+          "timestamp": "2026-06-04T01:32:51.572516",
+          "won": false
+        }
+      ],
+      "winners": 0,
+      "losers": 4,
+      "win_rate": 0.0,
+      "timestamp": "2026-06-04T01:32:51.572566",
+      "approved": false
+    },
+    {
+      "trades": [
+        {
+          "symbol": "smokefleet",
+          "pnl_pct": -48.87186917822397,
+          "exit_reason": "STOP LOSS (-49%)",
+          "timestamp": "2026-06-05T01:53:26.291992",
+          "won": false
+        },
+        {
+          "symbol": "smokefleet",
+          "pnl_pct": -48.87186917822397,
+          "exit_reason": "STOP LOSS (-49%)",
+          "timestamp": "2026-06-05T01:53:27.316189",
+          "won": false
+        },
+        {
+          "symbol": "SOLDONTRUG",
+          "pnl_pct": 459.37052932761094,
+          "exit_reason": "TP3 (+459%)",
+          "timestamp": "2026-06-05T04:01:09.545858",
+          "won": true
+        },
+        {
+          "symbol": "SOLDONTRUG",
+          "pnl_pct": 459.37052932761094,
+          "exit_reason": "TP3 (+459%)",
+          "timestamp": "2026-06-05T04:01:10.608479",
+          "won": true
+        }
+      ],
+      "winners": 2,
+      "losers": 2,
+      "win_rate": 0.5,
+      "timestamp": "2026-06-05T04:01:10.608512",
+      "approved": true
+    },
+    {
+      "trades": [
+        {
+          "symbol": "Lemon",
+          "pnl_pct": -97.62818053957294,
+          "exit_reason": "STOP LOSS (-98%)",
+          "timestamp": "2026-06-05T04:32:54.990695",
+          "won": false
+        },
+        {
+          "symbol": "Lemon",
+          "pnl_pct": -97.62818053957294,
+          "exit_reason": "STOP LOSS (-98%)",
+          "timestamp": "2026-06-05T04:32:56.055822",
+          "won": false
+        },
+        {
+          "symbol": "Lemon",
+          "pnl_pct": -97.62818053957294,
+          "exit_reason": "STOP LOSS (-98%)",
+          "timestamp": "2026-06-05T04:32:57.125337",
+          "won": false
+        },
+        {
+          "symbol": "honter",
+          "pnl_pct": -37.66823161189358,
+          "exit_reason": "STOP LOSS (-38%)",
+          "timestamp": "2026-06-05T15:31:34.593667",
+          "won": false
+        }
+      ],
+      "winners": 0,
+      "losers": 4,
+      "win_rate": 0.0,
+      "timestamp": "2026-06-05T15:31:34.593702",
+      "approved": false
+    },
+    {
+      "trades": [
+        {
+          "symbol": "honter",
+          "pnl_pct": -37.66823161189358,
+          "exit_reason": "STOP LOSS (-38%)",
+          "timestamp": "2026-06-05T15:31:35.669176",
+          "won": false
+        },
+        {
+          "symbol": "honter",
+          "pnl_pct": -37.66823161189358,
+          "exit_reason": "STOP LOSS (-38%)",
+          "timestamp": "2026-06-05T15:31:36.734319",
+          "won": false
+        },
+        {
+          "symbol": "LIFE",
+          "pnl_pct": -46.79858835391984,
+          "exit_reason": "STOP LOSS (-47%)",
+          "timestamp": "2026-06-05T16:36:09.426477",
+          "won": false
+        },
+        {
+          "symbol": "LIFE",
+          "pnl_pct": -46.79858835391984,
+          "exit_reason": "STOP LOSS (-47%)",
+          "timestamp": "2026-06-05T16:36:10.597052",
+          "won": false
+        }
+      ],
+      "winners": 0,
+      "losers": 4,
+      "win_rate": 0.0,
+      "timestamp": "2026-06-05T16:36:10.597083",
+      "approved": false
+    },
+    {
+      "trades": [
+        {
+          "symbol": "LIFE",
+          "pnl_pct": -46.79858835391984,
+          "exit_reason": "STOP LOSS (-47%)",
+          "timestamp": "2026-06-05T16:36:11.694746",
+          "won": false
+        },
+        {
+          "symbol": "DUCK",
+          "pnl_pct": -66.55642023346303,
+          "exit_reason": "STOP LOSS (-67%)",
+          "timestamp": "2026-06-05T19:04:06.722565",
+          "won": false
+        },
+        {
+          "symbol": "DUCK",
+          "pnl_pct": -66.55642023346303,
+          "exit_reason": "STOP LOSS (-67%)",
+          "timestamp": "2026-06-05T19:04:07.837552",
+          "won": false
+        },
+        {
+          "symbol": "bitbank",
+          "pnl_pct": -31.13183766070078,
+          "exit_reason": "STOP LOSS (-31%)",
+          "timestamp": "2026-06-05T19:29:21.404505",
+          "won": false
+        }
+      ],
+      "winners": 0,
+      "losers": 4,
+      "win_rate": 0.0,
+      "timestamp": "2026-06-05T19:29:21.404530",
+      "approved": false
+    }
+  ],
+  "total_trades": 20,
+  "total_wins": 2,
+  "total_losses": 18,
+  "last_update": "2026-06-05T19:29:21.405087"
+}

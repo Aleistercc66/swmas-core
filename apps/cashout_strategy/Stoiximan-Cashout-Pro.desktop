@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Stoiximan Cashout Pro
+Comment=Real-time cashout strategy dashboard
+Exec=/root/.openclaw/workspace/apps/cashout_strategy/launch.sh start
+Icon=/root/.openclaw/workspace/apps/cashout_strategy/dashboard/static/icon.png
+Terminal=false
+Type=Application
+Categories=Finance;Office;
+StartupNotify=true

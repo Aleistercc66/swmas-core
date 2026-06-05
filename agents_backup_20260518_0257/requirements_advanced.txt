@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+"""
+📦 REQUIREMENTS — Advanced Crypto Bot v5.0
+Install: pip install -r requirements_advanced.txt
+"""
+
+# Core async
+asyncio
+aiohttp
+
+# WebSocket support
+websockets==12.0
+
+# Scraping
+playwright==1.40.0
+beautifulsoup4==4.12.2
+lxml==4.9.3
+selectolax==0.3.21
+
+# HTTP client
+httpx==0.25.2
+requests==2.31.0
+
+# Data
+pandas==2.1.4
+numpy==1.26.2
+
+# Database
+redis==5.0.1
+
+# Anti-detection
+undetected-playwright  # If available
+
+# Utilities
+python-dotenv==1.0.0
+python-json-logger==2.0.7

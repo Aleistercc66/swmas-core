@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 SWARM v4.0 — Institutional Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            overflow-x: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+        }
+        .header h1 {
+            font-size: 2em;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .header .status {
+            color: #00ff88;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            border-color: #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+        .card h2 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .metric .label { color: #888; }
+        .metric .value { color: #fff; font-weight: bold; }
+        .metric .positive { color: #00ff00; }
+        .metric .negative { color: #ff0044; }
+        .metric .warning { color: #ffaa00; }
+        .agent-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 0;
+        }
+        .agent-status .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00ff00;
+            animation: pulse 2s infinite;
+        }
+        .agent-status .dot.offline { background: #ff0044; animation: none; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .signal-card {
+            background: #1a1a1a;
+            border-left: 4px solid #00ff00;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .signal-card .symbol {
+            font-size: 1.5em;
+            color: #00ff88;
+            font-weight: bold;
+        }
+        .signal-card .dna {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .signal-card .levels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .signal-card .level {
+            background: #222;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .signal-card .level .label {
+            font-size: 0.8em;
+            color: #888;
+        }
+        .signal-card .level .value {
+            font-size: 1.1em;
+            color: #fff;
+        }
+        .circuit-status {
+            font-size: 1.5em;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .circuit-normal { background: #003300; color: #00ff00; }
+        .circuit-warning { background: #333300; color: #ffaa00; }
+        .circuit-cooldown { background: #330000; color: #ff0044; }
+        .circuit-emergency { background: #ff0000; color: #fff; animation: blink 1s infinite; }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar .fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff00, #00ff88);
+            transition: width 0.5s;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+        }
+        .refresh-time {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #1a1a2e;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #00ff00;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="refresh-time" id="refreshTime">Last update: --:--:--</div>
+    
+    <div class="header">
+        <h1>🤖 SWARM v4.0</h1>
+        <div class="status">INSTITUTIONAL EXECUTION FRAMEWORK</div>
+        <div style="margin-top: 10px; color: #888;">16 Agents | Paper Trading | Capital Protection Active</div>
+    </div>
+
+    <div class="grid">
+        <!-- Market Overview -->
+        <div class="card">
+            <h2>📊 MARKET REGIME</h2>
+            <div id="marketRegime">
+                <div class="metric">
+                    <span class="label">Regime:</span>
+                    <span class="value" id="regime">Loading...</span>
+                </div>
+                <div class="metric">
+                    <span class="label">BTC Price:</span>
+                    <span class="value" id="btcPrice">Loading...</span>
+                </div>
+                <div class="metric">
+                    <span class="label">BTC 24h:</span>
+                    <span class="value" id="btcChange">Loading...</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Volatility:</span>
+                    <span class="value" id="volatility">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Status -->
+        <div class="card">
+            <h2>💰 PAPER PORTFOLIO</h2>
+            <div id="portfolio">
+                <div class="metric">
+                    <span class="label">Balance:</span>
+                    <span class="value" id="balance">$10,000.00</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Daily P&L:</span>
+                    <span class="value positive" id="dailyPnL">$0.00</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Open Positions:</span>
+                    <span class="value" id="openPositions">0</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Total Trades:</span>
+                    <span class="value" id="totalTrades">0</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Win Rate:</span>
+                    <span class="value" id="winRate">0%</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Expectancy:</span>
+                    <span class="value" id="expectancy">0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Circuit Breaker -->
+        <div class="card">
+            <h2>⚡ CIRCUIT BREAKER</h2>
+            <div id="circuitBreaker">
+                <div class="circuit-status circuit-normal" id="circuitStatus">
+                    NORMAL
+                </div>
+                <div class="metric">
+                    <span class="label">Daily Drawdown:</span>
+                    <span class="value" id="dailyDD">0%</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Consecutive Losses:</span>
+                    <span class="value" id="consecLosses">0</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Exposure:</span>
+                    <span class="value" id="exposure">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agent Status -->
+        <div class="card">
+            <h2>🤖 AGENT STATUS (16/16)</h2>
+            <div id="agentStatus">
+                <div class="agent-status"><div class="dot"></div> Scanner (Data)</div>
+                <div class="agent-status"><div class="dot"></div> Sentiment (Mood)</div>
+                <div class="agent-status"><div class="dot"></div> Whale (Smart Money)</div>
+                <div class="agent-status"><div class="dot"></div> Regime (Market State)</div>
+                <div class="agent-status"><div class="dot"></div> DNA (Setup Type)</div>
+                <div class="agent-status"><div class="dot"></div> FOMO (Anti-Hype)</div>
+                <div class="agent-status"><div class="dot"></div> Validator (Gatekeeper)</div>
+                <div class="agent-status"><div class="dot"></div> Dynamic Risk (ATR)</div>
+                <div class="agent-status"><div class="dot"></div> Portfolio (Tracking)</div>
+                <div class="agent-status"><div class="dot"></div> Master Controller</div>
+                <div class="agent-status"><div class="dot"></div> Jupiter Executor</div>
+                <div class="agent-status"><div class="dot"></div> Circuit Breaker</div>
+                <div class="agent-status"><div class="dot"></div> Position Sizing</div>
+                <div class="agent-status"><div class="dot"></div> Duplicate Protect</div>
+                <div class="agent-status"><div class="dot"></div> Trade Expiration</div>
+                <div class="agent-status"><div class="dot"></div> Execution Quality</div>
+            </div>
+        </div>
+
+        <!-- Active Signals -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🎯 ACTIVE SIGNALS</h2>
+            <div id="activeSignals">
+                <div style="color: #888; text-align: center; padding: 40px;">
+                    Waiting for valid signals...
+                </div>
+            </div>
+        </div>
+
+        <!-- Trade History -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>📚 RECENT TRADES</h2>
+            <div id="tradeHistory">
+                <div style="color: #888; text-align: center; padding: 40px;">
+                    No trades logged yet. Paper trading active.
+                </div>
+            </div>
+        </div>
+
+        <!-- DNA Performance -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>🧬 SETUP DNA PERFORMANCE</h2>
+            <div id="dnaPerformance">
+                <div style="color: #888; text-align: center; padding: 20px;">
+                    Collecting data... Need 100+ trades for statistical significance.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>SWARM v4.0 — Institutional-Grade Crypto Intelligence Framework</p>
+        <p style="margin-top: 10px; color: #444;">Capital Protection | Dynamic Risk | Paper Trading | 16 Agents</p>
+        <p style="margin-top: 5px; color: #333;">Next goal: 100 paper trades → Semi-auto unlock</p>
+    </div>
+
+    <script>
+        // Auto-refresh every 30 seconds
+        function updateDashboard() {
+            document.getElementById('refreshTime').textContent = 'Last update: ' + new Date().toLocaleTimeString();
+            
+            // Simulate fetching data (in production, this would read from the JSON files)
+            fetchData();
+        }
+
+        function fetchData() {
+            // This is a placeholder - in production, you'd read from:
+            // /tmp/scanner_output.json
+            // /tmp/dynamic_risk_output.json
+            // /root/.openclaw/workspace/agents/logs/portfolio_state.json
+            // etc.
+            
+            // For now, we'll show the static structure
+            console.log('Dashboard refresh at', new Date().toISOString());
+        }
+
+        // Initial load
+        updateDashboard();
+        
+        // Auto-refresh
+        setInterval(updateDashboard, 30000);
+    </script>
+</body>
+</html>

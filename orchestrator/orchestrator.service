@@ -1,0 +1,19 @@
+[Unit]
+Description=Telegram Orchestrator Agent (AImind Brain)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.openclaw/workspace/orchestrator
+Environment="ORCHESTRATOR_BOT_TOKEN=8386215028:AAFq3_Vn1kusUEIHH3c6oBL6K_aJaeYS4ac"
+Environment="WORKSPACE_DIR=/root/.openclaw/workspace"
+Environment="LOG_LEVEL=INFO"
+ExecStart=/usr/bin/python3 /root/.openclaw/workspace/orchestrator/telegram_orchestrator.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+"""
+Polymarket Telegram Alerter
+Sends trading signals via Telegram Bot.
+"""
+
+import logging
+from typing import Optional
+
+from telegram import Bot
+
+logger = logging.getLogger("polymarket_alerts")
+
+
+class PolymarketAlerter:
+    """Telegram alerter for Polymarket signals."""
+    
+    def __init__(self, bot_token: str, chat_id: str):
+        self.bot_token = bot_token
+        self.chat_id = chat_id
+        self.bot: Optional[Bot] = None
+    
+    async def __aenter__(self):
+        """Initialize bot."""
+        self.bot = Bot(token=self.bot_token)
+        try:
+            me = await self.bot.get_me()
+            logger.info(f"Bot connected: @{me.username}")
+        except Exception as e:
+            logger.error(f"Bot connection failed: {e}")
+        return self
+    
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        """Cleanup."""
+        if self.bot:
+            await self.bot.close()
+        logger.info("Bot disconnected")
+    
+    async def send_signal(self, text: str):
+        """Send a signal alert."""
+        if not self.bot:
+            logger.error("Bot not initialized")
+            return
+        
+        try:
+            await self.bot.send_message(
+                chat_id=self.chat_id,
+                text=text,
+                parse_mode="Markdown",
+                disable_web_page_preview=True
+            )
+        except Exception as e:
+            logger.error(f"Failed to send alert: {e}")
+    
+    async def send_trade_update(self, text: str):
+        """Send a trade update."""
+        await self.send_signal(text)
+
+    async def send_error(self, text: str):
+        """Send an error notification."""
+        if not self.bot:
+            return
+        try:
+            await self.bot.send_message(
+                chat_id=self.chat_id,
+                text=f"⚠️ **Error**\n\n{text}",
+                parse_mode="Markdown"
+            )
+        except Exception as e:
+            logger.error(f"Failed to send error: {e}")

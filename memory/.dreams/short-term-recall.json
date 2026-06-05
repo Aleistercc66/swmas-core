@@ -1,0 +1,482 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-04T01:33:03.999Z",
+  "entries": {
+    "memory:memory/2026-05-09.md:1:28": {
+      "key": "memory:memory/2026-05-09.md:1:28",
+      "path": "memory/2026-05-09.md",
+      "startLine": 1,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "# 2026-05-09 — Crypto Bot Development Session ## 🚀 ADVANCED v5.0 ARCHITECTURE BUILT Created 8 new files in `agents/` for real-time crypto intelligence: - `solana_rpc_monitor.py` — Direct Solana RPC reads, <1s latency - `pump_portal_monitor.py` — WebSocket for Pump.fun launches - `scraper_engine.py` — Playwright + BeautifulSoup scraping (DexScreener, GMGN, Photon) - `anti_detection.py` — Anti-bot detection evasion (fingerprint rotation, proxy rotation) - `ai_evaluation_layer.py` — Multi-dimensional AI analysis (scam probability, social sentiment, momentum, on-chain, volatility) - `v5_orchestrator.py` — Advanced orchestrator with pipeline: Scanner → Scraper → AI Eval → Signal - `twitter_scra",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7292092591524124,
+      "maxScore": 0.36700360178947444,
+      "firstRecalledAt": "2026-05-09T21:38:53.513Z",
+      "lastRecalledAt": "2026-05-25T16:07:05.965Z",
+      "queryHashes": [
+        "47b62a218612",
+        "c5683f247d1e"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "v5.0",
+        "real-time",
+        "solana-rpc-monitor.py",
+        "pump-portal-monitor.py",
+        "pump.fun",
+        "scraper-engine.py",
+        "anti-detection.py",
+        "anti-bot"
+      ]
+    },
+    "memory:memory/2026-05-07.md:123:173": {
+      "key": "memory:memory/2026-05-07.md:123:173",
+      "path": "memory/2026-05-07.md",
+      "startLine": 123,
+      "endLine": 173,
+      "source": "memory",
+      "snippet": "2. **USA** — Confidence 90/100 🟢 LOW RISK — R:R 1:2.5 3. **POPCAT** — Confidence 90/100 🟢 LOW RISK — R:R 1:2.5 All three have exact entry/stop/TP levels in the Telegram alert. ### Prompt Files Created (institutional-grade) - `agents/prompts/master_controller.md` - `agents/prompts/scanner_agent.md` - `agents/prompts/sentiment_agent.md` - `agents/prompts/whale_agent.md` - `agents/prompts/validator_agent.md` - `agents/prompts/risk_manager.md` - `agents/prompts/performance_analyst.md` ### v2 Python Scripts - `agents/v2_scanner.py` - `agents/v2_sentiment.py` - `agents/v2_whale.py` - `agents/v2_validator.py` - `agents/v2_risk_manager.py` - `agents/v2_performance.py` - `agents/v2_master_contro",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3538087487220764,
+      "maxScore": 0.3538087487220764,
+      "firstRecalledAt": "2026-05-09T21:38:53.513Z",
+      "lastRecalledAt": "2026-05-09T21:38:53.513Z",
+      "queryHashes": [
+        "47b62a218612"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "90/100",
+        "2.5",
+        "entry/stop/tp",
+        "institutional-grade",
+        "agents/prompts/scanner-agent.md",
+        "agents/prompts/whale-agent.md",
+        "agents/prompts/risk-manager.md",
+        "agents/v2-scanner.py"
+      ]
+    },
+    "memory:memory/2026-05-07.md:70:104": {
+      "key": "memory:memory/2026-05-07.md:70:104",
+      "path": "memory/2026-05-07.md",
+      "startLine": 70,
+      "endLine": 104,
+      "source": "memory",
+      "snippet": "- `/root/.openclaw/workspace/dexscreener_scanner.py` — Full scanner with all endpoints - `/root/.openclaw/workspace/profit_scanner_bot.py` — Cron-ready profit-focused scanner - `/root/.openclaw/workspace/run_scanner_daemon.sh` — Backup daemon script (superseded by cron) - `/root/.openclaw/workspace/quick_scan.py` — Hot movers debug script ### Next Actions Pending 1. User needs to add bot to each Telegram group (bot cannot join automatically) 2. Group keyword monitoring to be implemented once bot is added 3. Cross-reference group alpha with DexScreener data for extra signals 4. Consider adding KreoPolyBot interaction (send commands to it) ### Session Timeline - Started: ~05:00 GMT+8 - DexSc",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7725580066442489,
+      "maxScore": 0.4202294111251831,
+      "firstRecalledAt": "2026-05-09T21:38:53.531Z",
+      "lastRecalledAt": "2026-05-17T14:41:04.025Z",
+      "queryHashes": [
+        "d83ec6b02b20",
+        "993d67a7d3bf"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "backup",
+        "cron-ready",
+        "profit-focused",
+        "openclaw/workspace/quick-scan.py",
+        "cross-reference",
+        "root",
+        "openclaw",
+        "dexscreener-scanner.py"
+      ]
+    },
+    "memory:memory/2026-05-07.md:37:74": {
+      "key": "memory:memory/2026-05-07.md:37:74",
+      "path": "memory/2026-05-07.md",
+      "startLine": 37,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "- Schedule: `*/30 * * * *` (runs at :00 and :30 every hour) - Script: `/root/.openclaw/workspace/profit_scanner_bot.py` - Sends formatted alerts to Telegram DM - First automated runs started successfully - Manual test at 05:14 found AI (+58%) and JTO (+16%) opportunities ### Telegram Groups for Monitoring Groups user wants bot added to: 1. https://t.me/moonshots (primary) 2. https://t.me/memewars25 3. https://t.me/apingdegen 4. https://t.me/SonicsAlphacalls 5. https://t.me/aifirstbrain 6. https://t.me/blumcrypto **KreoPolyBot:** https://t.me/KreoPolyBot — This is a bot, not a group. Cannot \"join\" it. ### User Profile Notes - Bilingual Greek-English - Action-oriented, wants practical imple",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8157804578542709,
+      "maxScore": 0.41803153455257414,
+      "firstRecalledAt": "2026-05-09T21:38:53.531Z",
+      "lastRecalledAt": "2026-05-24T20:52:21.024Z",
+      "queryHashes": [
+        "d83ec6b02b20",
+        "4df2cf41f4c4"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "t.me/moonshots",
+        "t.me/memewars25",
+        "t.me/apingdegen",
+        "t.me/sonicsalphacalls",
+        "t.me/aifirstbrain",
+        "t.me/blumcrypto",
+        "t.me/kreopolybot",
+        "greek-english"
+      ]
+    },
+    "memory:memory/2026-05-07.md:1:44": {
+      "key": "memory:memory/2026-05-07.md:1:44",
+      "path": "memory/2026-05-07.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "# Memory — 2026-05-07 ## Crypto Automation Setup Session ### Telegram Bot - **Bot token configured:** 8667434354:AAFLJ7QSSmNpyW94CdGVANzf9NuDqDJQFuc - **User chat ID:** 158923136 (G:A.C / Gmewn) - **Bot username:** @KimiC_law_bot - \"Allow Groups?\" must be enabled in BotFather for group monitoring ### DexScreener Integration v2 - **API wrapper** with all 13 official endpoints implemented - Rate limits respected: 60/min for profiles/boosts, 300/min for pairs/tokens - File: `dexscreener_scanner.py` - **Aggressive profit scanner:** `profit_scanner_bot.py` (cron-driven) ### 7-Dimension Analysis Framework Implemented all required dimensions: 1. Price Action (trend structure, HH/HL) 2. Volume A",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2294200569391251,
+      "maxScore": 0.4115950971841812,
+      "firstRecalledAt": "2026-05-09T21:38:53.531Z",
+      "lastRecalledAt": "2026-05-25T00:07:54.074Z",
+      "queryHashes": [
+        "d83ec6b02b20",
+        "4df2cf41f4c4",
+        "0816d68c15fe"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "a.c",
+        "kimic-law-bot",
+        "60/min",
+        "profiles/boosts",
+        "300/min",
+        "pairs/tokens",
+        "dexscreener-scanner.py",
+        "profit-scanner-bot.py"
+      ]
+    },
+    "memory:memory/2026-05-09.md:48:75": {
+      "key": "memory:memory/2026-05-09.md:48:75",
+      "path": "memory/2026-05-09.md",
+      "startLine": 48,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "- `v2_scanner.py` now fetches boosted tokens + top movers + baseline coverage - Gets 20-30 tokens per scan instead of 2-3 - Added `get_boosted_tokens()` and `get_top_movers()` functions ## 📊 USER PREFERENCE: MAXIMUM PROFIT DETECTION User explicitly said: \"Θέλω να ανιχνεύει τις καλύτερες επιλογές και πιο κερδοφόρες\" - Wants profit-optimized filtering (not just any signal) - Prefers fewer, higher-quality signals over noise - Wants to see expected returns, not just raw data ## 📝 FILES MODIFIED TODAY - `/root/.openclaw/workspace/agents/v2_dynamic_risk.py` — Profit scoring, tier system, confidence fixes - `/root/.openclaw/workspace/agents/v2_validator.py` — Threshold lowered, pass rate logic",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3879760026931762,
+      "maxScore": 0.3879760026931762,
+      "firstRecalledAt": "2026-05-09T21:38:53.531Z",
+      "lastRecalledAt": "2026-05-09T21:38:53.531Z",
+      "queryHashes": [
+        "d83ec6b02b20"
+      ],
+      "recallDays": [
+        "2026-05-10"
+      ],
+      "conceptTags": [
+        "v2-scanner.py",
+        "20-30",
+        "2-3",
+        "get-boosted-tokens",
+        "get-top-movers",
+        "profit-optimized",
+        "higher-quality",
+        "now"
+      ]
+    },
+    "memory:memory/2026-05-10.md:190:205": {
+      "key": "memory:memory/2026-05-10.md:190:205",
+      "path": "memory/2026-05-10.md",
+      "startLine": 190,
+      "endLine": 205,
+      "source": "memory",
+      "snippet": "- Position monitor + auto executor: disabled pending verification ## 📁 Files Created - `agents/realtime_dexscreener.py` — 30s/10s real-time scanner - `agents/mevx_realtime.py` — MevX API integration agent - `agents/tmp_state/mevx_config.json` — API key storage (empty, needs key) ## 📁 Files Modified - `agents/v2_dynamic_risk.py` — Smart stop loss logic - `agents/v2_validator.py` — Relaxed validation thresholds - `agents/position_monitor.py` — Fixed race condition (separate output file) - `agents/auto_executor.py` — Telegram formatting + duplicate prevention - `agents/meta_agent.py` — Error handling fixes - `agents/start_all.sh` — Added new agents - `agents/logs/paper_trading.json` — Reset",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35016787350177764,
+      "maxScore": 0.35016787350177764,
+      "firstRecalledAt": "2026-05-17T14:41:04.044Z",
+      "lastRecalledAt": "2026-05-17T14:41:04.044Z",
+      "queryHashes": [
+        "002f6a7d2f55"
+      ],
+      "recallDays": [
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "agents/realtime-dexscreener.py",
+        "30s/10s",
+        "real-time",
+        "agents/mevx-realtime.py",
+        "agents/v2-dynamic-risk.py",
+        "agents/v2-validator.py",
+        "agents/position-monitor.py",
+        "agents/auto-executor.py"
+      ]
+    },
+    "memory:memory/2026-05-25.md:74:108": {
+      "key": "memory:memory/2026-05-25.md:74:108",
+      "path": "memory/2026-05-25.md",
+      "startLine": 74,
+      "endLine": 108,
+      "source": "memory",
+      "snippet": "- Integrated with existing Telegram orchestrator (@WorkSS11_bot) - Trading agents remain as specialized agents within swarm - Autonomous loop runs proactive tasks every 5 minutes - Real-time interface added for instant Telegram interaction ### Diary Entry - `/root/.openclaw/workspace/memorized_diary/day21-2026-05-25-built_general_purpose_swarm.md` ## 2026-05-25 05:51 UTC - Wallet Integration Build Session ### What We Built: - **MetaMask Wallet Integration** with BIP-39 Secret Recovery Phrase support - Added `MnemonicWallet` class to `wallet_manager.py` with BIP-44 HD derivation - Updated `wallet_commands.py` with new 4-step flow: 1. Password 2. Choose `key` or `phrase` 3. Input cre",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3686187297105789,
+      "maxScore": 0.3686187297105789,
+      "firstRecalledAt": "2026-05-24T22:54:27.505Z",
+      "lastRecalledAt": "2026-05-24T22:54:27.505Z",
+      "queryHashes": [
+        "d6ac73a84a41"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "workss11-bot",
+        "real-time",
+        "bip-39",
+        "wallet-manager.py",
+        "bip-44",
+        "wallet-commands.py",
+        "4-step",
+        "integrated"
+      ]
+    },
+    "memory:memory/2026-05-15.md:49:73": {
+      "key": "memory:memory/2026-05-15.md:49:73",
+      "path": "memory/2026-05-15.md",
+      "startLine": 49,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "- **executor.py** — AsyncExecutor: circuit breakers (daily loss, max trades), TIER_1 manual confirmation queue, TIER_2+ auto-execution, atomic position opens - **telegram_bot.py** — AsyncTelegramBot: signal alerts, portfolio updates, confirmation handling (/confirm <ID>), /portfolio /positions /status /help commands - **meta_supervisor.py** — AsyncMetaSupervisor: health checks, process monitoring, event logging for agent down #### Orchestration & Docker - **main_orchestrator.py** — Single entry point, spawns all agents as asyncio tasks, signal handlers for graceful shutdown - **Dockerfile** — Python 3.12 slim, multi-stage, health check - **docker-compose.yml** — PostgreSQL + Redis + 7 agent",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36653327643871303,
+      "maxScore": 0.36653327643871303,
+      "firstRecalledAt": "2026-05-24T22:54:27.505Z",
+      "lastRecalledAt": "2026-05-24T22:54:27.505Z",
+      "queryHashes": [
+        "d6ac73a84a41"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "executor.py",
+        "tier-1",
+        "tier-2",
+        "auto-execution",
+        "telegram-bot.py",
+        "meta-supervisor.py",
+        "main-orchestrator.py",
+        "3.12"
+      ]
+    },
+    "memory:memory/2026-05-11.md:22:33": {
+      "key": "memory:memory/2026-05-11.md:22:33",
+      "path": "memory/2026-05-11.md",
+      "startLine": 22,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "- Pump.fun bonding curve tracker - predicts graduation at ~$13K market cap - Token Safety Analyzer - honeypot/blacklist/mint detection, rug pull protection - MEV Protection - Jito Labs bundles, dynamic priority fees, anti-sandwich - WebSocket Sniper - sub-second new token detection, 10-second evaluation window - Advanced Jupiter v6 - multi-hop routing, DCA, batch pricing **Key constraint from user:** Wants the agent to be the most advanced possible. Expects fully autonomous, end-to-end implementation with minimal hand-holding. Prioritizes speed and production-quality code. **Status:** Archive delivered as `solana_agent.tar.gz`. User has not yet configured Telegram bot token or wallet keys",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7968553334474563,
+      "maxScore": 0.4290567576885223,
+      "firstRecalledAt": "2026-05-25T00:07:54.074Z",
+      "lastRecalledAt": "2026-06-04T01:33:03.999Z",
+      "queryHashes": [
+        "0816d68c15fe",
+        "0882c3d27beb"
+      ],
+      "recallDays": [
+        "2026-05-25",
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "pump.fun",
+        "honeypot/blacklist/mint",
+        "anti-sandwich",
+        "sub-second",
+        "10-second",
+        "multi-hop",
+        "end-to-end",
+        "hand-holding"
+      ]
+    },
+    "memory:memory/2026-05-10.md:28:72": {
+      "key": "memory:memory/2026-05-10.md:28:72",
+      "path": "memory/2026-05-10.md",
+      "startLine": 28,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "Fully automated paper trade execution: - Reads `dynamic_risk_output.json` for approved signals - Opens positions automatically when auto_mode is ON - **Duplicate prevention**: skips if already have open position on same coin - **Daily trade limit**: max 3 trades/day (configurable) - **Tier filtering**: only TIER_1/TIER_2 (configurable) - **Confidence filter**: min 60% (configurable) - Position sizing: 5% of balance default - Simulates slippage (0.35%) and fees (0.3%) ## 📈 METRICS CALCULATION FIXED Paper trading now tracks: - Total trades, wins, losses - Win rate percentage - Total PnL, total fees - Average win, average loss - Profit factor (gross profit / gross loss) - Starting balance, cu",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.40650075078010556,
+      "maxScore": 0.40650075078010556,
+      "firstRecalledAt": "2026-05-25T00:07:54.074Z",
+      "lastRecalledAt": "2026-05-25T00:07:54.074Z",
+      "queryHashes": [
+        "0816d68c15fe"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "dynamic-risk-output.json",
+        "auto-mode",
+        "trades/day",
+        "tier-1/tier-2",
+        "0.35",
+        "0.3",
+        "fully",
+        "automated"
+      ]
+    },
+    "memory:memory/2026-05-09.md:70:77": {
+      "key": "memory:memory/2026-05-09.md:70:77",
+      "path": "memory/2026-05-09.md",
+      "startLine": 70,
+      "endLine": 77,
+      "source": "memory",
+      "snippet": "- User still needs to choose A/B/C/D for signal delivery preference - Auto mode requires `auto_mode.json` with `\"enabled\": true` to bypass manual confirmation ## 🎯 NEXT STEPS (PENDING USER INPUT) 1. User needs to choose signal delivery option: A=all 8, B=top 3, C=tier 1 only, D=stricter 2. If no response in 2 min, default to B (top 3: Octopus, Bonk, ROAF) 3. After that: run live scan and deliver signals via Telegram",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3619479328393936,
+      "maxScore": 0.3619479328393936,
+      "firstRecalledAt": "2026-05-25T16:07:05.965Z",
+      "lastRecalledAt": "2026-05-25T16:07:05.965Z",
+      "queryHashes": [
+        "c5683f247d1e"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "a/b/c/d",
+        "auto-mode.json",
+        "user",
+        "still",
+        "needs",
+        "choose",
+        "signal",
+        "delivery"
+      ]
+    },
+    "memory:memory/2026-05-08.md:1:37": {
+      "key": "memory:memory/2026-05-08.md:1:37",
+      "path": "memory/2026-05-08.md",
+      "startLine": 1,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "## AUTO MODE ACTIVATED — 3 Trades Executed (08:44 AM) User said: \"Κινήσου αυτόματα\" (Move automatically) ### Changes Made **1. Auto Mode Enabled** - Created `tmp_state/auto_mode.json` with: `{\"mode\": \"SEMI_AUTO\", \"enabled\": true, \"max_daily_trades\": 3}` - Modified `v4_master_controller.py` to auto-confirm signals when auto mode is enabled - Auto-confirmed trades are written to `tmp_state/confirmed_trades.json` **2. 3 Trades Auto-Executed** | Symbol | Entry | Stop | Position | Fee | |--------|-------|------|----------|-----| | JTO | $0.5869 | $0.5545 | $500.00 | $1.50 | | BV7X | $0.00000419 | $0.00000394 | $475.00 | $1.43 | | FLOKI | $0.00003518 | $0.00003264 | $451.25 | $1.35 | **3. Pa",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3572504788637161,
+      "maxScore": 0.3572504788637161,
+      "firstRecalledAt": "2026-05-25T16:07:05.965Z",
+      "lastRecalledAt": "2026-05-25T16:07:05.965Z",
+      "queryHashes": [
+        "c5683f247d1e"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "tmp-state/auto-mode.json",
+        "semi-auto",
+        "max-daily-trades",
+        "v4-master-controller.py",
+        "auto-confirm",
+        "auto-confirmed",
+        "tmp-state/confirmed-trades.json",
+        "auto-executed"
+      ]
+    },
+    "memory:memory/2026-05-31.md:1:35": {
+      "key": "memory:memory/2026-05-31.md:1:35",
+      "path": "memory/2026-05-31.md",
+      "startLine": 1,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "# 🔮 Polymarket AI Trading Bot — 2026-05-31 **Status:** ✅ BUILT & READY **Location:** `/root/.openclaw/workspace/agents/` **Files:** - `polymarket_brain.py` — Signal engine + edge calculator + Kelly + risk manager - `polymarket_scanner.py` — Gamma API scanner - `polymarket_alerts.py` — Telegram alerts - `run_polymarket_brain.py` — Runner script **Architecture:** - SignalGenerator: momentum (5m/15m/1h), volume anomaly, order book imbalance, sentiment - EdgeCalculator: fair value vs market price with confidence - KellyCriterion: fractional Kelly (1/2 base) with dynamic adjustment - RiskManager: position limits, circuit breakers, correlation, exposure, SQLite persistence - DynamicRiskProfile:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.38623276352882385,
+      "maxScore": 0.38623276352882385,
+      "firstRecalledAt": "2026-05-31T00:52:01.357Z",
+      "lastRecalledAt": "2026-05-31T00:52:01.357Z",
+      "queryHashes": [
+        "4a5afef8b30c"
+      ],
+      "recallDays": [
+        "2026-05-31"
+      ],
+      "conceptTags": [
+        "openclaw/workspace/agents",
+        "polymarket-brain.py",
+        "polymarket-scanner.py",
+        "polymarket-alerts.py",
+        "run-polymarket-brain.py",
+        "5m/15m/1h",
+        "1/2",
+        "polymarket"
+      ]
+    },
+    "memory:memory/2026-05-11.md:1:27": {
+      "key": "memory:memory/2026-05-11.md:1:27",
+      "path": "memory/2026-05-11.md",
+      "startLine": 1,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "## 2026-05-11 10:50 CST ### Solana Profit Agent v2.0 - Built for Gerasimos **Request:** Build a Solana agent that learns everything about the ecosystem to achieve 15-30% daily returns. **What I built:** - Full `solana_agent/` directory with 13 modules (~2500+ lines of code) - Core modules: learning_engine, historian, opportunity_scanner, strategy_engine, execution_layer, risk_manager, telegram_alerts - v2.0 advanced modules added after deep research: pumpfun_tracker, token_safety, mev_protection, websocket_sniper, jupiter_client **Architecture:** - Learning Engine: DexScreener + Pump.fun + Jupiter data ingestion - Historian: Solana ecosystem historical analysis (100x tokens, cycles, seas",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4270196825265884,
+      "maxScore": 0.4270196825265884,
+      "firstRecalledAt": "2026-06-04T01:33:03.999Z",
+      "lastRecalledAt": "2026-06-04T01:33:03.999Z",
+      "queryHashes": [
+        "0882c3d27beb"
+      ],
+      "recallDays": [
+        "2026-06-04"
+      ],
+      "conceptTags": [
+        "v2.0",
+        "15-30",
+        "solana-agent",
+        "learning-engine",
+        "opportunity-scanner",
+        "strategy-engine",
+        "execution-layer",
+        "risk-manager"
+      ]
+    }
+  }
+}

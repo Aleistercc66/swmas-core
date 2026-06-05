@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-05-08T08:21:48.636894",
+  "overall": "RANGING",
+  "btc_state": {
+    "price": 79826.029,
+    "change_24h": -1.57,
+    "change_6h": -0.15,
+    "change_1h": 0.15,
+    "volatility": 1.57,
+    "timeframe_alignment": 0
+  },
+  "indicators": {
+    "btc_eth_correlation": "aligned",
+    "volatility_proxy": 1.57,
+    "trend_strength": 1.57,
+    "momentum_consistency": 0
+  },
+  "recommendations": [
+    "Mean reversion preferred",
+    "Breakout trades need extra confirmation",
+    "Reduce scan frequency to 30min"
+  ]
+}

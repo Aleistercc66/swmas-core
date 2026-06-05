@@ -1,0 +1,61 @@
+🎯 **UNIFIED MASTER DASHBOARD** 🎯
+Last update: 2026-06-05 10:16:58
+
+📈 **CRYPTO MARKETS** 🟡 ERROR: object of type 'NoneType' has 
+
+💰 SOL: $0.00 (+0.0%)
+📊 Pairs: 0
+
+🔥 **Top Tokens:**
+
+💰 **CASHOUT SYSTEM** 🟢 ACTIVE
+
+📊 Tracked Bets: 0
+⚽ Active Matches: 0
+🏢 Bookmakers: Stoiximan, Novibet
+
+Commands: `/cashout track`, `/cashout list`, `/cashout check`
+
+🐝 **SWARM INTELLIGENCE** 🟢 ACTIVE
+
+🧬 Generation: 13374
+⭐ Score: 7.85/10.0
+💰 Actions: 0
+📈 Opportunities: 0
+
+🤖 **AGENT SWARM** 🟢 ACTIVE
+
+📊 Active Agents: 15
+
+• Auto Runner: PID 62270 | CPU 0.0% | MEM 0.9%
+• Telegram Alert: PID 103863 | CPU 0.0% | MEM 0.5%
+• Enhanced Scanner: PID 116071 | CPU 0.0% | MEM 0.6%
+• Money Action: PID 116075 | CPU 0.1% | MEM 0.4%
+• Evolution Engine: PID 116077 | CPU 0.1% | MEM 0.6%
+
+💻 **SYSTEM HEALTH** 🟢 HEALTHY
+
+🖥️ CPU: 3.9% 🟢
+🧠 Memory: 62.3% 🟢
+💾 Disk: 41% 🟢
+⚙️ Processes: 157
+
+📱 **TELEGRAM BOT** 🟢 ONLINE
+
+🤖 Bot: @WorkSS11_bot
+📋 Handlers: 40
+
+**Key Commands:**
+• /dashboard
+• /agents
+• /cashout
+• /scan
+• /swarm
+• /status
+• /help
+
+---
+🔄 **Refresh:** `/dashboard refresh`
+📊 **Full Status:** `/status`
+💰 **CashOut:** `/cashout`
+🤖 **Agents:** `/agents`

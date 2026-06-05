@@ -1,0 +1,111 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "\u03a0\u03bf\u03b9\u03b1 \u03ba\u03c1\u03c5\u03c0\u03c4\u03bf \u03b5\u03af\u03bd\u03b1\u03b9 \u03c4\u03b1 \u03c0\u03b9\u03bf \u03b1\u03c0\u03bf\u03b4\u03bf\u03c4\u03b9\u03ba\u03ac;",
+      "timestamp": "2026-05-25T05:07:36.640456"
+    },
+    {
+      "role": "user",
+      "content": "Phrase: combine uncover second first emerge embody detect lesson grab mobile fall enforce",
+      "timestamp": "2026-05-25T05:37:38.175727"
+    },
+    {
+      "role": "user",
+      "content": "\u0398\u03ad\u03bb\u03c9 \u03bd\u03b1 \u03c0\u03c1\u03bf\u03c3\u03b8\u03ad\u03c3\u03c9 chain",
+      "timestamp": "2026-05-25T06:22:56.036073"
+    },
+    {
+      "role": "user",
+      "content": "\u039e\u03b5\u03ba\u03b9\u03bd\u03ac master training \u03c3\u03b5 \u03cc\u03bb\u03b1",
+      "timestamp": "2026-05-25T07:18:11.940020"
+    },
+    {
+      "role": "user",
+      "content": "\u0392\u03c1\u03b5\u03c2 \u03c0\u03bf\u03c5 \u03b8\u03b1 \u03bc\u03b1\u03c2 \u03c0\u03ac\u03c1\u03bf\u03c5\u03bc\u03b5 \u03b1\u03c0\u03cc\u03b4\u03bf\u03c3\u03b7 \u00b71000 \u03ac\u03bc\u03b5\u03c3\u03b1",
+      "timestamp": "2026-05-26T00:09:09.660462"
+    },
+    {
+      "role": "user",
+      "content": "1",
+      "timestamp": "2026-05-26T00:34:29.733939"
+    },
+    {
+      "role": "user",
+      "content": "/agents",
+      "timestamp": "2026-05-29T06:47:27.296708"
+    },
+    {
+      "role": "user",
+      "content": "\u0394\u03ce\u03c3\u03b5 \u03bc\u03bf\u03c5 \u03b5\u03b9\u03b4\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u03c0\u03cc\u03c4\u03b5 \u03bd\u03b1 \u03b2\u03b3\u03c9",
+      "timestamp": "2026-05-29T09:37:11.519772"
+    },
+    {
+      "role": "user",
+      "content": "\u039a\u03b1\u03b9 \u03c3\u03b5 \u03b1\u03c5\u03c4\u03bf",
+      "timestamp": "2026-05-29T09:40:16.972082"
+    },
+    {
+      "role": "user",
+      "content": "/",
+      "timestamp": "2026-05-29T10:13:24.829418"
+    },
+    {
+      "role": "user",
+      "content": "\u0398\u03ad\u03bb\u03c9 \u03bd\u03b1 \u03be\u03b5\u03ba\u03b9\u03bd\u03ae\u03c3\u03b5\u03b9\u03c2 \u03b1\u03c5\u03c4\u03cc\u03bc\u03b1\u03c4\u03b5\u03c2 \u03c3\u03c5\u03bd\u03b1\u03bb\u03bb\u03b1\u03b3\u03ad\u03c2",
+      "timestamp": "2026-06-04T01:23:42.493670"
+    },
+    {
+      "role": "user",
+      "content": ";",
+      "timestamp": "2026-06-04T01:26:14.821458"
+    },
+    {
+      "role": "user",
+      "content": "\u03a3\u03b2\u03ae\u03c3\u03b5 \u03cc\u03bb\u03b1 \u03c4\u03b1 \u03c3\u03ae\u03bc\u03b1\u03c4\u03b1 \u03c4\u03bf\u03c5 polymarket",
+      "timestamp": "2026-06-04T02:51:34.949725"
+    },
+    {
+      "role": "user",
+      "content": ";",
+      "timestamp": "2026-06-05T08:12:16.227151"
+    },
+    {
+      "role": "user",
+      "content": "\u039f\u03ba",
+      "timestamp": "2026-06-05T08:58:55.083882"
+    },
+    {
+      "role": "user",
+      "content": "\u0395\u03bb\u03b1",
+      "timestamp": "2026-06-05T09:00:13.314147"
+    },
+    {
+      "role": "user",
+      "content": "\u03a8",
+      "timestamp": "2026-06-05T09:23:38.932810"
+    },
+    {
+      "role": "user",
+      "content": "\u039f\u03ba",
+      "timestamp": "2026-06-05T09:32:38.752030"
+    },
+    {
+      "role": "user",
+      "content": "Ok",
+      "timestamp": "2026-06-05T09:40:11.315989"
+    },
+    {
+      "role": "user",
+      "content": "/\u03c3\u03c8\u03b1\u03bd",
+      "timestamp": "2026-06-05T10:15:54.360772"
+    }
+  ],
+  "started_at": "2026-05-25T05:07:36.640438",
+  "preferences": {},
+  "patterns": [],
+  "topics": [
+    "system",
+    "market"
+  ]
+}

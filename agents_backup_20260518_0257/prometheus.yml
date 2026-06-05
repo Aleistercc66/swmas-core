@@ -1,0 +1,19 @@
+# Prometheus configuration for Crypto Trading Swarm V2
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers: []
+
+rule_files: []
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'trading-agents'
+    static_configs:
+      - targets: ['scanner:9090', 'validator:9090', 'risk_engine:9090', 'executor:9090', 'position_monitor:9090']
+    scrape_interval: 5s

@@ -1,0 +1,93 @@
+# 🌐 SWARM CONFIGURATION
+swarm_name: "SWMAS-General"
+version: "2.0"
+
+# Core Settings
+max_agents: 20
+max_concurrent_tasks: 50
+task_timeout: 300
+autonomous_mode: true
+learning_enabled: true
+
+# Directions (8 main directions)
+directions:
+  - research
+  - content
+  - automation
+  - monitoring
+  - communication
+  - analysis
+  - problem_solving
+  - learning
+
+# Agent Types
+agent_types:
+  - ResearchAgent
+  - ContentAgent
+  - AutomationAgent
+  - MonitorAgent
+  - CommsAgent
+  - AnalysisAgent
+  - SolverAgent
+  - LearnAgent
+
+# Agent Limits
+agent_limits:
+  ResearchAgent: 5
+  ContentAgent: 5
+  AutomationAgent: 3
+  MonitorAgent: 5
+  CommsAgent: 3
+  AnalysisAgent: 3
+  SolverAgent: 3
+  LearnAgent: 2
+
+# Memory Settings
+memory:
+  short_term_ttl: 3600
+  max_episodic_events: 2000
+  max_user_contexts: 100
+  auto_save_interval: 60
+
+# Autonomous Loop
+autonomous:
+  enabled: true
+  interval_minutes: 5
+  proactive_tasks:
+    - type: research
+      description: "Check latest trends in AI and technology"
+      interval_hours: 6
+      priority: low
+    - type: monitor
+      description: "Health check on all swarm components"
+      interval_hours: 1
+      priority: normal
+    - type: learn
+      description: "Review completed tasks for patterns"
+      interval_hours: 12
+      priority: low
+    - type: analysis
+      description: "Analyze swarm performance metrics"
+      interval_hours: 4
+      priority: normal
+
+# Communication
+communication:
+  telegram:
+    enabled: true
+    bot_token: "8386215028:AAFq3_Vn1kusUEIHH3c6oBL6K_aJaeYS4ac"
+    admin_user_id: "158923136"
+  discord:
+    enabled: false
+    webhook_url: ""
+  email:
+    enabled: false
+    smtp_server: ""
+    smtp_port: 587
+
+# Logging
+logging:
+  level: INFO
+  file: "logs/orchestrator.log"
+  max_size_mb: 100
+  backup_count: 5

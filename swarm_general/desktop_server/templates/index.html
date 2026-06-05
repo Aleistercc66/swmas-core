@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWARM DASHBOARD</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0e1a;
+            color: #e0e6ed;
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            overflow-x: hidden;
+        }
+        .header {
+            background: linear-gradient(90deg, #0a0e1a 0%, #1a1f3a 50%, #0a0e1a 100%);
+            border-bottom: 2px solid #00ff88;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #00ff88;
+            text-shadow: 0 0 20px rgba(0,255,136,0.5);
+            letter-spacing: 3px;
+        }
+        .header .status {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .status-badge {
+            background: rgba(0,255,136,0.15);
+            border: 1px solid #00ff88;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #00ff88;
+        }
+        .status-badge.warning { border-color: #ffaa00; color: #ffaa00; background: rgba(255,170,0,0.15); }
+        .status-badge.danger { border-color: #ff4444; color: #ff4444; background: rgba(255,68,68,0.15); }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+        }
+        .card {
+            background: linear-gradient(135deg, #111833 0%, #1a2040 100%);
+            border: 1px solid #2a3a5c;
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00ff88, #00ccff, #ff00ff);
+        }
+        .card-title {
+            font-size: 14px;
+            color: #7a8bb5;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #1a2a4a;
+        }
+        .metric-row:last-child { border-bottom: none; }
+        .metric-label { color: #8a9bb8; font-size: 14px; }
+        .metric-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        .metric-value.warning { color: #ffaa00; }
+        .metric-value.danger { color: #ff4444; }
+        .metric-value.info { color: #00ccff; }
+        
+        .big-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00ff88;
+            text-shadow: 0 0 30px rgba(0,255,136,0.4);
+            margin: 10px 0;
+        }
+        .big-number.warning { color: #ffaa00; text-shadow: 0 0 30px rgba(255,170,0,0.4); }
+        .big-number.danger { color: #ff4444; text-shadow: 0 0 30px rgba(255,68,68,0.4); }
+        
+        .progress-bar {
+            height: 8px;
+            background: #1a2040;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #00ccff);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        .progress-fill.warning { background: linear-gradient(90deg, #ffaa00, #ff7700); }
+        .progress-fill.danger { background: linear-gradient(90deg, #ff4444, #ff0000); }
+        
+        .log-container {
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 12px;
+            line-height: 1.6;
+            background: #0a1020;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 16px;
+        }
+        .log-entry {
+            padding: 4px 0;
+            border-bottom: 1px solid #1a2040;
+            font-family: 'Courier New', monospace;
+        }
+        .log-time { color: #5a7a9a; margin-right: 8px; }
+        .log-info { color: #00ccff; }
+        .log-success { color: #00ff88; }
+        .log-warning { color: #ffaa00; }
+        .log-error { color: #ff4444; }
+        
+        .strategy-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 6px 0;
+            background: rgba(255,255,255,0.03);
+            border-radius: 6px;
+            border-left: 3px solid #00ff88;
+        }
+        .strategy-card.scanning { border-left-color: #00ff88; }
+        .strategy-card.arbitrage { border-left-color: #00ccff; }
+        .strategy-card.yield { border-left-color: #ffaa00; }
+        .strategy-card.sniper { border-left-color: #ff4444; }
+        .strategy-card.social { border-left-color: #ff00ff; }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #4a5a7a;
+            font-size: 12px;
+            border-top: 1px solid #1a2040;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0e1a; }
+        ::-webkit-scrollbar-thumb { background: #2a3a5c; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3a4a6c; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SWARM DASHBOARD</h1>
+        <div class="status">
+            <span class="status-badge pulse">LIVE</span>
+            <span class="status-badge">BOT: ONLINE</span>
+            <span class="status-badge">MONEY: ACTIVE</span>
+            <span class="status-badge">EVO: GEN {{ evo_gen }}</span>
+        </div>
+    </div>
+    
+    <div class="grid">
+        <!-- SWARM STATUS -->
+        <div class="card">
+            <div class="card-title">Swarm Status</div>
+            <div class="metric-row">
+                <span class="metric-label">Active Agents</span>
+                <span class="metric-value">{{ agents }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Active Tasks</span>
+                <span class="metric-value info">{{ tasks }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Completed</span>
+                <span class="metric-value">{{ completed }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Uptime</span>
+                <span class="metric-value info">{{ uptime }}</span>
+            </div>
+        </div>
+        
+        <!-- EVOLUTION -->
+        <div class="card">
+            <div class="card-title">Evolution Engine</div>
+            <div class="big-number">{{ evo_score }}</div>
+            <div class="metric-row">
+                <span class="metric-label">Target</span>
+                <span class="metric-value">10.0</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: {{ evo_percent }}%"></div>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Generation</span>
+                <span class="metric-value">{{ evo_gen }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Patterns</span>
+                <span class="metric-value info">{{ patterns }}</span>
+            </div>
+        </div>
+        
+        <!-- MONEY ENGINE -->
+        <div class="card">
+            <div class="card-title">Money Engine</div>
+            <div class="metric-row">
+                <span class="metric-label">Cycles</span>
+                <span class="metric-value">{{ money_cycles }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Opportunities</span>
+                <span class="metric-value info">{{ money_opps }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Actions Taken</span>
+                <span class="metric-value">{{ money_actions }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Strategies</span>
+                <span class="metric-value">{{ money_strategies }}</span>
+            </div>
+        </div>
+        
+        <!-- PROFIT -->
+        <div class="card">
+            <div class="card-title">Profit Pipeline</div>
+            <div class="metric-row">
+                <span class="metric-label">Signals</span>
+                <span class="metric-value">{{ signals }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Opportunities</span>
+                <span class="metric-value info">{{ opportunities }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Alerts Sent</span>
+                <span class="metric-value">{{ alerts }}</span>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Min Score</span>
+                <span class="metric-value {{ 'warning' if min_score < 50 else '' }}">{{ min_score }}/100</span>
+            </div>
+        </div>
+        
+        <!-- SYSTEM HEALTH -->
+        <div class="card">
+            <div class="card-title">System Health</div>
+            <div class="metric-row">
+                <span class="metric-label">CPU Load</span>
+                <span class="metric-value {{ 'warning' if cpu > 70 else 'danger' if cpu > 90 else '' }}">{{ cpu }}%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill {{ 'warning' if cpu > 70 else 'danger' if cpu > 90 else '' }}" style="width: {{ cpu }}%"></div>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Memory</span>
+                <span class="metric-value {{ 'warning' if mem > 80 else 'danger' if mem > 95 else '' }}">{{ mem }}%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill {{ 'warning' if mem > 80 else 'danger' if mem > 95 else '' }}" style="width: {{ mem }}%"></div>
+            </div>
+            <div class="metric-row">
+                <span class="metric-label">Processes</span>
+                <span class="metric-value">{{ processes }}</span>
+            </div>
+        </div>
+        
+        <!-- STRATEGIES -->
+        <div class="card">
+            <div class="card-title">Active Strategies</div>
+            <div class="strategy-card scanning">
+                <span>Scanning</span>
+                <span class="metric-value">{{ strat_scan }}%</span>
+            </div>
+            <div class="strategy-card arbitrage">
+                <span>Arbitrage</span>
+                <span class="metric-value info">{{ strat_arb }}%</span>
+            </div>
+            <div class="strategy-card yield">
+                <span>Yield</span>
+                <span class="metric-value warning">{{ strat_yield }}%</span>
+            </div>
+            <div class="strategy-card sniper">
+                <span>Sniper</span>
+                <span class="metric-value danger">{{ strat_snipe }}%</span>
+            </div>
+            <div class="strategy-card social">
+                <span>Social</span>
+                <span class="metric-value">{{ strat_social }}%</span>
+            </div>
+        </div>
+        
+        <!-- RECENT ALERTS -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <div class="card-title">Recent Alerts</div>
+            <div class="log-container">
+                {% for alert in recent_alerts %}
+                <div class="log-entry">
+                    <span class="log-time">{{ alert.time }}</span>
+                    <span class="log-{{ alert.level }}">{{ alert.message }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- RECENT LOGS -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <div class="card-title">System Logs</div>
+            <div class="log-container">
+                {% for log in recent_logs %}
+                <div class="log-entry">
+                    <span class="log-time">{{ log.time }}</span>
+                    <span class="log-{{ log.level }}">{{ log.message }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        SWARM DESKTOP SERVER v1.0 | Auto-refresh every 5s | OpenClaw + Kimi + Telegram + Swarm Intelligence
+    </div>
+    
+    <script>
+        setInterval(function() {
+            window.location.reload();
+        }, 5000);
+    </script>
+</body>
+</html>

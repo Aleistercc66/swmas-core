@@ -1,0 +1,2777 @@
+{
+  "known_errors": {},
+  "fixes_applied": [],
+  "research_history": [
+    {
+      "time": "2026-05-09T08:49:16.459087",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T08:49:15.285975"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T08:49:15.305319"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T08:49:16.458519"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T09:19:17.572116",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T09:19:16.515375"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T09:19:16.533904"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T09:19:17.571677"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T09:49:18.662576",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T09:49:17.666995"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T09:49:17.678896"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T09:49:18.662115"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T10:19:19.748169",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T10:19:18.725902"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T10:19:18.737132"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T10:19:19.747712"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T10:49:20.769715",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T10:49:19.807309"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T10:49:19.818532"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T10:49:20.769131"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T11:19:21.655978",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T11:19:20.838824"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T11:19:20.852605"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T11:19:21.655303"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T11:49:22.688601",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T11:49:21.717155"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T11:49:21.731768"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T11:49:22.688070"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T12:19:23.530953",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T12:19:22.749936"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T12:19:22.761178"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T12:19:23.530432"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T12:49:24.799738",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T12:49:23.592152"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T12:49:23.604284"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T12:49:24.798690"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T13:19:26.235799",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T13:19:24.867204"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T13:19:24.878669"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T13:19:26.235303"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T13:49:27.024380",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T13:49:26.290497"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T13:49:26.305980"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T13:49:27.023792"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T14:19:28.030161",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T14:19:27.080371"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T14:19:27.094147"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T14:19:28.029707"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T14:49:29.057808",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T14:49:28.099327"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T14:49:28.116333"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T14:49:29.057234"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T15:19:30.532658",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T15:19:29.126847"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T15:19:29.139441"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T15:19:30.532165"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T15:49:31.756790",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T15:49:30.592169"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T15:49:30.606312"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T15:49:31.756250"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T16:19:32.810926",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T16:19:31.819642"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T16:19:31.837733"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T16:19:32.810331"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T16:49:34.708786",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T16:49:32.868948"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T16:49:32.880717"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T16:49:34.708277"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T17:19:35.747226",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T17:19:34.770977"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T17:19:34.783728"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T17:19:35.746618"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T17:49:36.981353",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T17:49:35.799700"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T17:49:35.813229"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T17:49:36.980842"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T18:19:38.205285",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T18:19:37.040528"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T18:19:37.059635"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T18:19:38.204665"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T18:49:38.985634",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T18:49:38.265337"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T18:49:38.277432"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T18:49:38.985175"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T19:19:40.347734",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T19:19:39.048271"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T19:19:39.063960"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T19:19:40.347262"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T19:49:41.376470",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T19:49:40.417701"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T19:49:40.431157"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T19:49:41.375785"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T20:19:42.577079",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T20:19:41.435213"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T20:19:41.442413"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T20:19:42.576586"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T20:49:43.929133",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T20:49:42.801508"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T20:49:42.816032"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T20:49:43.928640"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T21:19:45.014904",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T21:19:43.984948"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T21:19:43.998618"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T21:19:45.014402"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T21:49:46.358520",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T21:49:45.075259"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T21:49:45.089655"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T21:49:46.358059"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T22:19:47.153771",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T22:19:46.425597"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T22:19:46.441529"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T22:19:47.153241"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T22:49:47.965015",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T22:49:47.224044"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T22:49:47.239985"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T22:49:47.964508"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T23:19:49.532977",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T23:19:48.029895"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T23:19:48.101269"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T23:19:49.532410"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-09T23:49:50.628528",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-09T23:49:49.635576"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-09T23:49:49.650176"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-09T23:49:50.628012"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T00:19:51.945841",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T00:19:50.770253"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T00:19:50.787143"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T00:19:51.945379"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T00:49:52.971710",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T00:49:52.006061"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T00:49:52.018253"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T00:49:52.971181"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T01:19:54.232729",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T01:19:53.033001"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T01:19:53.046602"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T01:19:54.232206"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T01:49:54.998794",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T01:49:54.292500"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T01:49:54.310534"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T01:49:54.998261"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T02:19:56.095880",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T02:19:55.057371"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T02:19:55.067946"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T02:19:56.095374"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T02:49:57.357916",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T02:49:56.148945"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T02:49:56.164042"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T02:49:57.357430"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T03:19:58.319988",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T03:19:57.414464"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T03:19:57.425764"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T03:19:58.319559"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T03:49:59.565748",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T03:49:58.377896"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T03:49:58.390341"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T03:49:59.565247"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T04:20:00.573012",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T04:19:59.631464"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T04:19:59.643164"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T04:20:00.572571"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T04:50:01.755495",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T04:50:00.631123"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T04:50:00.642235"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T04:50:01.754872"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T05:20:02.808328",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T05:20:01.822662"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T05:20:01.834713"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T05:20:02.808028"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T05:50:03.838576",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T05:50:02.876942"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T05:50:02.888927"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T05:50:03.838331"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T05:55:00.200021",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T05:54:59.026654"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T05:54:59.038369"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T05:55:00.199542"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T06:25:01.640292",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T06:25:00.263261"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T06:25:00.272851"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T06:25:01.639826"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T06:33:21.964356",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T06:33:20.938030"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T06:33:20.950515"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T06:33:21.963841"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T07:03:23.026674",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T07:03:22.029543"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T07:03:22.045516"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T07:03:23.025963"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T07:33:23.998780",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T07:33:23.087548"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T07:33:23.100933"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T07:33:23.998206"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T08:03:25.313658",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T08:03:24.054567"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T08:03:24.067935"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T08:03:25.313219"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T08:23:46.883606",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T08:23:45.598779"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T08:23:45.612086"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T08:23:46.883028"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T08:24:25.738547",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T08:24:24.977559"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T08:24:24.982023"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T08:24:25.738075"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T08:54:26.731515",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T08:54:25.797448"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T08:54:25.808128"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T08:54:26.731025"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T09:24:28.244238",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T09:24:27.068521"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T09:24:27.131626"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T09:24:28.243405"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T09:54:29.051300",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T09:54:28.309198"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T09:54:28.312303"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T09:54:29.050077"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T10:24:29.862128",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T10:24:29.130828"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T10:24:29.134316"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T10:24:29.861574"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T10:54:31.191634",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T10:54:30.239356"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T10:54:30.253179"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T10:54:31.190120"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T11:26:33.175191",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u274c ERROR: HTTPSConnectionPool(host='api.dexscreener.com', po",
+          "time": "2026-05-10T11:26:11.893937"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T11:26:12.214975"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T11:26:33.124055"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T11:57:27.002645",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T11:57:14.357656"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T11:57:17.016224"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T11:57:25.951224"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T12:28:18.202538",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T12:27:38.434850"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T12:27:42.400780"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T12:28:18.200264"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T12:58:40.286153",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T12:58:25.883495"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T12:58:27.323467"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T12:58:39.306933"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T13:29:09.776625",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T13:29:01.447986"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T13:29:03.768885"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T13:29:09.776309"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T14:03:12.141476",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T14:03:03.476983"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T14:03:03.653008"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T14:03:12.053270"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T16:17:38.916106",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u274c ERROR: HTTPSConnectionPool(host='api.dexscreener.com', po",
+          "time": "2026-05-10T15:00:57.352051"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T15:01:05.181844"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u274c UNREACHABLE",
+          "time": "2026-05-10T16:17:38.511761"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T22:39:38.862342",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u274c ERROR: HTTPSConnectionPool(host='api.dexscreener.com', po",
+          "time": "2026-05-10T20:21:18.545209"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T22:39:37.701713"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T22:39:38.860617"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T23:09:40.074203",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T23:09:38.927751"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T23:09:38.935539"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T23:09:40.073711"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-10T23:39:40.932369",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-10T23:39:40.132931"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-10T23:39:40.143118"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-10T23:39:40.931949"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T00:09:41.698464",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T00:09:40.992382"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T00:09:40.994813"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T00:09:41.698180"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T00:39:42.567112",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T00:39:41.763616"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T00:39:41.773616"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T00:39:42.566713"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T01:09:43.635016",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T01:09:42.630252"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T01:09:42.633102"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T01:09:43.634020"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T01:39:44.534112",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T01:39:43.703248"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T01:39:43.705788"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T01:39:44.533627"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T02:09:45.320536",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T02:09:44.591234"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T02:09:44.593785"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T02:09:45.319983"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T02:39:46.132724",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T02:39:45.380728"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T02:39:45.383076"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T02:39:46.132262"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T03:09:47.160818",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T03:09:46.191401"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T03:09:46.193918"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T03:09:47.160555"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T03:39:48.439008",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T03:39:47.216878"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T03:39:47.219339"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T03:39:48.438536"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T04:09:49.645346",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T04:09:48.494540"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T04:09:48.496974"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T04:09:49.644891"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T04:39:51.074031",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T04:39:49.705098"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T04:39:49.708050"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T04:39:51.073667"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T05:09:52.255195",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T05:09:51.131938"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T05:09:51.134594"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T05:09:52.254663"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T05:39:53.255775",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T05:39:52.319763"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T05:39:52.322356"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T05:39:53.255248"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T06:09:53.996069",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T06:09:53.313271"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T06:09:53.315728"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T06:09:53.995845"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T06:39:55.025787",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T06:39:54.097105"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T06:39:54.099619"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T06:39:55.025234"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T07:09:56.477147",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T07:09:55.084363"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T07:09:55.086817"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T07:09:56.476678"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T07:39:57.497189",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T07:39:56.542563"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T07:39:56.545417"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T07:39:57.496516"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T08:09:58.669162",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T08:09:57.557750"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T08:09:57.560142"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T08:09:58.668732"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T08:39:59.466222",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T08:39:58.732875"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T08:39:58.735876"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T08:39:59.465726"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T09:10:00.359031",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T09:09:59.529409"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T09:09:59.532740"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T09:10:00.358561"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T09:40:01.252184",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T09:40:00.418783"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T09:40:00.421542"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T09:40:01.251664"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T10:10:02.053101",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T10:10:01.319559"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T10:10:01.322194"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T10:10:02.052379"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T10:40:03.287199",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T10:40:02.121789"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T10:40:02.125048"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T10:40:03.286670"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T11:10:04.569938",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T11:10:03.620632"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T11:10:03.623258"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T11:10:04.569300"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T11:40:05.558682",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T11:40:04.655107"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T11:40:04.658112"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T11:40:05.558000"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T12:10:06.361961",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T12:10:05.629948"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T12:10:05.632724"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T12:10:06.361385"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T12:40:08.088211",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T12:40:06.439896"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T12:40:06.442843"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T12:40:08.087565"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T13:10:08.899276",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T13:10:08.198457"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T13:10:08.201049"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T13:10:08.898780"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T13:40:10.110443",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T13:40:08.968179"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T13:40:08.970850"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T13:40:10.109942"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T14:10:11.085373",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T14:10:10.173053"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T14:10:10.175748"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T14:10:11.084749"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T14:40:12.065071",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T14:40:11.157073"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T14:40:11.159989"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T14:40:12.064419"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T15:10:13.354778",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T15:10:12.133190"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T15:10:12.135919"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T15:10:13.354295"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T15:40:14.782046",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T15:40:13.423684"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T15:40:13.426439"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T15:40:14.781523"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T16:10:16.048065",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T16:10:14.850213"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T16:10:14.852856"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T16:10:16.047558"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T16:40:17.262570",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T16:40:16.114598"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T16:40:16.117094"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T16:40:17.262040"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T17:10:18.516979",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T17:10:17.601519"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T17:10:17.604145"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T17:10:18.516545"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T17:40:19.767015",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T17:40:18.591608"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T17:40:18.594134"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T17:40:19.766513"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T18:10:21.342940",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T18:10:19.829597"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T18:10:19.831934"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T18:10:21.342468"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T18:40:22.539552",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T18:40:21.406173"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T18:40:21.408763"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T18:40:22.538892"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T19:10:23.643639",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T19:10:22.604910"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T19:10:22.613442"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T19:10:23.642920"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T19:40:24.857376",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T19:40:23.714976"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T19:40:23.717644"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T19:40:24.856792"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T20:10:25.914042",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T20:10:24.931077"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T20:10:24.940516"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T20:10:25.913338"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T20:40:27.268618",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T20:40:25.982389"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T20:40:25.984957"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T20:40:27.268105"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T21:10:28.127280",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T21:10:27.331203"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T21:10:27.333616"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T21:10:28.126852"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T21:40:29.262357",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T21:40:28.194721"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T21:40:28.197509"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T21:40:29.261928"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T22:10:30.619692",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T22:10:29.326096"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T22:10:29.334053"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T22:10:30.619217"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T22:40:31.725582",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T22:40:30.694665"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T22:40:30.697714"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T22:40:31.725142"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T23:10:33.429164",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T23:10:31.786391"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T23:10:31.788829"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T23:10:33.428718"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-11T23:40:34.239636",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-11T23:40:33.542899"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-11T23:40:33.545572"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-11T23:40:34.239164"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T00:10:35.712716",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T00:10:34.313663"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T00:10:34.316792"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T00:10:35.712182"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T00:40:37.159337",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T00:40:35.777151"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T00:40:35.779703"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T00:40:37.158809"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T01:10:38.154034",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T01:10:37.221642"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T01:10:37.230937"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T01:10:38.153562"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T01:40:39.117847",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T01:40:38.216899"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T01:40:38.219537"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T01:40:39.117264"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T02:10:40.256968",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T02:10:39.223845"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T02:10:39.226575"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T02:10:40.256022"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T02:40:41.317663",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T02:40:40.315538"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T02:40:40.318167"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T02:40:41.317220"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T03:10:42.766159",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T03:10:41.377928"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T03:10:41.380734"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T03:10:42.765654"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T03:40:43.545238",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T03:40:42.836152"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T03:40:42.838715"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T03:40:43.544753"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T04:10:44.329271",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T04:10:43.607743"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T04:10:43.610135"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T04:10:44.328848"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T04:40:45.756840",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T04:40:44.391186"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T04:40:44.393825"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T04:40:45.756257"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T05:10:47.156588",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T05:10:45.816316"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T05:10:45.818553"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T05:10:47.156109"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T05:40:48.572338",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T05:40:47.452330"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T05:40:47.454886"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T05:40:48.571848"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T06:10:50.046160",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T06:10:48.631101"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T06:10:48.633663"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T06:10:50.045594"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T06:40:51.519288",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T06:40:50.115523"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T06:40:50.118200"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T06:40:51.518530"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T07:10:52.554382",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T07:10:51.577609"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T07:10:51.580050"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T07:10:52.553898"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T07:40:53.353821",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T07:40:52.612624"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T07:40:52.615167"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T07:40:53.353239"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T08:10:55.160917",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T08:10:53.879299"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T08:10:53.900721"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T08:10:55.160356"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-12T08:40:58.436130",
+      "findings": [
+        {
+          "tool": "DexScreener API",
+          "status": "\u2705 ACTIVE",
+          "pairs_found": 30,
+          "time": "2026-05-12T08:40:55.658639"
+        },
+        {
+          "tool": "Jupiter Price API",
+          "status": "\u274c UNAVAILABLE: HTTPSConnectionPool(host='price.jup.ag', port=443)",
+          "time": "2026-05-12T08:40:55.684331"
+        },
+        {
+          "tool": "Pump.fun",
+          "status": "\u2705 ACTIVE",
+          "time": "2026-05-12T08:40:58.435228"
+        }
+      ]
+    }
+  ],
+  "system_patterns": {},
+  "last_updated": "2026-05-12T09:09:25.527796"
+}

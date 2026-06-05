@@ -1,0 +1,11 @@
+{
+  "wallets": {},
+  "tracked": [],
+  "stats": {
+    "wallets_analyzed": 0,
+    "wallets_qualified": 0,
+    "signals_generated": 0,
+    "alerts_sent": 0
+  },
+  "saved_at": "2026-06-05T20:33:29.986243"
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoiximan Cashout Strategy - Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">⚡ Cashout Pro</div>
+                <div class="status-indicator" id="status-dot"></div>
+                <span id="status-text">Initializing...</span>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-primary" id="btn-start" onclick="startApp()">▶ Start</button>
+                <button class="btn btn-danger" id="btn-stop" onclick="stopApp()" disabled>⏹ Stop</button>
+                <button class="btn btn-secondary" onclick="refreshData()">🔄 Refresh</button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value" id="stat-total">0</div>
+                <div class="stat-label">Total Opportunities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-value" id="stat-executed">0</div>
+                <div class="stat-label">Executed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-value" id="stat-profit">0%</div>
+                <div class="stat-label">Avg Profit</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value" id="stat-winrate">0%</div>
+                <div class="stat-label">Win Rate</div>
+            </div>
+            <div class="stat-card highlight">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value" id="stat-today">0</div>
+                <div class="stat-label">Today's Opportunities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-value" id="stat-active">0</div>
+                <div class="stat-label">Active Tracking</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Opportunities Table -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>🎯 Live Opportunities</h2>
+                    <div class="filters">
+                        <select id="filter-status" onchange="filterOpportunities()">
+                            <option value="all">All Status</option>
+                            <option value="detected">Detected</option>
+                            <option value="tracking">Tracking</option>
+                            <option value="cashout_ready">🔥 Cashout Ready</option>
+                            <option value="executed">Executed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="opportunities-table">
+                        <thead>
+                            <tr>
+                                <th>Match</th>
+                                <th>League</th>
+                                <th>Kickoff</th>
+                                <th>Market</th>
+                                <th>Pinnacle Drop</th>
+                                <th>Stoiximan Odds</th>
+                                <th>Value Edge</th>
+                                <th>Confidence</th>
+                                <th>Golden Hour</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="opportunities-body">
+                            <tr class="empty-row">
+                                <td colspan="11">No opportunities yet. Start scanning to find them!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Strategy Info -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>📋 Two-Step Cashout Strategy</h2>
+                </div>
+                <div class="strategy-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Monitor Pinnacle</h3>
+                            <p>Watch for dropping odds on sharp bookmaker. &gt;5% drop = smart money signal.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Check Stoiximan</h3>
+                            <p>If Stoiximan hasn't adjusted yet, there's a value window. Check odds difference.</p>
+                        </div>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Golden Hour Cashout</h3>
+                            <p>60-90 min before kickoff, when lineups are announced. Cashout for 1-4% profit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OSINT Reports -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>🔍 OSINT Intelligence</h2>
+                    <span id="mode-badge" class="badge badge-info">DEMO MODE</span>
+                </div>
+                <div id="osint-container" class="osint-container">
+                    <div class="empty-row">OSINT reports will appear when opportunities are detected</div>
+                </div>
+            </div>
+
+            <!-- Settings Panel -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>⚙️ Settings</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label>Scan Interval (seconds)</label>
+                        <input type="number" id="scan-interval" value="120" min="30" max="600">
+                    </div>
+                    <div class="setting-item">
+                        <label>Min Drop % to Alert</label>
+                        <input type="number" id="min-drop" value="5" min="1" max="20">
+                    </div>
+                    <div class="setting-item">
+                        <label>Min Confidence Score</label>
+                        <input type="number" id="min-confidence" value="60" min="0" max="100">
+                    </div>
+                    <div class="setting-item">
+                        <label>Bankroll (€)</label>
+                        <input type="number" id="bankroll" value="2000" min="100">
+                    </div>
+                    <div class="setting-item">
+                        <label>Max Stake %</label>
+                        <input type="number" id="max-stake" value="3" min="1" max="10">
+                    </div>
+                    <div class="setting-item">
+                        <label>Telegram Alerts</label>
+                        <input type="checkbox" id="telegram-alerts" checked>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="saveSettings()">💾 Save Settings</button>
+            </div>
+
+            <!-- Log Panel -->
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>📝 Activity Log</h2>
+                    <button class="btn btn-small" onclick="clearLogs()">Clear</button>
+                </div>
+                <div class="log-container" id="log-container">
+                    <div class="log-entry">System initialized. Ready to start.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>Stoiximan Cashout Strategy App v1.0</span>
+            <span id="last-scan">Last scan: Never</span>
+        </footer>
+    </div>
+
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>

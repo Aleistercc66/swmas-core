@@ -1,0 +1,185 @@
+{
+  "learned_techniques": [
+    {
+      "name": "DexScreener Scanning",
+      "description": "Scan DEX pairs for new tokens and momentum",
+      "effectiveness": 0.9,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.969455"
+    },
+    {
+      "name": "Telegram Channel Monitoring",
+      "description": "Monitor public crypto channels for alpha",
+      "effectiveness": 0.85,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.969859"
+    },
+    {
+      "name": "Twitter Sentiment Analysis",
+      "description": "Analyze crypto Twitter sentiment trends",
+      "effectiveness": 0.8,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970023"
+    },
+    {
+      "name": "Reddit Crypto Subreddit Tracking",
+      "description": "Track r/CryptoCurrency, r/SatoshiStreetBets",
+      "effectiveness": 0.75,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970153"
+    },
+    {
+      "name": "Blockchain Address Clustering",
+      "description": "Group addresses by behavior patterns",
+      "effectiveness": 0.9,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970236"
+    },
+    {
+      "name": "GitHub Repository Analysis",
+      "description": "Analyze developer activity and code changes",
+      "effectiveness": 0.7,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970297"
+    },
+    {
+      "name": "News Aggregation",
+      "description": "Aggregate crypto news from multiple sources",
+      "effectiveness": 0.8,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970394"
+    },
+    {
+      "name": "Token Holder Distribution",
+      "description": "Analyze token distribution patterns",
+      "effectiveness": 0.85,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970479"
+    },
+    {
+      "name": "Smart Contract Verification",
+      "description": "Verify and analyze contract code",
+      "effectiveness": 0.8,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970538"
+    },
+    {
+      "name": "Whale Wallet Tracking",
+      "description": "Track large wallet movements",
+      "effectiveness": 0.9,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970594"
+    },
+    {
+      "name": "MEV Pattern Recognition",
+      "description": "Identify MEV extraction patterns",
+      "effectiveness": 0.75,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970647"
+    },
+    {
+      "name": "Cross-Chain Bridge Monitoring",
+      "description": "Monitor bridge flows and volumes",
+      "effectiveness": 0.7,
+      "uses": 0,
+      "discovered_at": "2026-05-25T03:58:27.970716"
+    }
+  ],
+  "discovered_sources": {
+    "DexScreener": {
+      "url": "https://dexscreener.com",
+      "category": "market_data",
+      "reliability": 0.95,
+      "discovered_at": "2026-05-25T03:58:27.970788"
+    },
+    "CoinGecko": {
+      "url": "https://coingecko.com",
+      "category": "market_data",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970797"
+    },
+    "CoinMarketCap": {
+      "url": "https://coinmarketcap.com",
+      "category": "market_data",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970801"
+    },
+    "DeFiLlama": {
+      "url": "https://defillama.com",
+      "category": "defi_analytics",
+      "reliability": 0.95,
+      "discovered_at": "2026-05-25T03:58:27.970805"
+    },
+    "Birdeye": {
+      "url": "https://birdeye.so",
+      "category": "solana_dex",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970808"
+    },
+    "Solscan": {
+      "url": "https://solscan.io",
+      "category": "blockchain_explorer",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970812"
+    },
+    "Etherscan": {
+      "url": "https://etherscan.io",
+      "category": "blockchain_explorer",
+      "reliability": 0.95,
+      "discovered_at": "2026-05-25T03:58:27.970816"
+    },
+    "Twitter/X": {
+      "url": "https://twitter.com",
+      "category": "social_sentiment",
+      "reliability": 0.7,
+      "discovered_at": "2026-05-25T03:58:27.970819"
+    },
+    "Reddit": {
+      "url": "https://reddit.com",
+      "category": "social_sentiment",
+      "reliability": 0.75,
+      "discovered_at": "2026-05-25T03:58:27.970822"
+    },
+    "GitHub": {
+      "url": "https://github.com",
+      "category": "developer_activity",
+      "reliability": 0.8,
+      "discovered_at": "2026-05-25T03:58:27.970856"
+    },
+    "CryptoPanic": {
+      "url": "https://cryptopanic.com",
+      "category": "news_aggregation",
+      "reliability": 0.85,
+      "discovered_at": "2026-05-25T03:58:27.970859"
+    },
+    "DefiPulse": {
+      "url": "https://defipulse.com",
+      "category": "defi_analytics",
+      "reliability": 0.8,
+      "discovered_at": "2026-05-25T03:58:27.970864"
+    },
+    "Nansen": {
+      "url": "https://nansen.ai",
+      "category": "whale_tracking",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970867"
+    },
+    "Dune Analytics": {
+      "url": "https://dune.com",
+      "category": "on_chain_analytics",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970876"
+    },
+    "Messari": {
+      "url": "https://messari.io",
+      "category": "research_reports",
+      "reliability": 0.9,
+      "discovered_at": "2026-05-25T03:58:27.970880"
+    }
+  },
+  "patterns": {},
+  "wallet_labels": {},
+  "project_intel": {},
+  "sentiment_models": {},
+  "last_updated": "2026-05-25T03:58:27.976664"
+}

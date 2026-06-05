@@ -1,0 +1,112 @@
+{
+  "timestamp": "2026-05-12T11:25:23.065678",
+  "results": [
+    {
+      "symbol": "JTO",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065456"
+    },
+    {
+      "symbol": "SOL",
+      "fomo_score": 30,
+      "status": "MODERATE_FOMO",
+      "rejections": [
+        "Volume climax \u2014 blow-off top pattern"
+      ],
+      "timestamp": "2026-05-12T11:25:23.065569"
+    },
+    {
+      "symbol": "XRP",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065583"
+    },
+    {
+      "symbol": "DOGE",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065590"
+    },
+    {
+      "symbol": "Bonk",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065598"
+    },
+    {
+      "symbol": "BTC",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065605"
+    },
+    {
+      "symbol": "ADA",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065619"
+    },
+    {
+      "symbol": "WIF",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065626"
+    },
+    {
+      "symbol": "PEPE",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065633"
+    },
+    {
+      "symbol": "FLOKI",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065640"
+    },
+    {
+      "symbol": "ETH",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065647"
+    },
+    {
+      "symbol": "LINK",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065653"
+    },
+    {
+      "symbol": "SHIB",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065660"
+    },
+    {
+      "symbol": "TRUMP",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065666"
+    },
+    {
+      "symbol": "JUP",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-12T11:25:23.065672"
+    }
+  ]
+}

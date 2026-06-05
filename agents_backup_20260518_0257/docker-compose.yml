@@ -1,0 +1,172 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: trading_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  db:
+    image: postgres:16-alpine
+    container_name: trading_db
+    environment:
+      POSTGRES_DB: trading
+      POSTGRES_USER: trader
+      POSTGRES_PASSWORD: strongpassword123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trader -d trading"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=15d'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+
+  # ── Trading Swarm Agents ──
+
+  scanner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: scanner
+    command: python -m agents_v2.scanner_event_driven
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import redis; redis.Redis(host=\"redis\").ping()'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  validator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: validator
+    command: python -m agents_v2.validator_event_driven
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+      - scanner
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import redis; redis.Redis(host=\"redis\").ping()'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  risk_engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: risk_engine
+    command: python -m agents_v2.risk_engine_event_driven
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+      - validator
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import redis; redis.Redis(host=\"redis\").ping()'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  master:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: master_orchestrator
+    command: python -m agents_v2.master_orchestrator
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+      - risk_engine
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import redis; redis.Redis(host=\"redis\").ping()'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  position_monitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: position_monitor
+    command: python -m agents_v2.position_monitor_event_driven
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+      - master
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import redis; redis.Redis(host=\"redis\").ping()'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  telegram_handler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telegram_handler
+    command: python -m agents_v2.telegram_event_handler
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+      - master
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  postgres_data:
+  grafana_data:

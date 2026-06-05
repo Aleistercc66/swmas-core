@@ -1,0 +1,2200 @@
+{
+  "learning": {
+    "pattern_2026-05-26T11:13:02.681695": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 2,
+          "MonitorAgent": 13,
+          "AnalysisAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 17,
+        "analyzed_at": "2026-05-26T11:13:02.680804"
+      },
+      "stored_at": "2026-05-26T11:13:02.681737",
+      "access_count": 0
+    },
+    "pattern_2026-05-26T15:23:04.422823": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 3,
+          "MonitorAgent": 19,
+          "AnalysisAgent": 3,
+          "LearnAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 19,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 26,
+        "analyzed_at": "2026-05-26T15:23:04.422703"
+      },
+      "stored_at": "2026-05-26T15:23:04.422834",
+      "access_count": 0
+    },
+    "pattern_2026-05-26T19:33:05.576208": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 3,
+          "MonitorAgent": 25,
+          "AnalysisAgent": 4,
+          "LearnAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 25,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 33,
+        "analyzed_at": "2026-05-26T19:33:05.576152"
+      },
+      "stored_at": "2026-05-26T19:33:05.576212",
+      "access_count": 0
+    },
+    "pattern_2026-05-26T23:43:06.089889": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 4,
+          "MonitorAgent": 31,
+          "AnalysisAgent": 5,
+          "LearnAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 31,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 41,
+        "analyzed_at": "2026-05-26T23:43:06.089825"
+      },
+      "stored_at": "2026-05-26T23:43:06.089896",
+      "access_count": 0
+    },
+    "pattern_2026-05-27T12:24:09.456020": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 2,
+          "MonitorAgent": 13,
+          "AnalysisAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 17,
+        "analyzed_at": "2026-05-27T12:24:09.455877"
+      },
+      "stored_at": "2026-05-27T12:24:09.456033",
+      "access_count": 0
+    },
+    "pattern_2026-05-27T16:34:11.195041": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 3,
+          "MonitorAgent": 19,
+          "AnalysisAgent": 3,
+          "LearnAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 19,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 26,
+        "analyzed_at": "2026-05-27T16:34:11.194914"
+      },
+      "stored_at": "2026-05-27T16:34:11.195047",
+      "access_count": 0
+    },
+    "pattern_2026-05-27T20:44:12.345036": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 3,
+          "MonitorAgent": 25,
+          "AnalysisAgent": 4,
+          "LearnAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 25,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 33,
+        "analyzed_at": "2026-05-27T20:44:12.344888"
+      },
+      "stored_at": "2026-05-27T20:44:12.345041",
+      "access_count": 0
+    },
+    "pattern_2026-05-28T00:54:12.839968": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 4,
+          "MonitorAgent": 31,
+          "AnalysisAgent": 5,
+          "LearnAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 31,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 41,
+        "analyzed_at": "2026-05-28T00:54:12.839901"
+      },
+      "stored_at": "2026-05-28T00:54:12.839972",
+      "access_count": 0
+    },
+    "pattern_2026-05-28T05:04:14.982930": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 5,
+          "MonitorAgent": 37,
+          "AnalysisAgent": 6,
+          "LearnAgent": 2,
+          "AutomationAgent": 1,
+          "ContentAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 37,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 52,
+        "analyzed_at": "2026-05-28T05:04:14.982852"
+      },
+      "stored_at": "2026-05-28T05:04:14.982933",
+      "access_count": 0
+    },
+    "pattern_2026-05-28T09:14:17.377056": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 5,
+          "MonitorAgent": 44,
+          "AnalysisAgent": 7,
+          "LearnAgent": 2,
+          "AutomationAgent": 1,
+          "ContentAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 44,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 60,
+        "analyzed_at": "2026-05-28T09:14:17.376992"
+      },
+      "stored_at": "2026-05-28T09:14:17.377060",
+      "access_count": 0
+    },
+    "pattern_2026-05-28T13:24:19.239195": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 6,
+          "MonitorAgent": 50,
+          "AnalysisAgent": 8,
+          "LearnAgent": 2,
+          "AutomationAgent": 1,
+          "ContentAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 50,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 8,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 68,
+        "analyzed_at": "2026-05-28T13:24:19.239037"
+      },
+      "stored_at": "2026-05-28T13:24:19.239212",
+      "access_count": 0
+    },
+    "pattern_2026-05-28T17:34:20.545284": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 7,
+          "MonitorAgent": 56,
+          "AnalysisAgent": 9,
+          "LearnAgent": 3,
+          "AutomationAgent": 1,
+          "ContentAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 56,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 9,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 77,
+        "analyzed_at": "2026-05-28T17:34:20.545206"
+      },
+      "stored_at": "2026-05-28T17:34:20.545288",
+      "access_count": 0
+    },
+    "pattern_2026-05-28T21:44:21.190613": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 7,
+          "MonitorAgent": 62,
+          "AnalysisAgent": 10,
+          "LearnAgent": 3,
+          "AutomationAgent": 1,
+          "ContentAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 62,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 10,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 84,
+        "analyzed_at": "2026-05-28T21:44:21.190534"
+      },
+      "stored_at": "2026-05-28T21:44:21.190617",
+      "access_count": 0
+    },
+    "pattern_2026-05-29T01:54:22.831475": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 8,
+          "MonitorAgent": 68,
+          "AnalysisAgent": 11,
+          "LearnAgent": 3,
+          "AutomationAgent": 1,
+          "ContentAgent": 1
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 8,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 68,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 11,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 1,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 92,
+        "analyzed_at": "2026-05-29T01:54:22.831320"
+      },
+      "stored_at": "2026-05-29T01:54:22.831480",
+      "access_count": 0
+    },
+    "pattern_2026-05-29T06:04:25.342702": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 10,
+          "MonitorAgent": 74,
+          "AnalysisAgent": 12,
+          "LearnAgent": 4,
+          "AutomationAgent": 2,
+          "ContentAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 10,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 74,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 12,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 104,
+        "analyzed_at": "2026-05-29T06:04:25.342629"
+      },
+      "stored_at": "2026-05-29T06:04:25.342706",
+      "access_count": 0
+    },
+    "pattern_2026-05-29T10:14:27.333277": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 11,
+          "MonitorAgent": 82,
+          "AnalysisAgent": 13,
+          "LearnAgent": 4,
+          "AutomationAgent": 2,
+          "ContentAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 11,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 82,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 114,
+        "analyzed_at": "2026-05-29T10:14:27.333178"
+      },
+      "stored_at": "2026-05-29T10:14:27.333283",
+      "access_count": 0
+    },
+    "pattern_2026-05-29T14:24:28.782613": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 11,
+          "MonitorAgent": 88,
+          "AnalysisAgent": 14,
+          "LearnAgent": 4,
+          "AutomationAgent": 2,
+          "ContentAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 11,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 88,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 14,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 121,
+        "analyzed_at": "2026-05-29T14:24:28.782547"
+      },
+      "stored_at": "2026-05-29T14:24:28.782617",
+      "access_count": 0
+    },
+    "pattern_2026-05-29T18:34:29.610936": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 12,
+          "MonitorAgent": 94,
+          "AnalysisAgent": 15,
+          "LearnAgent": 5,
+          "AutomationAgent": 2,
+          "ContentAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 12,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 94,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 15,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 130,
+        "analyzed_at": "2026-05-29T18:34:29.610784"
+      },
+      "stored_at": "2026-05-29T18:34:29.610943",
+      "access_count": 0
+    },
+    "pattern_2026-05-29T22:44:30.670980": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 13,
+          "MonitorAgent": 100,
+          "AnalysisAgent": 16,
+          "LearnAgent": 5,
+          "AutomationAgent": 2,
+          "ContentAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 100,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 16,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 138,
+        "analyzed_at": "2026-05-29T22:44:30.670895"
+      },
+      "stored_at": "2026-05-29T22:44:30.670984",
+      "access_count": 0
+    },
+    "pattern_2026-05-30T02:54:33.285833": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 13,
+          "MonitorAgent": 106,
+          "AnalysisAgent": 17,
+          "LearnAgent": 5,
+          "AutomationAgent": 2,
+          "ContentAgent": 2
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 106,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 17,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 2,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 145,
+        "analyzed_at": "2026-05-30T02:54:33.285687"
+      },
+      "stored_at": "2026-05-30T02:54:33.285839",
+      "access_count": 0
+    },
+    "pattern_2026-05-30T07:04:35.343690": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 14,
+          "MonitorAgent": 112,
+          "AnalysisAgent": 18,
+          "LearnAgent": 6,
+          "AutomationAgent": 3,
+          "ContentAgent": 3
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 14,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 112,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 18,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 156,
+        "analyzed_at": "2026-05-30T07:04:35.343595"
+      },
+      "stored_at": "2026-05-30T07:04:35.343695",
+      "access_count": 0
+    },
+    "pattern_2026-05-30T11:14:36.898700": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 15,
+          "MonitorAgent": 119,
+          "AnalysisAgent": 19,
+          "LearnAgent": 6,
+          "AutomationAgent": 3,
+          "ContentAgent": 3
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 15,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 119,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 19,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 165,
+        "analyzed_at": "2026-05-30T11:14:36.898636"
+      },
+      "stored_at": "2026-05-30T11:14:36.898704",
+      "access_count": 0
+    },
+    "pattern_2026-05-30T15:24:37.802242": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 15,
+          "MonitorAgent": 125,
+          "AnalysisAgent": 20,
+          "LearnAgent": 6,
+          "AutomationAgent": 3,
+          "ContentAgent": 3
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 15,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 125,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 20,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 172,
+        "analyzed_at": "2026-05-30T15:24:37.802177"
+      },
+      "stored_at": "2026-05-30T15:24:37.802246",
+      "access_count": 0
+    },
+    "pattern_2026-05-30T19:34:38.339142": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 16,
+          "MonitorAgent": 131,
+          "AnalysisAgent": 21,
+          "LearnAgent": 7,
+          "AutomationAgent": 3,
+          "ContentAgent": 3
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 16,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 131,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 21,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 181,
+        "analyzed_at": "2026-05-30T19:34:38.338911"
+      },
+      "stored_at": "2026-05-30T19:34:38.339151",
+      "access_count": 0
+    },
+    "pattern_2026-05-30T23:44:41.046556": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 17,
+          "MonitorAgent": 137,
+          "AnalysisAgent": 22,
+          "LearnAgent": 7,
+          "AutomationAgent": 3,
+          "ContentAgent": 3
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 17,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 137,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 22,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 189,
+        "analyzed_at": "2026-05-30T23:44:41.046432"
+      },
+      "stored_at": "2026-05-30T23:44:41.046560",
+      "access_count": 0
+    },
+    "pattern_2026-05-31T03:54:43.271963": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 17,
+          "MonitorAgent": 143,
+          "AnalysisAgent": 23,
+          "LearnAgent": 7,
+          "AutomationAgent": 3,
+          "ContentAgent": 3
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 17,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 143,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 23,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 3,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 196,
+        "analyzed_at": "2026-05-31T03:54:43.271869"
+      },
+      "stored_at": "2026-05-31T03:54:43.271967",
+      "access_count": 0
+    },
+    "pattern_2026-05-31T08:04:44.958578": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 19,
+          "MonitorAgent": 149,
+          "AnalysisAgent": 24,
+          "LearnAgent": 8,
+          "AutomationAgent": 4,
+          "ContentAgent": 4
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 19,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 149,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 24,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 8,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 208,
+        "analyzed_at": "2026-05-31T08:04:44.958211"
+      },
+      "stored_at": "2026-05-31T08:04:44.958584",
+      "access_count": 0
+    },
+    "pattern_2026-05-31T12:14:46.091904": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 20,
+          "MonitorAgent": 157,
+          "AnalysisAgent": 26,
+          "LearnAgent": 8,
+          "AutomationAgent": 4,
+          "ContentAgent": 4
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 20,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 157,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 26,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 8,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 219,
+        "analyzed_at": "2026-05-31T12:14:46.091816"
+      },
+      "stored_at": "2026-05-31T12:14:46.091909",
+      "access_count": 0
+    },
+    "pattern_2026-05-31T16:24:46.532613": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 21,
+          "MonitorAgent": 163,
+          "AnalysisAgent": 27,
+          "LearnAgent": 9,
+          "AutomationAgent": 4,
+          "ContentAgent": 4
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 21,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 163,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 27,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 9,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 228,
+        "analyzed_at": "2026-05-31T16:24:46.532516"
+      },
+      "stored_at": "2026-05-31T16:24:46.532617",
+      "access_count": 0
+    },
+    "pattern_2026-05-31T20:34:48.899448": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 21,
+          "MonitorAgent": 169,
+          "AnalysisAgent": 28,
+          "LearnAgent": 9,
+          "AutomationAgent": 4,
+          "ContentAgent": 4
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 21,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 169,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 28,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 9,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 235,
+        "analyzed_at": "2026-05-31T20:34:48.899252"
+      },
+      "stored_at": "2026-05-31T20:34:48.899456",
+      "access_count": 0
+    },
+    "pattern_2026-06-01T00:44:51.277096": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 22,
+          "MonitorAgent": 175,
+          "AnalysisAgent": 29,
+          "LearnAgent": 9,
+          "AutomationAgent": 4,
+          "ContentAgent": 4
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 22,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 175,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 29,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 9,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 4,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 243,
+        "analyzed_at": "2026-06-01T00:44:51.276890"
+      },
+      "stored_at": "2026-06-01T00:44:51.277103",
+      "access_count": 0
+    },
+    "pattern_2026-06-01T04:54:53.122145": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 23,
+          "MonitorAgent": 181,
+          "AnalysisAgent": 30,
+          "LearnAgent": 10,
+          "AutomationAgent": 5,
+          "ContentAgent": 5
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 23,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 181,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 30,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 10,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 254,
+        "analyzed_at": "2026-06-01T04:54:53.122067"
+      },
+      "stored_at": "2026-06-01T04:54:53.122150",
+      "access_count": 0
+    },
+    "pattern_2026-06-01T09:04:54.388106": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 23,
+          "MonitorAgent": 187,
+          "AnalysisAgent": 31,
+          "LearnAgent": 10,
+          "AutomationAgent": 5,
+          "ContentAgent": 5
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 23,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 187,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 31,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 10,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 261,
+        "analyzed_at": "2026-06-01T09:04:54.387726"
+      },
+      "stored_at": "2026-06-01T09:04:54.388113",
+      "access_count": 0
+    },
+    "pattern_2026-06-01T13:14:55.020770": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 24,
+          "MonitorAgent": 194,
+          "AnalysisAgent": 32,
+          "LearnAgent": 10,
+          "AutomationAgent": 5,
+          "ContentAgent": 5
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 24,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 194,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 32,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 10,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 270,
+        "analyzed_at": "2026-06-01T13:14:55.020700"
+      },
+      "stored_at": "2026-06-01T13:14:55.020774",
+      "access_count": 0
+    },
+    "pattern_2026-06-01T17:24:56.864893": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 25,
+          "MonitorAgent": 200,
+          "AnalysisAgent": 33,
+          "LearnAgent": 11,
+          "AutomationAgent": 5,
+          "ContentAgent": 5
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 25,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 200,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 33,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 11,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 279,
+        "analyzed_at": "2026-06-01T17:24:56.864821"
+      },
+      "stored_at": "2026-06-01T17:24:56.864897",
+      "access_count": 0
+    },
+    "pattern_2026-06-01T21:34:59.364843": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 25,
+          "MonitorAgent": 206,
+          "AnalysisAgent": 34,
+          "LearnAgent": 11,
+          "AutomationAgent": 5,
+          "ContentAgent": 5
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 25,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 206,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 34,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 11,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 286,
+        "analyzed_at": "2026-06-01T21:34:59.364676"
+      },
+      "stored_at": "2026-06-01T21:34:59.364848",
+      "access_count": 0
+    },
+    "pattern_2026-06-02T01:45:01.350481": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 26,
+          "MonitorAgent": 212,
+          "AnalysisAgent": 35,
+          "LearnAgent": 11,
+          "AutomationAgent": 5,
+          "ContentAgent": 5
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 26,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 212,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 35,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 11,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 5,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 294,
+        "analyzed_at": "2026-06-02T01:45:01.350254"
+      },
+      "stored_at": "2026-06-02T01:45:01.350488",
+      "access_count": 0
+    },
+    "pattern_2026-06-02T05:55:02.811968": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 28,
+          "MonitorAgent": 218,
+          "AnalysisAgent": 36,
+          "LearnAgent": 12,
+          "AutomationAgent": 6,
+          "ContentAgent": 6
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 28,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 218,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 36,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 12,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 306,
+        "analyzed_at": "2026-06-02T05:55:02.811539"
+      },
+      "stored_at": "2026-06-02T05:55:02.811981",
+      "access_count": 0
+    },
+    "pattern_2026-06-02T10:05:03.623023": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 28,
+          "MonitorAgent": 224,
+          "AnalysisAgent": 37,
+          "LearnAgent": 12,
+          "AutomationAgent": 6,
+          "ContentAgent": 6
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 28,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 224,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 37,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 12,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 313,
+        "analyzed_at": "2026-06-02T10:05:03.622788"
+      },
+      "stored_at": "2026-06-02T10:05:03.623029",
+      "access_count": 0
+    },
+    "pattern_2026-06-02T14:15:04.906604": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 29,
+          "MonitorAgent": 232,
+          "AnalysisAgent": 38,
+          "LearnAgent": 12,
+          "AutomationAgent": 6,
+          "ContentAgent": 6
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 29,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 232,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 38,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 12,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 323,
+        "analyzed_at": "2026-06-02T14:15:04.906459"
+      },
+      "stored_at": "2026-06-02T14:15:04.906610",
+      "access_count": 0
+    },
+    "pattern_2026-06-02T18:25:07.491650": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 30,
+          "MonitorAgent": 238,
+          "AnalysisAgent": 39,
+          "LearnAgent": 13,
+          "AutomationAgent": 6,
+          "ContentAgent": 6
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 30,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 238,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 39,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 332,
+        "analyzed_at": "2026-06-02T18:25:07.491559"
+      },
+      "stored_at": "2026-06-02T18:25:07.491654",
+      "access_count": 0
+    },
+    "pattern_2026-06-02T22:35:09.561731": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 31,
+          "MonitorAgent": 244,
+          "AnalysisAgent": 40,
+          "LearnAgent": 13,
+          "AutomationAgent": 6,
+          "ContentAgent": 6
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 31,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 244,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 40,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 340,
+        "analyzed_at": "2026-06-02T22:35:09.561625"
+      },
+      "stored_at": "2026-06-02T22:35:09.561736",
+      "access_count": 0
+    },
+    "pattern_2026-06-03T02:45:11.094567": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 31,
+          "MonitorAgent": 250,
+          "AnalysisAgent": 41,
+          "LearnAgent": 13,
+          "AutomationAgent": 6,
+          "ContentAgent": 6
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 31,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 250,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 41,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 13,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 6,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 347,
+        "analyzed_at": "2026-06-03T02:45:11.094391"
+      },
+      "stored_at": "2026-06-03T02:45:11.094573",
+      "access_count": 0
+    },
+    "pattern_2026-06-03T06:55:12.014969": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 32,
+          "MonitorAgent": 256,
+          "AnalysisAgent": 42,
+          "LearnAgent": 14,
+          "AutomationAgent": 7,
+          "ContentAgent": 7
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 32,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 256,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 42,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 14,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 358,
+        "analyzed_at": "2026-06-03T06:55:12.014867"
+      },
+      "stored_at": "2026-06-03T06:55:12.014974",
+      "access_count": 0
+    },
+    "pattern_2026-06-03T11:05:12.763517": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 33,
+          "MonitorAgent": 262,
+          "AnalysisAgent": 43,
+          "LearnAgent": 14,
+          "AutomationAgent": 7,
+          "ContentAgent": 7
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 33,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 262,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 43,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 14,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 366,
+        "analyzed_at": "2026-06-03T11:05:12.763186"
+      },
+      "stored_at": "2026-06-03T11:05:12.763524",
+      "access_count": 0
+    },
+    "pattern_2026-06-03T15:15:15.498065": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 33,
+          "MonitorAgent": 269,
+          "AnalysisAgent": 44,
+          "LearnAgent": 14,
+          "AutomationAgent": 7,
+          "ContentAgent": 7
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 33,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 269,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 44,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 14,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 374,
+        "analyzed_at": "2026-06-03T15:15:15.497960"
+      },
+      "stored_at": "2026-06-03T15:15:15.498070",
+      "access_count": 0
+    },
+    "pattern_2026-06-03T19:25:17.700038": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 34,
+          "MonitorAgent": 275,
+          "AnalysisAgent": 45,
+          "LearnAgent": 15,
+          "AutomationAgent": 7,
+          "ContentAgent": 7
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 34,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 275,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 45,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 15,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 383,
+        "analyzed_at": "2026-06-03T19:25:17.699708"
+      },
+      "stored_at": "2026-06-03T19:25:17.700059",
+      "access_count": 0
+    },
+    "pattern_2026-06-03T23:35:19.333725": {
+      "value": {
+        "agent_distribution": {
+          "ResearchAgent": 35,
+          "MonitorAgent": 281,
+          "AnalysisAgent": 46,
+          "LearnAgent": 15,
+          "AutomationAgent": 7,
+          "ContentAgent": 7
+        },
+        "success_rates": {
+          "ResearchAgent": {
+            "success": 35,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "MonitorAgent": {
+            "success": 281,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AnalysisAgent": {
+            "success": 46,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "LearnAgent": {
+            "success": 15,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "AutomationAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          },
+          "ContentAgent": {
+            "success": 7,
+            "fail": 0,
+            "rate": 1.0
+          }
+        },
+        "total_tasks": 391,
+        "analyzed_at": "2026-06-03T23:35:19.333572"
+      },
+      "stored_at": "2026-06-03T23:35:19.333731",
+      "access_count": 0
+    }
+  }
+}

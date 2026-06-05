@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-06-05T10:16:58.226820",
+  "sections": {
+    "crypto": {
+      "name": "CRYPTO MARKETS",
+      "icon": "\ud83d\udcc8",
+      "status": "\ud83d\udfe1 ERROR: object of type 'NoneType' has ",
+      "data": {},
+      "last_updated": "2026-06-05T10:16:58.126921"
+    },
+    "cashout": {
+      "name": "CASHOUT SYSTEM",
+      "icon": "\ud83d\udcb0",
+      "status": "\ud83d\udfe2 ACTIVE",
+      "data": {
+        "tracked_bets": 0,
+        "active_matches": 0,
+        "bookmakers": [
+          "Stoiximan",
+          "Novibet"
+        ]
+      },
+      "last_updated": "2026-06-05T10:16:58.127164"
+    },
+    "swarm": {
+      "name": "SWARM INTELLIGENCE",
+      "icon": "\ud83d\udc1d",
+      "status": "\ud83d\udfe2 ACTIVE",
+      "data": {
+        "generation": 13374,
+        "score": 7.8500000000000005,
+        "actions": 0,
+        "opportunities": 0
+      },
+      "last_updated": "2026-06-05T10:16:58.162289"
+    },
+    "agents": {
+      "name": "AGENT SWARM",
+      "icon": "\ud83e\udd16",
+      "status": "\ud83d\udfe2 ACTIVE",
+      "data": {
+        "active_agents": 15,
+        "agents": [
+          {
+            "name": "Auto Runner",
+            "pid": "62270",
+            "cpu": "0.0",
+            "mem": "0.9",
+            "uptime": "4:49"
+          },
+          {
+            "name": "Telegram Alert",
+            "pid": "103863",
+            "cpu": "0.0",
+            "mem": "0.5",
+            "uptime": "0:20"
+          },
+          {
+            "name": "Enhanced Scanner",
+            "pid": "116071",
+            "cpu": "0.0",
+            "mem": "0.6",
+            "uptime": "3:30"
+          },
+          {
+            "name": "Money Action",
+            "pid": "116075",
+            "cpu": "0.1",
+            "mem": "0.4",
+            "uptime": "13:11"
+          },
+          {
+            "name": "Evolution Engine",
+            "pid": "116077",
+            "cpu": "0.1",
+            "mem": "0.6",
+            "uptime": "12:48"
+          },
+          {
+            "name": "Realtime Interface",
+            "pid": "116682",
+            "cpu": "0.0",
+            "mem": "0.7",
+            "uptime": "0:02"
+          },
+          {
+            "name": "Telegram Orchestrator",
+            "pid": "211257",
+            "cpu": "0.0",
+            "mem": "1.5",
+            "uptime": "0:53"
+          },
+          {
+            "name": "Smart Money",
+            "pid": "217009",
+            "cpu": "0.0",
+            "mem": "0.0",
+            "uptime": "0:00"
+          },
+          {
+            "name": "Smart Money",
+            "pid": "217010",
+            "cpu": "0.0",
+            "mem": "0.5",
+            "uptime": "0:16"
+          },
+          {
+            "name": "Auto Sniper",
+            "pid": "234149",
+            "cpu": "0.0",
+            "mem": "0.0",
+            "uptime": "0:00"
+          }
+        ]
+      },
+      "last_updated": "2026-06-05T10:16:58.189513"
+    },
+    "system": {
+      "name": "SYSTEM HEALTH",
+      "icon": "\ud83d\udcbb",
+      "status": "\ud83d\udfe2 HEALTHY",
+      "data": {
+        "cpu": 3.9,
+        "memory": 62.3,
+        "processes": 157,
+        "disk": 41
+      },
+      "last_updated": "2026-06-05T10:16:58.209494"
+    },
+    "telegram": {
+      "name": "TELEGRAM BOT",
+      "icon": "\ud83d\udcf1",
+      "status": "\ud83d\udfe2 ONLINE",
+      "data": {
+        "bot": "@WorkSS11_bot",
+        "handlers": 40,
+        "commands": [
+          "/dashboard",
+          "/agents",
+          "/cashout",
+          "/scan",
+          "/swarm",
+          "/status",
+          "/help"
+        ]
+      },
+      "last_updated": "2026-06-05T10:16:58.225444"
+    }
+  }
+}

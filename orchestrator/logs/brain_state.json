@@ -1,0 +1,98 @@
+{
+  "context_cache": {
+    "158923136": [
+      {
+        "role": "user",
+        "content": "\u03a3\u03b2\u03ae\u03c3\u03b5 \u03cc\u03bb\u03b1 \u03c4\u03b1 \u03c3\u03ae\u03bc\u03b1\u03c4\u03b1 \u03c4\u03bf\u03c5 polymarket",
+        "timestamp": "2026-06-04T02:51:34.950591"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Analysis** \ud83e\udde0\n\nQuery: _\u03a3\u03b2\u03ae\u03c3\u03b5 \u03cc\u03bb\u03b1 \u03c4\u03b1 \u03c3\u03ae\u03bc\u03b1\u03c4\u03b1 \u03c4\u03bf\u03c5 polymarket_\n\n**Market Intelligence:**\nI'm connected to DexScreener, Jupiter, and multiple exchange APIs.\nUse `/scan` for instant market analysis or `/signal` for trading signals.\n\n**Available Actions:**\n\u2022 `/scan` \u2014 Full market scan\n\u2022 `/signal` \u2014 Trading signals\n\u2022 `/spawn scanner` \u2014 Dedicated scanner agent\n\u2022 `/spawn trader` \u2014 Trading execution agent\n\nWhat would you like to explore?\n        ",
+        "timestamp": "2026-06-04T02:51:34.950623"
+      },
+      {
+        "role": "user",
+        "content": ";",
+        "timestamp": "2026-06-05T08:12:16.228063"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_;_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T08:12:16.228101"
+      },
+      {
+        "role": "user",
+        "content": "\u039f\u03ba",
+        "timestamp": "2026-06-05T08:58:55.084961"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_\u039f\u03ba_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T08:58:55.085019"
+      },
+      {
+        "role": "user",
+        "content": "\u0395\u03bb\u03b1",
+        "timestamp": "2026-06-05T09:00:13.315155"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_\u0395\u03bb\u03b1_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T09:00:13.315202"
+      },
+      {
+        "role": "user",
+        "content": "<\u03b5\u03c7\u03bf\u03c5\u03bc\u03b5 \u03ba\u03ac\u03c4\u03b9)>",
+        "timestamp": "2026-06-05T09:00:35.339285"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_<\u03b5\u03c7\u03bf\u03c5\u03bc\u03b5 \u03ba\u03ac\u03c4\u03b9)>_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T09:00:35.339536"
+      },
+      {
+        "role": "user",
+        "content": "\u03a8",
+        "timestamp": "2026-06-05T09:23:38.933684"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_\u03a8_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T09:23:38.933731"
+      },
+      {
+        "role": "user",
+        "content": "\u039f\u03ba",
+        "timestamp": "2026-06-05T09:32:38.753192"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_\u039f\u03ba_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T09:32:38.753234"
+      },
+      {
+        "role": "user",
+        "content": "Ok",
+        "timestamp": "2026-06-05T09:40:11.317333"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_Ok_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T09:40:11.317587"
+      },
+      {
+        "role": "user",
+        "content": "/\u03c3\u03c8\u03b1\u03bd",
+        "timestamp": "2026-06-05T10:15:54.361670"
+      },
+      {
+        "role": "brain",
+        "content": "\n\ud83e\udde0 **Brain Response** \ud83e\udde0\n\n_/\u03c3\u03c8\u03b1\u03bd_\n\nI hear you! I'm your orchestrator brain \u2014 connected to:\n\u2022 \ud83e\udd16 Swarm of specialized agents\n\u2022 \ud83d\udcca Real-time market data\n\u2022 \ud83c\udfaf Evolving skill system\n\u2022 \ud83c\udf10 Full workspace access\n\n**What can I do for you?**\n\u2022 Market analysis \u2192 `/scan`\n\u2022 Spawn agents \u2192 `/spawn <type>`\n\u2022 Direct brain query \u2192 `/brain <question>`\n\u2022 Autopilot mode \u2192 `/autopilot`\n\nLet's move! \ud83d\ude80\n        ",
+        "timestamp": "2026-06-05T10:15:54.361712"
+      }
+    ]
+  },
+  "decision_history": [],
+  "last_update": "2026-06-05T10:15:54.362145"
+}

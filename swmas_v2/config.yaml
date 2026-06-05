@@ -1,0 +1,57 @@
+# SWMAS Configuration
+# Self-Wvolving Multiplicative AI Swarm
+
+swarm:
+  name: "SWMAS"
+  version: "1.0.0"
+  max_agents: 100
+  default_agent_ttl: 3600  # seconds
+
+orchestrator:
+  check_interval: 1.0  # seconds
+  default_deadline: 300  # 5 minutes
+  max_concurrent_objectives: 10
+
+communication_bus:
+  history_limit: 10000
+  default_channel: "default"
+  channels:
+    - "swarm"
+    - "research"
+    - "analysis"
+    - "execution"
+    - "monitoring"
+    - "optimization"
+    - "registry"
+    - "objectives"
+    - "results"
+
+shared_memory:
+  db_path: "swmas_memory.db"
+  max_entries: 50000
+  default_ttl: null  # never expire by default
+
+agent_factory:
+  templates:
+    researcher:
+      max_tasks: 10
+      research_depth: 3
+    analyst:
+      max_tasks: 10
+      passive_scan_interval: 10
+    executor:
+      max_tasks: 15
+      default_deadline: 300
+    monitor:
+      max_tasks: 5
+      check_interval: 10
+    optimizer:
+      max_tasks: 5
+      optimization_interval: 30
+
+monitor:
+  thresholds:
+    bus_queue_size: 100
+    memory_entries_max: 45000
+    agent_error_rate: 0.2
+    objective_timeout: 600

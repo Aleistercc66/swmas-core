@@ -1,0 +1,42 @@
+MODE: ULTRA_AGGRESSIVE
+strategy: sniper_x3
+user_id: 158923136
+
+targets:
+  - token: GAMEFUND
+    address: 2ETdRmbeW39Q3Z8RX6NfinYZyDPayKCuVvpqXrmjpump
+    entry_price: 0.0001188
+    take_profit_1: 0.0005940  # +500%
+    take_profit_2: 0.001188   # +1000%
+    take_profit_3: 0.002376   # +2000%
+    stop_loss: 0.00008316     # -30%
+    status: ACTIVE
+    
+  - token: GENWEALTH
+    address: 5gdkymiHDBetTnCBjr1YAeqMCeGJKVFRkumrAAgmpump
+    entry_price: 0.00009811
+    take_profit_1: 0.0003924  # +400%
+    take_profit_2: 0.0007849  # +800%
+    stop_loss: 0.00006867     # -30%
+    status: ACTIVE
+    
+  - token: Summer26
+    address: BbnsAS3r2RNBLxCU1n6dBXzXZBQAPEQC5w82Czsspump
+    entry_price: 0.00007118
+    take_profit_1: 0.0002135  # +300%
+    stop_loss: 0.00004982     # -30%
+    status: ACTIVE
+
+alert_rules:
+  price_check_interval: 60  # seconds
+  pump_threshold_5m: 20     # alert if +20% in 5m
+  pump_threshold_1h: 50     # alert if +50% in 1h
+  dump_threshold_5m: -15   # alert if -15% in 5m
+  volume_spike: 3.0        # alert if volume 3x average
+
+notifications:
+  telegram: 158923136
+  on_entry: true
+  on_tp: true
+  on_sl: true
+  on_pump_detected: true

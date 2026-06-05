@@ -1,0 +1,14 @@
+{
+  "starting_balance": 10000.0,
+  "current_balance": 10000.0,
+  "daily_pnl": 0.0,
+  "daily_trades": 0,
+  "consecutive_losses": 0,
+  "total_trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "total_exposure": 0.0,
+  "mode": "MANUAL",
+  "emergency_active": false,
+  "last_reset": "2026-05-08T08:45:00.000000"
+}

@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-05-08T08:21:56.517556",
+  "tokens": [
+    {
+      "symbol": "PEPE",
+      "liquidity_usd": 270606.72,
+      "liquidity_score": 70,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 0.01,
+      "whale_signal": "NEUTRAL",
+      "buy_sell_ratio": 1.0,
+      "price_change_24h": -1.06,
+      "price_change_1h": -0.04,
+      "timestamp": "2026-05-08T08:21:55.649162"
+    },
+    {
+      "symbol": "WIF",
+      "liquidity_usd": 84942.5,
+      "liquidity_score": 50,
+      "liquidity_health": "DECLINING",
+      "volume_liquidity_ratio": 0.06,
+      "whale_signal": "SLIGHT_BUY",
+      "buy_sell_ratio": 1.36,
+      "price_change_24h": 6.84,
+      "price_change_1h": 0.0,
+      "timestamp": "2026-05-08T08:21:55.736560"
+    },
+    {
+      "symbol": "Bonk",
+      "liquidity_usd": 497558.37,
+      "liquidity_score": 70,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 4.36,
+      "whale_signal": "NEUTRAL",
+      "buy_sell_ratio": 0.85,
+      "price_change_24h": 1.0,
+      "price_change_1h": 1.26,
+      "timestamp": "2026-05-08T08:21:56.002699"
+    },
+    {
+      "symbol": "SOL",
+      "liquidity_usd": 146639.5,
+      "liquidity_score": 70,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 2.14,
+      "whale_signal": "SLIGHT_BUY",
+      "buy_sell_ratio": 1.21,
+      "price_change_24h": -42.48,
+      "price_change_1h": -3.15,
+      "timestamp": "2026-05-08T08:21:56.053439"
+    },
+    {
+      "symbol": "ETH",
+      "liquidity_usd": 1392847.64,
+      "liquidity_score": 90,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 3.05,
+      "whale_signal": "SLIGHT_BUY",
+      "buy_sell_ratio": 1.4,
+      "price_change_24h": -2.37,
+      "price_change_1h": 0.06,
+      "timestamp": "2026-05-08T08:21:56.108637"
+    },
+    {
+      "symbol": "DOGE",
+      "liquidity_usd": 95762.74,
+      "liquidity_score": 50,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 0.01,
+      "whale_signal": "DISTRIBUTION",
+      "buy_sell_ratio": 0.64,
+      "price_change_24h": -2.83,
+      "price_change_1h": -1.05,
+      "timestamp": "2026-05-08T08:21:56.162063"
+    },
+    {
+      "symbol": "SHIB",
+      "liquidity_usd": 308205.23,
+      "liquidity_score": 70,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 0.01,
+      "whale_signal": "STRONG_ACCUMULATION",
+      "buy_sell_ratio": 210.39,
+      "price_change_24h": -3.25,
+      "price_change_1h": 0.62,
+      "timestamp": "2026-05-08T08:21:56.211192"
+    },
+    {
+      "symbol": "FLOKI",
+      "liquidity_usd": 9977262.82,
+      "liquidity_score": 90,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 0.05,
+      "whale_signal": "NEUTRAL",
+      "buy_sell_ratio": 1.03,
+      "price_change_24h": 5.24,
+      "price_change_1h": 1.01,
+      "timestamp": "2026-05-08T08:21:56.260787"
+    },
+    {
+      "symbol": "BOME",
+      "liquidity_usd": 11568765.76,
+      "liquidity_score": 90,
+      "liquidity_health": "HEALTHY",
+      "volume_liquidity_ratio": 0.13,
+      "whale_signal": "NEUTRAL",
+      "buy_sell_ratio": 1.07,
+      "price_change_24h": 1.89,
+      "price_change_1h": 0.16,
+      "timestamp": "2026-05-08T08:21:56.516186"
+    }
+  ]
+}

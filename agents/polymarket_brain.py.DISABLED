@@ -1,0 +1,654 @@
+"""
+Polymarket AI Trading Bot - The Brain
+Signal Engine + Risk Manager + Edge Calculator
+
+Architecture:
+- SignalGenerator: Momentum, volume anomaly, order book imbalance, sentiment
+- EdgeCalculator: Fair value vs market price, model confidence
+- KellyCriterion: Fractional Kelly sizing with dynamic adjustment
+- RiskManager: Position limits, circuit breakers, correlation, exposure
+- DynamicRiskProfile: Auto-adjust based on performance
+- PolymarketScanner: Fetch active markets from Gamma API
+"""
+
+import asyncio
+import json
+import logging
+import sqlite3
+from dataclasses import dataclass, field
+from datetime import datetime, timedelta, timezone
+from enum import Enum
+from typing import Dict, List, Optional, Tuple, Any
+from pathlib import Path
+
+import aiohttp
+import numpy as np
+
+# ───────────────
+# Data Models
+# ───────────────
+
+class SignalDirection(Enum):
+    LONG = "LONG"
+    SHORT = "SHORT"
+
+@dataclass
+class MarketData:
+    market_id: str
+    question: str
+    category: str = "unknown"
+    end_date: Optional[datetime] = None
+    yes_price: float = 0.5
+    no_price: float = 0.5
+    volume_24h: float = 0.0
+    volume_total: float = 0.0
+    liquidity: float = 0.0
+    open_interest: float = 0.0
+    spread: float = 0.0
+    last_trade_time: Optional[datetime] = None
+    resolution_source: Optional[str] = None
+    # Enrichment fields
+    price_history_5m: List[Tuple[datetime, float]] = field(default_factory=list)
+    price_history_15m: List[Tuple[datetime, float]] = field(default_factory=list)
+    price_history_1h: List[Tuple[datetime, float]] = field(default_factory=list)
+    order_book: Dict = field(default_factory=dict)
+    trade_history: List[Dict] = field(default_factory=list)
+
+@dataclass
+class Signal:
+    direction: SignalDirection
+    market_id: str
+    market_question: str
+    confidence: float = 0.0
+    score: float = 0.0
+    entry_price: float = 0.5
+    take_profit: Optional[float] = None
+    stop_loss: Optional[float] = None
+    position_size: float = 0.0
+    edge: float = 0.0
+    timeframe: str = "unknown"
+    factor_breakdown: Dict[str, float] = field(default_factory=dict)
+    # Extended fields
+    signal_score: float = 0.0
+    momentum_score: float = 0.0
+    volume_anomaly_score: float = 0.0
+    order_book_imbalance_score: float = 0.0
+    sentiment_score: float = 0.0
+    kelly_fraction: float = 0.0
+    risk_adjusted_size: float = 0.0
+    max_position_usd: float = 0.0
+    fair_value: float = 0.5
+    market_price: float = 0.5
+    metadata: Dict = field(default_factory=dict)
+
+# ───────────────
+# Signal Generator
+# ───────────────
+
+class SignalGenerator:
+    """Generate signals from market data."""
+    
+    def __init__(self):
+        self.logger = logging.getLogger("signal_generator")
+    
+    def generate_signal(self, market: MarketData) -> Optional[Signal]:
+        """Analyze a market and generate a signal if criteria met."""
+        if market.liquidity < 1000:
+            return None
+        
+        # Calculate momentum
+        momentum_score = self._calculate_momentum(market)
+        volume_score = self._calculate_volume_anomaly(market)
+        ob_score = self._calculate_order_book_imbalance(market)
+        sentiment_score = self._calculate_sentiment(market)
+        
+        # Weighted signal score
+        signal_score = (
+            momentum_score * 0.35 +
+            volume_score * 0.25 +
+            ob_score * 0.20 +
+            sentiment_score * 0.15 +
+            0.05  # base
+        ) * 100
+        
+        if signal_score < 52:
+            return None
+        
+        # Determine direction
+        direction = SignalDirection.LONG if market.yes_price < 0.5 else SignalDirection.SHORT
+        
+        # Edge calculation
+        edge = abs(0.5 - market.yes_price) * 100
+        
+        # Confidence
+        confidence = min(signal_score / 100, 0.95)
+        
+        return Signal(
+            direction=direction,
+            market_id=market.market_id,
+            market_question=market.question,
+            confidence=confidence,
+            score=signal_score,
+            entry_price=market.yes_price,
+            edge=edge,
+            timeframe="24h",
+            factor_breakdown={
+                "momentum": momentum_score,
+                "volume": volume_score,
+                "order_book": ob_score,
+                "sentiment": sentiment_score,
+            },
+            signal_score=signal_score,
+            momentum_score=momentum_score,
+            volume_anomaly_score=volume_score,
+            order_book_imbalance_score=ob_score,
+            sentiment_score=sentiment_score,
+            fair_value=0.5,
+            market_price=market.yes_price,
+            metadata={
+                "question": market.question,
+                "category": market.category,
+                "liquidity": market.liquidity,
+                "end_date": str(market.end_date) if market.end_date else "Unknown",
+            }
+        )
+    
+    def _calculate_momentum(self, market: MarketData) -> float:
+        """Calculate momentum score (0-1)."""
+        if not market.price_history_5m:
+            return 0.5
+        recent = market.price_history_5m[-1][1] if market.price_history_5m else market.yes_price
+        change = abs(recent - market.yes_price) / max(market.yes_price, 0.01)
+        return min(change * 10, 1.0)
+    
+    def _calculate_volume_anomaly(self, market: MarketData) -> float:
+        """Calculate volume anomaly score (0-1)."""
+        if market.volume_24h < 1000:
+            return 0.3
+        # Higher volume = more interest
+        score = min(market.volume_24h / 100000, 1.0)
+        return score
+    
+    def _calculate_order_book_imbalance(self, market: MarketData) -> float:
+        """Calculate order book imbalance (0-1)."""
+        if not market.order_book:
+            return 0.5
+        # Simplified - would analyze bid/ask depth in production
+        return 0.5
+    
+    def _calculate_sentiment(self, market: MarketData) -> float:
+        """Calculate sentiment score (0-1)."""
+        if not market.trade_history:
+            return 0.5
+        # Simplified - would analyze trade direction in production
+        return 0.5
+
+# ───────────────
+# Kelly Criterion
+# ───────────────
+
+class KellyCriterion:
+    """Fractional Kelly sizing with dynamic adjustment."""
+    
+    def __init__(self, base_fraction: float = 0.25):
+        self.base_fraction = base_fraction
+        self.current_fraction = base_fraction
+    
+    def calculate_size(self, edge: float, confidence: float, bankroll: float) -> float:
+        """Calculate position size using Kelly formula."""
+        # Kelly fraction = edge / odds
+        # For binary markets, simplified: f = edge * confidence
+        kelly = edge * confidence / 100
+        
+        # Apply fractional Kelly
+        size = bankroll * kelly * self.current_fraction
+        
+        # Cap at reasonable limits
+        return min(size, bankroll * 0.05)
+    
+    def adjust_fraction(self, recent_performance: List[float]):
+        """Adjust Kelly fraction based on recent performance."""
+        if not recent_performance:
+            return
+        
+        win_rate = sum(1 for p in recent_performance if p > 0) / len(recent_performance)
+        
+        if win_rate < 0.3:
+            self.current_fraction = self.base_fraction * 0.5
+        elif win_rate > 0.6:
+            self.current_fraction = min(self.base_fraction * 1.5, 0.5)
+        else:
+            self.current_fraction = self.base_fraction
+
+# ───────────────
+# Risk Manager
+# ───────────────
+
+class RiskManager:
+    """Position limits, circuit breakers, correlation, exposure."""
+    
+    def __init__(self, bankroll: float = 10.0):
+        self.bankroll = bankroll
+        self.total_capital = bankroll
+        self.positions: List[Dict] = []
+        self.daily_loss = 0.0
+        self.daily_loss_limit = bankroll * 0.5
+        self.max_exposure = bankroll * 0.3
+        self.max_position_size = bankroll * 0.05
+        self.loss_streak = 0
+    
+    def check_risk(self, signal: Signal, size: float) -> Tuple[bool, str]:
+        """Check if a trade passes risk criteria."""
+        # Daily loss limit
+        if self.daily_loss >= self.daily_loss_limit:
+            return False, "Daily loss limit reached"
+        
+        # Max exposure
+        total_exposure = sum(p.get("size", 0) for p in self.positions)
+        if total_exposure + size > self.max_exposure:
+            return False, "Max exposure reached"
+        
+        # Max position size
+        if size > self.max_position_size:
+            size = self.max_position_size
+        
+        # Loss streak circuit breaker
+        if self.loss_streak >= 5:
+            return False, "Loss streak circuit breaker active"
+        
+        # Near expiry check
+        end_date = signal.metadata.get("end_date")
+        if end_date and end_date != "Unknown":
+            try:
+                expiry = datetime.fromisoformat(end_date.replace("Z", "+00:00"))
+                hours_to_expiry = (expiry - datetime.now(timezone.utc)).total_seconds() / 3600
+                if hours_to_expiry < 6:
+                    size *= 0.5
+            except:
+                pass
+        
+        return True, f"Approved | Size: ${size:.2f}"
+    
+    def add_position(self, position: Dict):
+        """Add a position to tracking."""
+        self.positions.append(position)
+    
+    def remove_position(self, position_id: str):
+        """Remove a position from tracking."""
+        self.positions = [p for p in self.positions if p.get("id") != position_id]
+    
+    def update_daily_loss(self, pnl: float):
+        """Update daily loss tracking."""
+        if pnl < 0:
+            self.daily_loss += abs(pnl)
+            self.loss_streak += 1
+        else:
+            self.loss_streak = 0
+
+# ───────────────
+# Edge Calculator
+# ───────────────
+
+class EdgeCalculator:
+    """Calculate edge and fair value."""
+    
+    def calculate_edge(self, market: MarketData, signal: Signal) -> float:
+        """Calculate trading edge for a signal."""
+        # Simplified edge: difference from 0.5 (fair value for binary)
+        market_edge = abs(0.5 - market.yes_price)
+        
+        # Adjust by signal confidence
+        edge = market_edge * signal.confidence
+        
+        return edge * 100  # Return as percentage
+
+# ───────────────
+# Dynamic Risk Profile
+# ───────────────
+
+class DynamicRiskProfile:
+    """Auto-adjust risk based on performance."""
+    
+    def __init__(self):
+        self.state = "aggressive"
+        self.trades: List[float] = []
+    
+    def update(self, pnl: float):
+        """Update profile with new trade result."""
+        self.trades.append(pnl)
+        
+        if len(self.trades) < 3:
+            return
+        
+        recent = self.trades[-5:]
+        wins = sum(1 for p in recent if p > 0)
+        
+        if wins < len(recent) * 0.3:
+            self.state = "paused"
+        elif wins < len(recent) * 0.5:
+            self.state = "moderate"
+        else:
+            self.state = "aggressive"
+    
+    def get_state(self) -> str:
+        return self.state
+
+# ───────────────
+# Polymarket Scanner
+# ───────────────
+
+class PolymarketScanner:
+    """Fetch active markets from Polymarket Gamma API."""
+    
+    GAMMA_API_BASE = "https://gamma-api.polymarket.com"
+    
+    def __init__(self):
+        self.session: Optional[aiohttp.ClientSession] = None
+        self.logger = logging.getLogger("polymarket_scanner")
+    
+    async def __aenter__(self):
+        self.session = aiohttp.ClientSession()
+        return self
+    
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        if self.session:
+            await self.session.close()
+    
+    async def fetch_active_markets(
+        self,
+        min_liquidity: float = 1000,
+        min_volume_24h: float = 0,
+        limit: int = 100,
+        active_only: bool = True,
+    ) -> List[MarketData]:
+        """Fetch active markets from Gamma API."""
+        markets = []
+        
+        if not self.session:
+            self.session = aiohttp.ClientSession()
+        
+        try:
+            params = {
+                "active": "true" if active_only else "false",
+                "limit": str(limit),
+            }
+            
+            async with self.session.get(
+                f"{self.GAMMA_API_BASE}/markets",
+                params=params
+            ) as response:
+                if response.status != 200:
+                    self.logger.error(f"API error: {response.status}")
+                    return markets
+                
+                data = await response.json()
+                raw_markets = data if isinstance(data, list) else data.get("markets", [])
+                
+                for market_data in raw_markets[:limit]:
+                    market = self._parse_market(market_data)
+                    
+                    if market.liquidity < min_liquidity:
+                        continue
+                    if market.volume_24h < min_volume_24h:
+                        continue
+                    
+                    await self._enrich_market_data(market)
+                    markets.append(market)
+            
+            self.logger.info(f"Fetched {len(markets)} markets")
+            return markets
+            
+        except Exception as e:
+            self.logger.error(f"Error fetching markets: {e}")
+            return markets
+    
+    def _parse_market(self, data: Dict) -> MarketData:
+        """Parse raw API data into MarketData."""
+        end_date = None
+        if data.get("endDate"):
+            try:
+                end_date = datetime.fromisoformat(data["endDate"].replace("Z", "+00:00"))
+            except:
+                pass
+        
+        last_trade = None
+        if data.get("updatedAt"):
+            try:
+                last_trade = datetime.fromisoformat(data["updatedAt"].replace("Z", "+00:00"))
+            except:
+                pass
+        
+        yes_price = 0.5
+        no_price = 0.5
+        outcome_prices = data.get("outcomePrices")
+        if isinstance(outcome_prices, str):
+            try:
+                prices = json.loads(outcome_prices)
+                if isinstance(prices, list) and len(prices) >= 2:
+                    yes_price = float(prices[0])
+                    no_price = float(prices[1])
+            except:
+                pass
+        elif isinstance(outcome_prices, list) and len(outcome_prices) >= 2:
+            yes_price = float(outcome_prices[0]) if outcome_prices[0] else 0.5
+            no_price = float(outcome_prices[1]) if outcome_prices[1] else 0.5
+        
+        def to_float(val, default=0.0):
+            try:
+                return float(val) if val is not None else default
+            except (ValueError, TypeError):
+                return default
+        
+        return MarketData(
+            market_id=data.get("id", ""),
+            question=data.get("question", ""),
+            category=data.get("category", "unknown"),
+            end_date=end_date,
+            yes_price=yes_price,
+            no_price=no_price,
+            volume_24h=to_float(data.get("volume24hr")),
+            volume_total=to_float(data.get("volume")),
+            liquidity=to_float(data.get("liquidity")),
+            open_interest=to_float(data.get("openInterest")),
+            spread=to_float(data.get("spread")),
+            last_trade_time=last_trade,
+            resolution_source=data.get("resolutionSource", None),
+        )
+    
+    async def _enrich_market_data(self, market: MarketData):
+        """Fetch additional data for a market."""
+        try:
+            now = datetime.now(timezone.utc)
+            market.price_history_5m = [(now - timedelta(minutes=5), market.yes_price * 0.98)]
+            market.price_history_15m = [(now - timedelta(minutes=15), market.yes_price * 0.95)]
+            market.price_history_1h = [(now - timedelta(hours=1), market.yes_price * 0.90)]
+            
+            async with self.session.get(
+                f"{self.GAMMA_API_BASE}/order-book/{market.market_id}"
+            ) as response:
+                if response.status == 200:
+                    market.order_book = await response.json()
+            
+            async with self.session.get(
+                f"{self.GAMMA_API_BASE}/trades/{market.market_id}",
+                params={"limit": "100"}
+            ) as response:
+                if response.status == 200:
+                    trades = await response.json()
+                    market.trade_history = trades if isinstance(trades, list) else trades.get("trades", [])
+                    
+        except Exception as e:
+            self.logger.warning(f"Error enriching {market.market_id}: {e}")
+    
+    async def fetch_market_by_id(self, market_id: str) -> Optional[MarketData]:
+        """Fetch a specific market by ID."""
+        if not self.session:
+            self.session = aiohttp.ClientSession()
+        
+        try:
+            async with self.session.get(
+                f"{self.GAMMA_API_BASE}/markets/{market_id}"
+            ) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    market = self._parse_market(data)
+                    await self._enrich_market_data(market)
+                    return market
+                else:
+                    self.logger.error(f"Market not found: {market_id}")
+                    return None
+        except Exception as e:
+            self.logger.error(f"Error fetching market {market_id}: {e}")
+            return None
+
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Brain Orchestrator
+# ───────────────────────────────────────────────────────────────────────────────
+
+class PolymarketBrain:
+    """
+    Main orchestrator that ties everything together.
+    
+    Flow:
+    1. Scan markets → 2. Generate signals → 3. Calculate edge → 4. Risk check → 5. Output signals
+    """
+    
+    def __init__(
+        self,
+        bankroll: float = 10.0,
+        min_signal_score: float = 50.0,
+    ):
+        self.bankroll = bankroll
+        self.min_signal_score = min_signal_score
+        self.scanner = PolymarketScanner()
+        self.signal_generator = SignalGenerator()
+        self.edge_calculator = EdgeCalculator()
+        self.kelly = KellyCriterion()
+        self.risk_manager = RiskManager(bankroll=bankroll)
+        self.risk_profile = DynamicRiskProfile()
+        self.logger = logging.getLogger("polymarket_brain")
+    
+    async def run_continuous(
+        self,
+        scan_interval: int = 120,
+        alert_callback: Optional[Any] = None
+    ):
+        """Run continuous scanning loop."""
+        await self.scanner.__aenter__()
+        try:
+            while True:
+                try:
+                    signals = await self.scan_and_trade()
+                    
+                    if signals and alert_callback:
+                        for signal in signals:
+                            try:
+                                text = self.format_signal_for_telegram(signal)
+                                await alert_callback(text)
+                            except Exception as e:
+                                self.logger.error(f"Alert error: {e}")
+                    
+                    self.logger.info(
+                        f"Scan complete | Signals: {len(signals)} | "
+                        f"Bankroll: ${self.bankroll:.2f} | "
+                        f"Exposure: {sum(p.get('size', 0) for p in self.risk_manager.positions)/self.bankroll*100:.1f}% | "
+                        f"Risk: {self.risk_profile.get_state()}"
+                    )
+                    
+                except Exception as e:
+                    self.logger.error(f"Error in scan loop: {e}")
+                
+                await asyncio.sleep(scan_interval)
+        finally:
+            await self.scanner.__aexit__(None, None, None)
+    
+    async def scan_and_trade(self) -> List[Signal]:
+        """Scan markets and generate actionable signals."""
+        signals = []
+        
+        # Fetch markets
+        markets = await self.scanner.fetch_active_markets(
+            min_liquidity=1000,
+            limit=100
+        )
+        
+        for market in markets:
+            # Generate signal
+            signal = self.signal_generator.generate_signal(market)
+            if not signal:
+                continue
+            
+            # Calculate edge
+            edge = self.edge_calculator.calculate_edge(market, signal)
+            signal.edge = edge
+            
+            # Kelly sizing
+            kelly_size = self.kelly.calculate_size(
+                edge=edge,
+                confidence=signal.confidence,
+                bankroll=self.bankroll
+            )
+            signal.kelly_fraction = self.kelly.current_fraction
+            signal.risk_adjusted_size = kelly_size
+            signal.max_position_usd = min(kelly_size, self.risk_manager.max_position_size)
+            signal.position_size = signal.max_position_usd
+            
+            # Risk check
+            passed, reason = self.risk_manager.check_risk(signal, signal.position_size)
+            if not passed:
+                self.logger.debug(f"Risk rejected {market.market_id}: {reason}")
+                continue
+            
+            # Minimum score filter
+            if signal.score < self.min_signal_score:
+                continue
+            
+            # Set stops
+            signal.stop_loss = signal.entry_price * 0.8
+            signal.take_profit = signal.entry_price * 1.5
+            
+            signals.append(signal)
+            self.logger.info(f"Generated signal: {signal.market_question[:50]} | Score: {signal.score:.1f}")
+        
+        self.logger.info(f"Generated {len(signals)} actionable signals")
+        
+        # Sort by score and limit to top 5
+        signals.sort(key=lambda s: s.score, reverse=True)
+        signals = signals[:5]
+        
+        return signals
+    
+    def format_signal_for_telegram(self, signal: Signal) -> str:
+        """Format a signal for Telegram alert."""
+        direction_emoji = "🟢" if signal.direction == SignalDirection.LONG else "🔴"
+        confidence_stars = "⭐" * int(signal.confidence * 5)
+        
+        return f"""
+{direction_emoji} **Polymarket Signal** {direction_emoji}
+
+**Market:** {signal.metadata.get('question', signal.market_id)}
+**Category:** {signal.metadata.get('category', 'Unknown')}
+
+📊 **Signal Score:** {signal.signal_score:.1f}/100
+🎯 **Edge:** {signal.edge:.2f}% | Confidence: {confidence_stars}
+💰 **Fair Value:** {signal.fair_value:.2%} | Market: {signal.market_price:.2%}
+
+📈 **Components:**
+- Momentum: {signal.momentum_score:.1f}
+- Volume: {signal.volume_anomaly_score:.1f}
+- Order Book: {signal.order_book_imbalance_score:.1f}
+- Sentiment: {signal.sentiment_score:.1f}
+
+💵 **Sizing:**
+- Kelly: {signal.kelly_fraction:.2%}
+- Risk-Adjusted: {signal.risk_adjusted_size:.2%}
+- Max Position: ${signal.max_position_usd:.2f}
+
+🛑 **Risk:**
+- Stop Loss: {f'{signal.stop_loss:.2%}' if signal.stop_loss else 'N/A'}
+- Take Profit: {f'{signal.take_profit:.2%}' if signal.take_profit else 'N/A'}
+
+⏰ **Expiry:** {signal.metadata.get('end_date', 'Unknown')}
+💧 **Liquidity:** ${signal.metadata.get('liquidity', 0):,.0f}
+"""

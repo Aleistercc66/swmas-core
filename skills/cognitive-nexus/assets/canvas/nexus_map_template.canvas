@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {"id": "dashboard", "x": 400, "y": 50, "width": 200, "height": 80, "type": "text", "text": "🧠 NEXUS DASHBOARD"},
+    {"id": "inbox", "x": 100, "y": 200, "width": 150, "height": 60, "type": "file", "file": "inbox/README.md"},
+    {"id": "gemini", "x": 300, "y": 200, "width": 120, "height": 60, "type": "text", "text": "🕵️ Gemini Scout"},
+    {"id": "kimi", "x": 450, "y": 200, "width": 120, "height": 60, "type": "text", "text": "🗜️ Kimi Extractor"},
+    {"id": "claude", "x": 600, "y": 200, "width": 120, "height": 60, "type": "text", "text": "🏗️ Claude Architect"},
+    {"id": "hermes", "x": 750, "y": 200, "width": 120, "height": 60, "type": "text", "text": "🔮 Hermes Oracle"},
+    {"id": "openclaw", "x": 900, "y": 200, "width": 120, "height": 60, "type": "text", "text": "⚙️ OpenClaw Operator"},
+    {"id": "knowledge", "x": 600, "y": 350, "width": 150, "height": 60, "type": "file", "file": "knowledge/README.md"},
+    {"id": "conflicts", "x": 750, "y": 350, "width": 150, "height": 60, "type": "file", "file": "conflicts/README.md"},
+    {"id": "decisions", "x": 450, "y": 350, "width": 150, "height": 60, "type": "file", "file": "decisions/README.md"}
+  ],
+  "edges": [
+    {"fromNode": "dashboard", "fromSide": "bottom", "toNode": "inbox", "toSide": "top"},
+    {"fromNode": "inbox", "fromSide": "right", "toNode": "gemini", "toSide": "left"},
+    {"fromNode": "gemini", "fromSide": "right", "toNode": "kimi", "toSide": "left"},
+    {"fromNode": "kimi", "fromSide": "right", "toNode": "claude", "toSide": "left"},
+    {"fromNode": "claude", "fromSide": "right", "toNode": "hermes", "toSide": "left"},
+    {"fromNode": "hermes", "fromSide": "bottom", "toNode": "conflicts", "toSide": "top", "label": "REJECTED"},
+    {"fromNode": "hermes", "fromSide": "right", "toNode": "openclaw", "toSide": "left", "label": "APPROVED"},
+    {"fromNode": "openclaw", "fromSide": "bottom", "toNode": "knowledge", "toSide": "top"},
+    {"fromNode": "claude", "fromSide": "bottom", "toNode": "decisions", "toSide": "top"}
+  ]
+}

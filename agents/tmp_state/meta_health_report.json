@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-05-12T09:07:34.715286",
+  "uptime_hours": 48.72,
+  "tmux_status": {},
+  "recent_errors": [
+    {
+      "file": "v2_scanner.log",
+      "line": "API error: SSLError: HTTPSConnectionPool(host='api.dexscreene",
+      "pattern": "Error",
+      "time": "2026-05-12T09:07:43.063627"
+    },
+    {
+      "file": "v2_validator.log",
+      "line": "\u274c JTO: 71% \u2014 Failed: momentum_24h, buy_pressure",
+      "pattern": "Failed",
+      "time": "2026-05-12T09:07:43.344630"
+    },
+    {
+      "file": "v2_validator.log",
+      "line": "\u274c DOGE: 71% \u2014 Failed: momentum_24h, buy_pressure",
+      "pattern": "Failed",
+      "time": "2026-05-12T09:07:43.344666"
+    },
+    {
+      "file": "v2_validator.log",
+      "line": "\u274c BTC: 71% \u2014 Failed: momentum_24h, buy_pressure",
+      "pattern": "Failed",
+      "time": "2026-05-12T09:07:43.344671"
+    },
+    {
+      "file": "v2_validator.log",
+      "line": "\u274c ADA: 71% \u2014 Failed: momentum_24h, buy_pressure",
+      "pattern": "Failed",
+      "time": "2026-05-12T09:07:43.344675"
+    }
+  ],
+  "repairs_done_24h": 286,
+  "research_findings": 3,
+  "knowledge_entries": 0
+}

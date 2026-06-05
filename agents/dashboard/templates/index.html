@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 KreoPoly Swarm — Beast Mode Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #0f1525 100%); }
+        .glass { 
+            background: rgba(20, 25, 40, 0.6); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        .glass-hover:hover {
+            background: rgba(30, 35, 55, 0.7);
+            border-color: rgba(255,255,255,0.15);
+        }
+        .green-glow { box-shadow: 0 0 20px rgba(34,197,94,0.3); }
+        .red-glow { box-shadow: 0 0 20px rgba(239,68,68,0.3); }
+        .orange-glow { box-shadow: 0 0 20px rgba(251,146,60,0.3); }
+        .blue-glow { box-shadow: 0 0 20px rgba(59,130,246,0.3); }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+        .slide-in { animation: slideIn 0.3s ease-out; }
+        @keyframes slideIn { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .toast {
+            animation: toastSlide 0.4s ease-out;
+            backdrop-filter: blur(10px);
+        }
+        @keyframes toastSlide { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+        .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+        .score-bar {
+            background: linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #22c55e 100%);
+            height: 4px;
+            border-radius: 2px;
+        }
+        .chain-heatmap-solana { background: linear-gradient(135deg, #9945FF20, #14F19520); border: 1px solid #9945FF40; }
+        .chain-heatmap-base { background: linear-gradient(135deg, #0052FF20, #0052FF10); border: 1px solid #0052FF40; }
+        .chain-heatmap-eth { background: linear-gradient(135deg, #627EEA20, #627EEA10); border: 1px solid #627EEA40; }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen font-sans">
+    
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2 w-80"></div>
+
+    <!-- Header -->
+    <header class="border-b border-white/5 backdrop-blur-lg sticky top-0 z-40 bg-black/30">
+        <div class="container mx-auto px-4 py-3 max-w-[1600px] flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="text-2xl">🐺</div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">
+                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400">KreoPoly Swarm</span>
+                    </h1>
+                    <p class="text-xs text-gray-500">Autonomous Trading · Beast Mode v2</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <!-- Market Regime Badge -->
+                <div id="market-regime" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-500/20 text-gray-400 border border-gray-500/30">
+                    📊 CHOP
+                </div>
+                
+                <!-- Status Badges -->
+                <span id="ws-status" class="px-3 py-1 rounded-full text-xs font-mono bg-red-500/20 text-red-400 border border-red-500/30 flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-red-400"></span> OFFLINE
+                </span>
+                <span id="mode-badge" class="px-3 py-1 rounded-full text-xs font-mono bg-blue-500/20 text-blue-400 border border-blue-500/30">📊 PAPER</span>
+                <span id="auto-badge" class="px-3 py-1 rounded-full text-xs font-mono bg-gray-500/20 text-gray-400 border border-gray-500/30">🤖 MANUAL</span>
+                
+                <!-- Emergency Button -->
+                <button onclick="sendControl('emergency-stop')" class="px-3 py-1.5 bg-red-600/20 hover:bg-red-600/40 border border-red-500/30 rounded-lg text-xs font-bold text-red-400 transition red-glow">
+                    🛑 STOP
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-4 max-w-[1600px] space-y-4">
+        
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ROW 1: Portfolio Overview + Risk + Market Regime -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+            
+            <!-- Portfolio Overview (8 cols) -->
+            <div class="lg:col-span-8">
+                <div class="glass rounded-2xl p-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">📈 Portfolio Overview</h2>
+                        <span class="text-xs text-gray-600" id="last-update">Updated: --:--:--</span>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                        <div class="glass-hover rounded-xl p-3 transition">
+                            <p class="text-gray-500 text-[10px] uppercase tracking-wider">Balance</p>
+                            <p id="balance" class="text-lg font-bold text-white">$10,000</p>
+                        </div>
+                        <div class="glass-hover rounded-xl p-3 transition">
+                            <p class="text-gray-500 text-[10px] uppercase tracking-wider">Daily PnL</p>
+                            <p id="daily-pnl" class="text-lg font-bold text-gray-400">$0.00</p>
+                        </div>
+                        <div class="glass-hover rounded-xl p-3 transition">
+                            <p class="text-gray-500 text-[10px] uppercase tracking-wider">Total PnL</p>
+                            <p id="total-pnl" class="text-lg font-bold text-gray-400">$0.00</p>
+                        </div>
+                        <div class="glass-hover rounded-xl p-3 transition">
+                            <p class="text-gray-500 text-[10px] uppercase tracking-wider">Win Rate</p>
+                            <p id="win-rate" class="text-lg font-bold text-gray-400">0%</p>
+                        </div>
+                        <div class="glass-hover rounded-xl p-3 transition">
+                            <p class="text-gray-500 text-[10px] uppercase tracking-wider">Max Drawdown</p>
+                            <p id="drawdown" class="text-lg font-bold text-gray-400">0%</p>
+                        </div>
+                        <div class="glass-hover rounded-xl p-3 transition">
+                            <p class="text-gray-500 text-[10px] uppercase tracking-wider">Risk Used</p>
+                            <p id="risk-used" class="text-lg font-bold text-gray-400">$0 / $500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Risk Meter + Market Regime (4 cols) -->
+            <div class="lg:col-span-4 space-y-4">
+                <!-- Risk Meter -->
+                <div class="glass rounded-2xl p-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">🛡️ Risk & Safety</h2>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-gray-500">Daily Risk Budget</span>
+                                <span id="risk-budget-text" class="text-gray-400">$0 / $500</span>
+                            </div>
+                            <div class="h-2 bg-gray-700 rounded-full overflow-hidden">
+                                <div id="risk-budget-bar" class="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-gray-500">Circuit Breaker</span>
+                            <span id="circuit-status" class="text-green-400 font-bold">● ACTIVE</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-gray-500">Kill Switch</span>
+                            <span id="kill-switch-status" class="text-green-400 font-bold">● ARMED</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs">
+                            <span class="text-gray-500">Max Position</span>
+                            <span id="max-position" class="text-gray-400">$350</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ROW 2: Multi-Chain Heatmap -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="glass rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">🌐 Multi-Chain Overview</h2>
+                <span class="text-xs text-gray-600">Live scanning across 3 chains</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Solana -->
+                <div class="chain-heatmap-solana rounded-xl p-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">⚡</span>
+                            <span class="font-bold text-sm">Solana</span>
+                        </div>
+                        <span id="solana-status" class="text-xs px-2 py-0.5 rounded bg-green-500/20 text-green-400">● Active</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div>
+                            <p class="text-[10px] text-gray-500">Pairs</p>
+                            <p id="solana-pairs" class="text-sm font-bold">--</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500">Signals</p>
+                            <p id="solana-signals" class="text-sm font-bold text-yellow-400">--</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500">Volume</p>
+                            <p id="solana-volume" class="text-sm font-bold">--</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Base -->
+                <div class="chain-heatmap-base rounded-xl p-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">🔵</span>
+                            <span class="font-bold text-sm">Base</span>
+                        </div>
+                        <span id="base-status" class="text-xs px-2 py-0.5 rounded bg-green-500/20 text-green-400">● Active</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div>
+                            <p class="text-[10px] text-gray-500">Pairs</p>
+                            <p id="base-pairs" class="text-sm font-bold">--</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500">Signals</p>
+                            <p id="base-signals" class="text-sm font-bold text-yellow-400">--</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500">Volume</p>
+                            <p id="base-volume" class="text-sm font-bold">--</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ethereum -->
+                <div class="chain-heatmap-eth rounded-xl p-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">💎</span>
+                            <span class="font-bold text-sm">Ethereum</span>
+                        </div>
+                        <span id="eth-status" class="text-xs px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-400">● Standby</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div>
+                            <p class="text-[10px] text-gray-500">Pairs</p>
+                            <p id="eth-pairs" class="text-sm font-bold">--</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500">Signals</p>
+                            <p id="eth-signals" class="text-sm font-bold text-yellow-400">--</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-gray-500">Volume</p>
+                            <p id="eth-volume" class="text-sm font-bold">--</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ROW 3: Live Positions + Active Signals -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            
+            <!-- Live Positions -->
+            <div class="glass rounded-2xl p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider flex items-center gap-2">
+                        📍 Live Positions
+                        <span id="positions-count" class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">0</span>
+                    </h2>
+                    <span class="text-xs text-gray-600">Real-time PnL</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="text-gray-500 text-[10px] uppercase border-b border-white/5">
+                                <th class="text-left py-2">Symbol</th>
+                                <th class="text-right py-2">Entry</th>
+                                <th class="text-right py-2">Current</th>
+                                <th class="text-right py-2">PnL %</th>
+                                <th class="text-right py-2">PnL $</th>
+                                <th class="text-center py-2">Time</th>
+                                <th class="text-center py-2">SL/TP</th>
+                            </tr>
+                        </thead>
+                        <tbody id="positions-table" class="text-xs">
+                            <tr><td colspan="7" class="text-center py-8 text-gray-600">No open positions</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Active Signals -->
+            <div class="glass rounded-2xl p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider flex items-center gap-2">
+                        🎯 Active Signals
+                        <span id="signals-count" class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded-full">0</span>
+                    </h2>
+                    <span class="text-xs text-gray-600">Composite Score 0-100</span>
+                </div>
+                <div id="active-signals" class="space-y-2 max-h-80 overflow-y-auto scrollbar-thin">
+                    <div class="text-center py-8 text-gray-600 text-xs">No active signals</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ROW 4: Agent Health + Performance Charts -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            
+            <!-- Agent Health -->
+            <div class="glass rounded-2xl p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">🤖 Agent Health</h2>
+                    <span class="text-xs text-gray-600">Fitness Score</span>
+                </div>
+                <div id="agent-health" class="space-y-2">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            
+            <!-- Performance Chart -->
+            <div class="glass rounded-2xl p-5 lg:col-span-2">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">📊 Performance Analytics</h2>
+                    <div class="flex gap-2">
+                        <button onclick="setChartPeriod('1h')" class="text-xs px-2 py-1 rounded bg-white/5 hover:bg-white/10 transition">1H</button>
+                        <button onclick="setChartPeriod('24h')" class="text-xs px-2 py-1 rounded bg-white/5 hover:bg-white/10 transition">24H</button>
+                        <button onclick="setChartPeriod('7d')" class="text-xs px-2 py-1 rounded bg-white/5 hover:bg-white/10 transition">7D</button>
+                    </div>
+                </div>
+                <div id="performance-chart" class="h-48"></div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ROW 5: Signal Quality + Whale Activity + Event Log -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            
+            <!-- Signal Quality Heatmap -->
+            <div class="glass rounded-2xl p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">🔥 Signal Quality</h2>
+                </div>
+                <div id="signal-quality" class="space-y-2">
+                    <div class="flex items-center justify-between text-xs">
+                        <span class="text-gray-500">Solana Meme</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-green-400 rounded-full" style="width: 75%"></div>
+                            </div>
+                            <span class="text-green-400">75%</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs">
+                        <span class="text-gray-500">Base DeFi</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-yellow-400 rounded-full" style="width: 60%"></div>
+                            </div>
+                            <span class="text-yellow-400">60%</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between text-xs">
+                        <span class="text-gray-500">ETH Alts</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-20 h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full bg-orange-400 rounded-full" style="width: 45%"></div>
+                            </div>
+                            <span class="text-orange-400">45%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Whale & Smart Money -->
+            <div class="glass rounded-2xl p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">🐋 Whale Activity</h2>
+                    <span class="text-xs text-gray-600">Last 1h</span>
+                </div>
+                <div id="whale-activity" class="space-y-2 text-xs">
+                    <div class="text-center py-4 text-gray-600">Waiting for whale data...</div>
+                </div>
+            </div>
+            
+            <!-- Event Log -->
+            <div class="glass rounded-2xl p-5">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">📡 Event Log</h2>
+                    <button onclick="clearEvents()" class="text-xs text-gray-500 hover:text-gray-300 transition">Clear</button>
+                </div>
+                <div id="events-log" class="space-y-1 max-h-48 overflow-y-auto scrollbar-thin text-[10px] font-mono">
+                    <div class="text-gray-600 py-2">No events yet</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ROW 6: Manual Controls -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="glass rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider">🎛️ Manual Controls</h2>
+                <div class="flex gap-2 text-xs text-gray-500">
+                    <span>Shortcuts: E=Emergency P=Pause A=Approve</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2">
+                <button onclick="sendControl('confirm-trade')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-green-400 border border-green-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">✅</span>
+                    <span>Confirm Trade</span>
+                </button>
+                <button onclick="sendControl('toggle-auto')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-blue-400 border border-blue-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">🔄</span>
+                    <span>Toggle Auto</span>
+                </button>
+                <button onclick="sendControl('toggle-paper')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-purple-400 border border-purple-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">📊</span>
+                    <span>Toggle Paper</span>
+                </button>
+                <button onclick="sendControl('pause')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-yellow-400 border border-yellow-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">⏸️</span>
+                    <span>Pause</span>
+                </button>
+                <button onclick="sendControl('resume')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-green-400 border border-green-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">▶️</span>
+                    <span>Resume</span>
+                </button>
+                <button onclick="sendControl('close-all')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-orange-400 border border-orange-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">🔒</span>
+                    <span>Close All</span>
+                </button>
+                <button onclick="sendControl('reset')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-gray-400 border border-gray-500/20 transition flex flex-col items-center gap-1">
+                    <span class="text-lg">🔄</span>
+                    <span>Reset</span>
+                </button>
+                <button onclick="sendControl('emergency-stop')" class="glass-hover px-4 py-3 rounded-xl text-xs font-bold text-red-400 border border-red-500/20 transition red-glow flex flex-col items-center gap-1">
+                    <span class="text-lg">🛑</span>
+                    <span>EMERGENCY STOP</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

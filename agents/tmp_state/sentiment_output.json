@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-05-08T08:21:56.566783",
+  "overall_market_mood": "CAUTIOUS_BULLISH",
+  "bullish_count": 2,
+  "bearish_count": 1,
+  "token_sentiment": {
+    "PEPE": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": -1.06,
+      "price_change_1h": -0.04,
+      "volume": 3761.01,
+      "liquidity": 270606.72,
+      "divergence_warning": false,
+      "confidence": 2.12
+    },
+    "WIF": {
+      "mood": "BULLISH",
+      "price_change_24h": 6.84,
+      "price_change_1h": 0.0,
+      "volume": 4861.41,
+      "liquidity": 84942.5,
+      "divergence_warning": false,
+      "confidence": 13.68
+    },
+    "BONK": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": 1.0,
+      "price_change_1h": 1.26,
+      "volume": 2170757.95,
+      "liquidity": 497558.37,
+      "divergence_warning": false,
+      "confidence": 2.0
+    },
+    "SOL": {
+      "mood": "BEARISH",
+      "price_change_24h": -42.48,
+      "price_change_1h": -3.15,
+      "volume": 313455.78,
+      "liquidity": 146639.5,
+      "divergence_warning": false,
+      "confidence": 84.96
+    },
+    "ETH": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": -2.37,
+      "price_change_1h": 0.06,
+      "volume": 4246182.39,
+      "liquidity": 1392847.64,
+      "divergence_warning": false,
+      "confidence": 4.74
+    },
+    "DOGE": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": -2.83,
+      "price_change_1h": -1.05,
+      "volume": 591.14,
+      "liquidity": 95762.74,
+      "divergence_warning": false,
+      "confidence": 5.66
+    },
+    "SHIB": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": -3.25,
+      "price_change_1h": 0.62,
+      "volume": 2356.28,
+      "liquidity": 308205.23,
+      "divergence_warning": false,
+      "confidence": 6.5
+    },
+    "FLOKI": {
+      "mood": "BULLISH",
+      "price_change_24h": 5.24,
+      "price_change_1h": 1.01,
+      "volume": 513270.46,
+      "liquidity": 9977262.82,
+      "divergence_warning": false,
+      "confidence": 10.48
+    },
+    "BOME": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": 1.89,
+      "price_change_1h": 0.16,
+      "volume": 1515781.08,
+      "liquidity": 11568765.76,
+      "divergence_warning": false,
+      "confidence": 3.78
+    },
+    "POPCAT": {
+      "mood": "CAUTIOUS",
+      "price_change_24h": -0.68,
+      "price_change_1h": 1.14,
+      "volume": 523318.75,
+      "liquidity": 3904684.17,
+      "divergence_warning": false,
+      "confidence": 1.36
+    }
+  },
+  "hot_topics": [
+    "WIF (BULLISH, +6.8%)",
+    "FLOKI (BULLISH, +5.2%)",
+    "BOME (CAUTIOUS, +1.9%)",
+    "BONK (CAUTIOUS, +1.0%)",
+    "POPCAT (CAUTIOUS, -0.7%)"
+  ],
+  "divergence_alerts": []
+}

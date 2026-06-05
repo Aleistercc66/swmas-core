@@ -1,0 +1,663 @@
+{
+  "timestamp": "2026-05-12T10:35:21.996696",
+  "status": "COMPLETE",
+  "total_scanned": 15,
+  "validated": [
+    {
+      "symbol": "SOL",
+      "price": 97.59,
+      "status": "PASSED",
+      "pass_rate": 0.86,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 359655.81,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 8345957.47,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 2.27,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.3,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": true,
+          "value": 1.05,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 2.27
+        }
+      },
+      "raw_data": {
+        "symbol": "SOL",
+        "chain": "base",
+        "price": 97.59,
+        "liquidity": 359655.81,
+        "volume_24h": 8345957.47,
+        "volume_6h": 1677473.19,
+        "volume_1h": 289955.55,
+        "volume_5m": 15261.28,
+        "change_24h": 2.27,
+        "change_6h": 0.43,
+        "change_1h": 0.3,
+        "change_5m": 0.11,
+        "buys_24h": 4627.0,
+        "sells_24h": 4421.0,
+        "buys_1h": 140.0,
+        "sells_1h": 116.0,
+        "fdv": 6635872.0,
+        "market_cap": 6635872.0,
+        "age_hours": 999,
+        "url": "https://dexscreener.com/base/0x1131db5977242a03ebead1acd18f80a9a29e5922",
+        "timestamp": "2026-05-12T09:04:58.382562",
+        "address": "0x311935Cd80B76769bF2ecC9D8Ab7635b2139cf82"
+      }
+    },
+    {
+      "symbol": "XRP",
+      "price": 1.48,
+      "status": "PASSED",
+      "pass_rate": 0.86,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 600694.0,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 2757272.6,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 1.26,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.4,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": true,
+          "value": 1.28,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 1.26
+        }
+      },
+      "raw_data": {
+        "symbol": "XRP",
+        "chain": "bsc",
+        "price": 1.48,
+        "liquidity": 600694.0,
+        "volume_24h": 2757272.6,
+        "volume_6h": 200382.17,
+        "volume_1h": 47371.8,
+        "volume_5m": 13.03,
+        "change_24h": 1.26,
+        "change_6h": 0.75,
+        "change_1h": 0.4,
+        "change_5m": 0.0,
+        "buys_24h": 2529.0,
+        "sells_24h": 1982.0,
+        "buys_1h": 87.0,
+        "sells_1h": 125.0,
+        "fdv": 482218402.0,
+        "market_cap": 482218402.0,
+        "age_hours": 17777.0,
+        "url": "https://dexscreener.com/bsc/0xe3d9f8ef633666771b7f1995aaedeb67d1b3c853",
+        "timestamp": "2026-05-12T09:05:01.780656",
+        "address": "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE"
+      }
+    },
+    {
+      "symbol": "Bonk",
+      "price": 7.554e-06,
+      "status": "PASSED",
+      "pass_rate": 0.86,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 616378.11,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 2446214.72,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 0.26,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.33,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": true,
+          "value": 1.01,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 0.26
+        }
+      },
+      "raw_data": {
+        "symbol": "Bonk",
+        "chain": "solana",
+        "price": 7.554e-06,
+        "liquidity": 616378.11,
+        "volume_24h": 2446214.72,
+        "volume_6h": 381208.39,
+        "volume_1h": 52944.79,
+        "volume_5m": 6310.7,
+        "change_24h": 0.26,
+        "change_6h": 0.02,
+        "change_1h": 0.33,
+        "change_5m": 0.15,
+        "buys_24h": 4770.0,
+        "sells_24h": 4744.0,
+        "buys_1h": 194.0,
+        "sells_1h": 107.0,
+        "fdv": 671295557.0,
+        "market_cap": 664739462.0,
+        "age_hours": 17559.3,
+        "url": "https://dexscreener.com/solana/6ofwm7kplfxnwmb3z5xwboxnspp3jjyirapqpsivcnsp",
+        "timestamp": "2026-05-12T09:04:55.041182",
+        "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+      }
+    },
+    {
+      "symbol": "LINK",
+      "price": 10.58,
+      "status": "PASSED",
+      "pass_rate": 0.86,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 24386523.65,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 1943939.51,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": -0.94,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.0,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": true,
+          "value": 1.15,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": -0.94
+        }
+      },
+      "raw_data": {
+        "symbol": "LINK",
+        "chain": "ethereum",
+        "price": 10.58,
+        "liquidity": 24386523.65,
+        "volume_24h": 1943939.51,
+        "volume_6h": 613853.7,
+        "volume_1h": 0.0,
+        "volume_5m": 0.0,
+        "change_24h": -0.94,
+        "change_6h": -0.38,
+        "change_1h": 0.0,
+        "change_5m": 0.0,
+        "buys_24h": 115.0,
+        "sells_24h": 100.0,
+        "buys_1h": 0.0,
+        "sells_1h": 0.0,
+        "fdv": 10586308702.0,
+        "market_cap": 7697306106.0,
+        "age_hours": 43975.2,
+        "url": "https://dexscreener.com/ethereum/0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8",
+        "timestamp": "2026-05-12T09:05:14.825153",
+        "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "symbol": "JTO",
+      "price": 0.5281,
+      "status": "CONDITIONAL",
+      "pass_rate": 0.71,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 1026500.78,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 369594.04,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 3.81,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 2.5,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": false,
+          "value": 0.74,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 3.81
+        }
+      },
+      "raw_data": {
+        "symbol": "JTO",
+        "chain": "solana",
+        "price": 0.5281,
+        "liquidity": 1026500.78,
+        "volume_24h": 369594.04,
+        "volume_6h": 179399.36,
+        "volume_1h": 12829.46,
+        "volume_5m": 2240.15,
+        "change_24h": 3.81,
+        "change_6h": 4.34,
+        "change_1h": 2.5,
+        "change_5m": 0.01,
+        "buys_24h": 779.0,
+        "sells_24h": 1046.0,
+        "buys_1h": 58.0,
+        "sells_1h": 19.0,
+        "fdv": 528189752.0,
+        "market_cap": 247794328.0,
+        "age_hours": 21286.0,
+        "url": "https://dexscreener.com/solana/g2fie1yn9n9zjx5e1e2lxxmnhvb1h3hcuhlpfkj98sma",
+        "timestamp": "2026-05-12T09:05:04.079458",
+        "address": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL"
+      }
+    },
+    {
+      "symbol": "DOGE",
+      "price": 0.1114,
+      "status": "CONDITIONAL",
+      "pass_rate": 0.71,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 339383.24,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 341508.65,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 0.55,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.3,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": false,
+          "value": 0.93,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 0.55
+        }
+      },
+      "raw_data": {
+        "symbol": "DOGE",
+        "chain": "bsc",
+        "price": 0.1114,
+        "liquidity": 339383.24,
+        "volume_24h": 341508.65,
+        "volume_6h": 79343.52,
+        "volume_1h": 8952.15,
+        "volume_5m": 257.4,
+        "change_24h": 0.55,
+        "change_6h": 0.74,
+        "change_1h": 0.3,
+        "change_5m": 0.02,
+        "buys_24h": 1416.0,
+        "sells_24h": 1527.0,
+        "buys_1h": 42.0,
+        "sells_1h": 31.0,
+        "fdv": 285460185.0,
+        "market_cap": 285460185.0,
+        "age_hours": 13027.9,
+        "url": "https://dexscreener.com/bsc/0x353d328efbef48b79a570cbc2fde20f40e9f2063",
+        "timestamp": "2026-05-12T09:04:57.351564",
+        "address": "0xbA2aE424d960c26247Dd6c32edC70B295c744C43"
+      }
+    },
+    {
+      "symbol": "BTC",
+      "price": 88109.064,
+      "status": "CONDITIONAL",
+      "pass_rate": 0.71,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 440545351.81,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 197610.23,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 0.0,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.0,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": false,
+          "value": 0.73,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 0.0
+        }
+      },
+      "raw_data": {
+        "symbol": "BTC",
+        "chain": "solana",
+        "price": 88109.064,
+        "liquidity": 440545351.81,
+        "volume_24h": 197610.23,
+        "volume_6h": 53889.2,
+        "volume_1h": 0.0,
+        "volume_5m": 0.0,
+        "change_24h": 0.0,
+        "change_6h": 0.0,
+        "change_1h": 0.0,
+        "change_5m": 0.0,
+        "buys_24h": 8.0,
+        "sells_24h": 11.0,
+        "buys_1h": 0.0,
+        "sells_1h": 0.0,
+        "fdv": 880914426.0,
+        "market_cap": 880914426.0,
+        "age_hours": 2459.5,
+        "url": "https://dexscreener.com/solana/e4zpmbeoj41mdgsdkgzeawk3ykyr3mqmnex9a5arymv5",
+        "timestamp": "2026-05-12T09:04:56.781419",
+        "address": "BTCqQb9ZHEJ5yTrnARGsCjqpGDo1JhKohsEn637GUT1g"
+      }
+    },
+    {
+      "symbol": "ADA",
+      "price": 0.2676,
+      "status": "CONDITIONAL",
+      "pass_rate": 0.71,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 240699732.19,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 245132.54,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": 0.0,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.0,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": false,
+          "value": 0.91,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": 0.0
+        }
+      },
+      "raw_data": {
+        "symbol": "ADA",
+        "chain": "solana",
+        "price": 0.2676,
+        "liquidity": 240699732.19,
+        "volume_24h": 245132.54,
+        "volume_6h": 52706.72,
+        "volume_1h": 25309.46,
+        "volume_5m": 0.0,
+        "change_24h": 0.0,
+        "change_6h": 0.0,
+        "change_1h": 0.0,
+        "change_5m": 0.0,
+        "buys_24h": 10.0,
+        "sells_24h": 11.0,
+        "buys_1h": 1.0,
+        "sells_1h": 1.0,
+        "fdv": 240921987.0,
+        "market_cap": 240921987.0,
+        "age_hours": 109.6,
+        "url": "https://dexscreener.com/solana/2qxjxmt68eirpru65mneo7k73qxppomcehyvkj1rq5cf",
+        "timestamp": "2026-05-12T09:05:11.385789",
+        "address": "ADAZbY2yd4MtWvR2Q9kkngauLJrYaKWrCC4NvSUqNu4J"
+      }
+    },
+    {
+      "symbol": "WIF",
+      "price": 1.014,
+      "status": "CONDITIONAL",
+      "pass_rate": 0.71,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 1012256084.92,
+          "min": 30000
+        },
+        "volume": {
+          "pass": false,
+          "value": 13.98,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": -0.02,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": 0.0,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": true,
+          "value": 1.0,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": -0.02
+        }
+      },
+      "raw_data": {
+        "symbol": "WIF",
+        "chain": "solana",
+        "price": 1.014,
+        "liquidity": 1012256084.92,
+        "volume_24h": 13.98,
+        "volume_6h": 0.0,
+        "volume_1h": 0.0,
+        "volume_5m": 0.0,
+        "change_24h": -0.02,
+        "change_6h": 0.0,
+        "change_1h": 0.0,
+        "change_5m": 0.0,
+        "buys_24h": 2.0,
+        "sells_24h": 2.0,
+        "buys_1h": 0.0,
+        "sells_1h": 0.0,
+        "fdv": 1013256144.0,
+        "market_cap": 1013256144.0,
+        "age_hours": 6597.6,
+        "url": "https://dexscreener.com/solana/ahnsokysrhbqcgkvida2wqczjubchq1pqapua1ppjlq8",
+        "timestamp": "2026-05-12T09:05:19.006652",
+        "address": "4nKiBzUscGCKkEpz1Jz8upgbaRySigVF94FcDZ6RN5u5"
+      }
+    },
+    {
+      "symbol": "PEPE",
+      "price": 4.334e-06,
+      "status": "CONDITIONAL",
+      "pass_rate": 0.71,
+      "checks": {
+        "liquidity": {
+          "pass": true,
+          "value": 29035824.22,
+          "min": 30000
+        },
+        "volume": {
+          "pass": true,
+          "value": 368060.68,
+          "min": 10000
+        },
+        "momentum_24h": {
+          "pass": false,
+          "value": -0.2,
+          "min": 5,
+          "max": 500
+        },
+        "momentum_1h": {
+          "pass": true,
+          "value": -0.14,
+          "min": -5
+        },
+        "buy_pressure": {
+          "pass": false,
+          "value": 0.95,
+          "min": 1.0
+        },
+        "liquidity_trend": {
+          "pass": true,
+          "value": 0
+        },
+        "not_parabolic": {
+          "pass": true,
+          "value": -0.2
+        }
+      },
+      "raw_data": {
+        "symbol": "PEPE",
+        "chain": "ethereum",
+        "price": 4.334e-06,
+        "liquidity": 29035824.22,
+        "volume_24h": 368060.68,
+        "volume_6h": 61275.43,
+        "volume_1h": 6595.24,
+        "volume_5m": 0.0,
+        "change_24h": -0.2,
+        "change_6h": -0.7,
+        "change_1h": -0.14,
+        "change_5m": 0.0,
+        "buys_24h": 90.0,
+        "sells_24h": 95.0,
+        "buys_1h": 2.0,
+        "sells_1h": 0.0,
+        "fdv": 1793678216.0,
+        "market_cap": 1793678216.0,
+        "age_hours": 26959.7,
+        "url": "https://dexscreener.com/ethereum/0xa43fe16908251ee70ef74718545e4fe6c5ccec9f"

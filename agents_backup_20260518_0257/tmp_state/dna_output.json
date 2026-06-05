@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-05-08T08:36:45.862170",
+  "classifications": [
+    {
+      "symbol": "OGDOGE",
+      "dna_type": "REVERSAL",
+      "confidence": 60,
+      "evidence": [
+        "Extreme overextension: +138.0%",
+        "Volume climax detected"
+      ],
+      "timestamp": "2026-05-08T08:36:45.861972",
+      "raw_metrics": {
+        "chg24": 138.0,
+        "chg6": 138.0,
+        "chg1": -0.43,
+        "chg5": -6.52,
+        "vol_ratio": 16.78690021473421,
+        "volume_climax": true,
+        "consolidation": false,
+        "rejection": false,
+        "steady_climb": false,
+        "overextended": true
+      }
+    },
+    {
+      "symbol": "AMERICA",
+      "dna_type": "BREAKOUT",
+      "confidence": 75,
+      "evidence": [
+        "Volume spike: 5.1x liquidity",
+        "Consolidation before: 6h change only 12.7%",
+        "Break of resistance: +107.0% in 24h"
+      ],
+      "timestamp": "2026-05-08T08:36:45.862038",
+      "raw_metrics": {
+        "chg24": 107.0,
+        "chg6": 12.66,
+        "chg1": 6.63,
+        "chg5": 2.16,
+        "vol_ratio": 5.131832866034953,
+        "volume_climax": false,
+        "consolidation": true,
+        "rejection": false,
+        "steady_climb": false,
+        "overextended": true
+      }
+    },
+    {
+      "symbol": "Aliens",
+      "dna_type": "REVERSAL",
+      "confidence": 45,
+      "evidence": [
+        "Extreme move: +55.5%"
+      ],
+      "timestamp": "2026-05-08T08:36:45.862062",
+      "raw_metrics": {
+        "chg24": 55.51,
+        "chg6": 38.18,
+        "chg1": 11.4,
+        "chg5": 0.1,
+        "vol_ratio": 0.5903019695484943,
+        "volume_climax": false,
+        "consolidation": false,
+        "rejection": false,
+        "steady_climb": false,
+        "overextended": false
+      }
+    },
+    {
+      "symbol": "btc",
+      "dna_type": "MOMENTUM_CONTINUATION",
+      "confidence": 50,
+      "evidence": [
+        "Momentum: +43.3%"
+      ],
+      "timestamp": "2026-05-08T08:36:45.862079",
+      "raw_metrics": {
+        "chg24": 43.26,
+        "chg6": 14.35,
+        "chg1": -7.84,
+        "chg5": 0.0,
+        "vol_ratio": 1.1173992091407154,
+        "volume_climax": false,
+        "consolidation": false,
+        "rejection": true,
+        "steady_climb": false,
+        "overextended": false
+      }
+    },
+    {
+      "symbol": "JTO",
+      "dna_type": "MOMENTUM_CONTINUATION",
+      "confidence": 50,
+      "evidence": [
+        "Momentum: +39.8%"
+      ],
+      "timestamp": "2026-05-08T08:36:45.862105",
+      "raw_metrics": {
+        "chg24": 39.84,
+        "chg6": -12.17,
+        "chg1": -3.19,
+        "chg5": -1.23,
+        "vol_ratio": 3.062970835788236,
+        "volume_climax": false,
+        "consolidation": false,
+        "rejection": true,
+        "steady_climb": false,
+        "overextended": false
+      }
+    },
+    {
+      "symbol": "BV7X",
+      "dna_type": "ACCUMULATION",
+      "confidence": 40,
+      "evidence": [
+        "Gradual climb: +18.1%"
+      ],
+      "timestamp": "2026-05-08T08:36:45.862132",
+      "raw_metrics": {
+        "chg24": 18.05,
+        "chg6": 9.21,
+        "chg1": 0.04,
+        "chg5": 0.4,
+        "vol_ratio": 0.13661489918946546,
+        "volume_climax": false,
+        "consolidation": false,
+        "rejection": false,
+        "steady_climb": true,
+        "overextended": false
+      }
+    },
+    {
+      "symbol": "FLOKI",
+      "dna_type": "ACCUMULATION",
+      "confidence": 40,
+      "evidence": [
+        "Gradual climb: +5.4%"
+      ],
+      "timestamp": "2026-05-08T08:36:45.862157",
+      "raw_metrics": {
+        "chg24": 5.42,
+        "chg6": 0.64,
+        "chg1": 1.1,
+        "chg5": 0.0,
+        "vol_ratio": 0.05137308681933052,
+        "volume_climax": false,
+        "consolidation": true,
+        "rejection": false,
+        "steady_climb": false,
+        "overextended": false
+      }
+    }
+  ]
+}

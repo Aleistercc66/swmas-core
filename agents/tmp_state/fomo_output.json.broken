@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-05-10T12:44:20.829720",
+  "results": [
+    {
+      "symbol": "RAGE",
+      "fomo_score": 60,
+      "status": "REJECTED",
+      "rejections": [
+        "Already pumped >100% \u2014 extreme FOMO territory",
+        "1h candle +30.9% \u2014 chasing parabolic"
+      ],
+      "timestamp": "2026-05-10T12:44:20.829619"
+    },
+    {
+      "symbol": "VEE",
+      "fomo_score": 25,
+      "status": "MODERATE_FOMO",
+      "rejections": [
+        "Already pumped >50% \u2014 late entry risk"
+      ],
+      "timestamp": "2026-05-10T12:44:20.829690"
+    },
+    {
+      "symbol": "LUNC",
+      "fomo_score": 0,
+      "status": "CLEAN",
+      "rejections": [],
+      "timestamp": "2026-05-10T12:44:20.829702"
+    },
+    {
+      "symbol": "APX",
+      "fomo_score": 15,
+      "status": "CLEAN",
+      "rejections": [
+        "Buy/sell ratio 8.3x \u2014 unsustainable buying"
+      ],
+      "timestamp": "2026-05-10T12:44:20.829712"
+    }
+  ]
+}

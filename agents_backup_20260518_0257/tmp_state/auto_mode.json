@@ -1,0 +1,16 @@
+{
+  "mode": "MANUAL",
+  "enabled": false,
+  "max_daily_trades": 3,
+  "position_size_pct": 5,
+  "min_confidence": 55,
+  "min_tier": "TIER_2",
+  "min_profit_potential": 50,
+  "min_execution_probability": 70,
+  "min_stop_distance": 10,
+  "max_stop_distance": 25,
+  "since": "2026-05-10T08:25:00",
+  "network_retry": 3,
+  "telegram_timeout": 15,
+  "note": "AUTO DISABLED FOR SAFETY — Enable after verifying system works"
+}

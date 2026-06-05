@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Unified Master Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e94560;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #e94560;
+            text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+        }
+        
+        .header .timestamp {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #2a2a4a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #2a2a4a;
+        }
+        
+        .card-header .icon {
+            font-size: 2em;
+        }
+        
+        .card-header h2 {
+            font-size: 1.3em;
+            color: #fff;
+        }
+        
+        .card-header .status {
+            margin-left: auto;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .status-online {
+            background: #00d9ff;
+            color: #000;
+        }
+        
+        .status-active {
+            background: #00ff88;
+            color: #000;
+        }
+        
+        .status-warning {
+            background: #ffaa00;
+            color: #000;
+        }
+        
+        .status-error {
+            background: #ff0055;
+            color: #fff;
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #1a1a3a;
+        }
+        
+        .metric:last-child {
+            border-bottom: none;
+        }
+        
+        .metric-label {
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        .metric-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .metric-value.positive {
+            color: #00ff88;
+        }
+        
+        .metric-value.negative {
+            color: #ff0055;
+        }
+        
+        .token-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .token-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #1a1a3a;
+        }
+        
+        .token-item:last-child {
+            border-bottom: none;
+        }
+        
+        .token-symbol {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .token-price {
+            color: #888;
+        }
+        
+        .token-change {
+            font-weight: bold;
+        }
+        
+        .token-change.up {
+            color: #00ff88;
+        }
+        
+        .token-change.down {
+            color: #ff0055;
+        }
+        
+        .agent-list {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        
+        .agent-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #1a1a3a;
+        }
+        
+        .agent-item:last-child {
+            border-bottom: none;
+        }
+        
+        .agent-name {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .agent-pid {
+            color: #888;
+            font-size: 0.8em;
+        }
+        
+        .agent-stats {
+            text-align: right;
+        }
+        
+        .agent-cpu {
+            color: #00d9ff;
+        }
+        
+        .agent-mem {
+            color: #ffaa00;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #1a1a3a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            border-radius: 10px;
+            transition: width 0.5s;
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        .commands {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .command-btn {
+            background: #2a2a4a;
+            border: 1px solid #3a3a5a;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+        
+        .command-btn:hover {
+            background: #e94560;
+            border-color: #e94560;
+        }
+        
+        .refresh-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #e94560;
+            color: #fff;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.5);
+            transition: all 0.3s;
+        }
+        
+        .refresh-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(233, 69, 96, 0.7);
+        }
+        
+        .refresh-btn.spinning {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #888;
+        }
+        
+        .error {
+            text-align: center;
+            padding: 50px;
+            color: #ff0055;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #e94560;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Unified Master Dashboard</h1>
+        <div class="timestamp" id="timestamp">Loading...</div>
+    </div>
+    
+    <div class="grid" id="dashboard">
+        <div class="loading">Loading dashboard data...</div>
+    </div>
+    
+    <button class="refresh-btn" id="refreshBtn" onclick="refreshDashboard()">🔄</button>
+    
+    <script>
+        let autoRefreshInterval;
+        
+        async function fetchDashboardData() {
+            try {
+                const response = await fetch('/api/dashboard');
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                return await response.json();
+            } catch (error) {
+                console.error('Error fetching dashboard:', error);
+                return null;
+            }
+        }
+        
+        function renderDashboard(data) {
+            if (!data) {
+                document.getElementById('dashboard').innerHTML = 
+                    '<div class="error">❌ Error loading dashboard. Check server connection.</div>';
+                return;
+            }
+            
+            document.getElementById('timestamp').textContent = 'Last update: ' + data.timestamp;
+            
+            const grid = document.getElementById('dashboard');
+            grid.innerHTML = '';
+            
+            // Crypto Section
+            if (data.crypto) {
+                const crypto = data.crypto;
+                grid.innerHTML += `
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">📈</span>
+                            <h2>CRYPTO MARKETS</h2>
+                            <span class="status ${crypto.status === '🟢 ACTIVE' ? 'status-active' : 'status-error'}">${crypto.status}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">💰 SOL Price</span>
+                            <span class="metric-value">$${crypto.data.sol_price?.toFixed(2) || '0.00'}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">📊 24h Change</span>
+                            <span class="metric-value ${crypto.data.sol_change > 0 ? 'positive' : 'negative'}">${crypto.data.sol_change > 0 ? '+' : ''}${crypto.data.sol_change?.toFixed(1) || '0.0'}%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">📈 Pairs</span>
+                            <span class="metric-value">${crypto.data.pairs_count || 0}</span>
+                        </div>
+                        <div class="token-list">
+                            ${crypto.data.top_tokens?.map(token => `
+                                <div class="token-item">
+                                    <span class="token-symbol">${token.token}</span>
+                                    <span class="token-price">$${token.price?.toFixed(6) || '0.00'}</span>
+                                    <span class="token-change ${token.change > 0 ? 'up' : 'down'}">${token.change > 0 ? '🟢' : '🔴'} ${token.change > 0 ? '+' : ''}${token.change?.toFixed(1) || '0.0'}%</span>
+                                </div>
+                            `).join('') || ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // CashOut Section
+            if (data.cashout) {
+                const cash = data.cashout;
+                grid.innerHTML += `
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">💰</span>
+                            <h2>CASHOUT SYSTEM</h2>
+                            <span class="status ${cash.status === '🟢 ACTIVE' ? 'status-active' : 'status-error'}">${cash.status}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">📊 Tracked Bets</span>
+                            <span class="metric-value">${cash.data.tracked_bets || 0}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">⚽ Active Matches</span>
+                            <span class="metric-value">${cash.data.active_matches || 0}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">🏢 Bookmakers</span>
+                            <span class="metric-value">${cash.data.bookmakers?.join(', ') || 'None'}</span>
+                        </div>
+                        <div class="commands">
+                            <span class="command-btn">/cashout track</span>
+                            <span class="command-btn">/cashout list</span>
+                            <span class="command-btn">/cashout check</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Swarm Section
+            if (data.swarm) {
+                const swarm = data.swarm;
+                const score = swarm.data.score || 0;
+                const progress = Math.min((score / 10) * 100, 100);
+                grid.innerHTML += `
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">🐝</span>
+                            <h2>SWARM INTELLIGENCE</h2>
+                            <span class="status ${swarm.status === '🟢 ACTIVE' ? 'status-active' : 'status-error'}">${swarm.status}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">🧬 Generation</span>
+                            <span class="metric-value">${swarm.data.generation || 0}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">⭐ Score</span>
+                            <span class="metric-value">${score.toFixed(2)}/10.0</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%"></div>
+                        </div>
+                        <div class="progress-text">Progress: ${progress.toFixed(0)}%</div>
+                        <div class="metric">
+                            <span class="metric-label">💰 Actions</span>
+                            <span class="metric-value">${swarm.data.actions || 0}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">📈 Opportunities</span>
+                            <span class="metric-value">${swarm.data.opportunities || 0}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Agents Section
+            if (data.agents) {
+                const agents = data.agents;
+                grid.innerHTML += `
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">🤖</span>
+                            <h2>AGENT SWARM</h2>
+                            <span class="status ${agents.status === '🟢 ACTIVE' ? 'status-active' : 'status-error'}">${agents.status}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">📊 Active Agents</span>
+                            <span class="metric-value">${agents.data.active_agents || 0}</span>
+                        </div>
+                        <div class="agent-list">
+                            ${agents.data.agents?.map(agent => `
+                                <div class="agent-item">
+                                    <div>
+                                        <span class="agent-name">${agent.name}</span>
+                                        <span class="agent-pid">PID: ${agent.pid}</span>
+                                    </div>
+                                    <div class="agent-stats">
+                                        <span class="agent-cpu">CPU: ${agent.cpu}%</span>
+                                        <span class="agent-mem">MEM: ${agent.mem}%</span>
+                                    </div>
+                                </div>
+                            `).join('') || ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // System Section
+            if (data.system) {
+                const sys = data.system;
+                grid.innerHTML += `
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">💻</span>
+                            <h2>SYSTEM HEALTH</h2>
+                            <span class="status ${sys.status === '🟢 HEALTHY' ? 'status-online' : 'status-warning'}">${sys.status}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">🖥️ CPU</span>
+                            <span class="metric-value ${sys.data.cpu < 70 ? 'positive' : sys.data.cpu < 90 ? 'negative' : 'negative'}">${sys.data.cpu?.toFixed(1) || '0.0'}%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">🧠 Memory</span>
+                            <span class="metric-value ${sys.data.memory < 80 ? 'positive' : 'negative'}">${sys.data.memory?.toFixed(1) || '0.0'}%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">💾 Disk</span>
+                            <span class="metric-value ${sys.data.disk < 80 ? 'positive' : 'negative'}">${sys.data.disk || 0}%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">⚙️ Processes</span>
+                            <span class="metric-value">${sys.data.processes || 0}</span>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Telegram Section
+            if (data.telegram) {
+                const tel = data.telegram;
+                grid.innerHTML += `
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">📱</span>
+                            <h2>TELEGRAM BOT</h2>
+                            <span class="status ${tel.status === '🟢 ONLINE' ? 'status-online' : 'status-error'}">${tel.status}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">🤖 Bot</span>
+                            <span class="metric-value">${tel.data.bot || 'Unknown'}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">📋 Handlers</span>
+                            <span class="metric-value">${tel.data.handlers || 0}</span>
+                        </div>
+                        <div class="commands">
+                            ${tel.data.commands?.map(cmd => `<span class="command-btn">${cmd}</span>`).join('') || ''}
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        
+        async function refreshDashboard() {
+            const btn = document.getElementById('refreshBtn');
+            btn.classList.add('spinning');
+            
+            const data = await fetchDashboardData();
+            renderDashboard(data);
+            
+            btn.classList.remove('spinning');
+        }
+        
+        function startAutoRefresh() {
+            autoRefreshInterval = setInterval(refreshDashboard, 30000); // 30 seconds
+        }
+        
+        function stopAutoRefresh() {
+            clearInterval(autoRefreshInterval);
+        }
+        
+        // Initial load
+        refreshDashboard();
+        startAutoRefresh();
+        
+        // Pause auto-refresh when tab is hidden
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopAutoRefresh();
+            } else {
+                refreshDashboard();
+                startAutoRefresh();
+            }
+        });
+    </script>
+</body>
+</html>

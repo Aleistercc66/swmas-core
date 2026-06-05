@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+"""
+Polymarket Brain - Runner Script
+Continuous scan + signal generation + Telegram alerts.
+"""
+
+import asyncio
+import logging
+import os
+import sys
+from pathlib import Path
+
+# Add agents directory to path
+sys.path.insert(0, str(Path(__file__).parent))
+
+from polymarket_brain import PolymarketBrain
+from polymarket_alerts import PolymarketAlerter
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(name)s | %(levelname)s | %(message)s",
+)
+logger = logging.getLogger("polymarket_runner")
+
+
+async def main():
+    """Main runner."""
+    # Configuration
+    bankroll = float(os.getenv("PM_BANKROLL", "10.0"))
+    scan_interval = int(os.getenv("PM_SCAN_INTERVAL", "120"))
+    bot_token = os.getenv("PM_BOT_TOKEN", "")
+    chat_id = os.getenv("PM_CHAT_ID", "")
+    
+    logger.info(f"🚀 Starting Polymarket Brain")
+    logger.info(f"💰 Bankroll: ${bankroll:.2f}")
+    logger.info(f"⏱️ Scan interval: {scan_interval}s")
+    
+    brain = PolymarketBrain(bankroll=bankroll)
+    
+    # Alert setup
+    alerter = None
+    if bot_token and chat_id:
+        alerter = PolymarketAlerter(bot_token=bot_token, chat_id=chat_id)
+        await alerter.__aenter__()
+    
+    async def alert_callback(text: str):
+        """Send alert via Telegram."""
+        if alerter and alerter.bot:
+            await alerter.bot.send_message(
+                chat_id=chat_id,
+                text=text,
+                parse_mode="Markdown",
+                disable_web_page_preview=True
+            )
+    
+    try:
+        await brain.run_continuous(
+            scan_interval=scan_interval,
+            alert_callback=alert_callback if alerter else None
+        )
+    except KeyboardInterrupt:
+        logger.info("🛑 Stopping...")
+    finally:
+        if alerter:
+            await alerter.__aexit__(None, None, None)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

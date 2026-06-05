@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-05-08T08:21:49.276343",
+  "system_phase": "PAPER_TRADING_AUDIT",
+  "total_trades_logged": 5,
+  "performance": {
+    "value": -48.7,
+    "status": "NEGATIVE",
+    "win_rate": 0.0,
+    "avg_win": 0,
+    "avg_loss": 48.7,
+    "total_trades": 1,
+    "wins": 0,
+    "losses": 1,
+    "message": "$-48.70 per trade (need > $0.30 for semi-auto)"
+  },
+  "drawdown": {
+    "max_dd_pct": 0.49,
+    "current_dd_pct": 0.49,
+    "current_balance": 9951.3,
+    "peak_balance": 10000,
+    "status": "HEALTHY"
+  },
+  "regime_analysis": {
+    "regimes": {
+      "UNKNOWN": {
+        "total_trades": 1,
+        "avg_pnl": -48.7,
+        "win_rate": 0.0,
+        "status": "UNPROFITABLE"
+      }
+    },
+    "best_regime": "UNKNOWN",
+    "worst_regime": "UNKNOWN",
+    "status": "ANALYZED"
+  },
+  "dna_analysis": {
+    "dna_types": {
+      "UNKNOWN": {
+        "total_trades": 1,
+        "avg_pnl": -48.7,
+        "win_rate": 0.0,
+        "status": "UNPROFITABLE"
+      }
+    },
+    "best_dna": "UNKNOWN",
+    "worst_dna": "UNKNOWN",
+    "status": "ANALYZED"
+  },
+  "false_signals": {
+    "quick_losses": 0,
+    "total_losses": 1,
+    "false_signal_rate": 0.0,
+    "status": "LOW"
+  },
+  "agent_health": {
+    "scanner": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "sentiment": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "whale": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "regime": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "dna": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "fomo": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "validator": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    },
+    "risk": {
+      "log_entries_24h": 0,
+      "status": "NO_ACTIVITY",
+      "recommendation": "REVIEW"
+    }
+  },
+  "readiness": {
+    "semi_auto": "NOT_READY",
+    "testnet": "NOT_READY",
+    "real_capital": "NOT_READY"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "balance": 10000.0,
+  "positions": [],
+  "history": [],
+  "total_fees_paid": 0,
+  "total_slippage_cost": 0,
+  "trades_executed": 0,
+  "settings": {
+    "spread_enabled": true,
+    "slippage_model": "liquidity_based",
+    "fee_rate": 0.003,
+    "latency_model": "random_1_5s",
+    "max_liquidity_pct": 0.05,
+    "partial_fills": true
+  }
+}

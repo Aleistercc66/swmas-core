@@ -1,0 +1,47 @@
+# Stock Trading Brain — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ───────────────────────────
+# Core Data & Analysis
+# ───────────────────────────
+pandas>=1.5.0
+numpy>=1.24.0
+pandas-ta>=0.3.14b0
+
+# ───────────────────────────
+# Data Sources
+# ───────────────────────────
+yfinance>=0.2.0
+
+# ───────────────────────────
+# Async & Networking
+# ───────────────────────────
+aiohttp>=3.8.0
+asyncio
+
+# ───────────────────────────
+# Interactive Brokers (for future order execution)
+# ───────────────────────────
+ib-insync>=0.9.70
+
+# ───────────────────────────
+# Database
+# ───────────────────────────
+# sqlite3 (built-in)
+
+# ───────────────────────────
+# Alerts
+# ───────────────────────────
+python-telegram-bot>=20.0
+
+# ───────────────────────────
+# Utilities
+# ───────────────────────────
+python-dotenv>=1.0.0
+pytz>=2023.3
+
+# ───────────────────────────
+# Testing
+# ───────────────────────────
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

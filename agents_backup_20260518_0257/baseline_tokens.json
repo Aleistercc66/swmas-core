@@ -1,0 +1,107 @@
+{
+  "baseline": {
+    "SOL": {
+      "symbol": "SOL",
+      "name": "Solana",
+      "addresses": {
+        "solana": "So11111111111111111111111111111111111111112",
+        "base": "0xD31a59c85aE9D8edEFeC411D448f90841571b89c"
+      },
+      "expected_price_range": [80, 200],
+      "expected_liq_min": 1000000
+    },
+    "ETH": {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "addresses": {
+        "ethereum": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        "solana": "7vfCXTUXx5WJV5JMGKfYdEJ0L6q4c5f5"
+      },
+      "expected_price_range": [1500, 5000],
+      "expected_liq_min": 5000000
+    },
+    "BTC": {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "addresses": {
+        "ethereum": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        "solana": "3NZ9JMVBmGAqocybic2c7LQCJ1mNAR8mwrUQfKjM8P1L"
+      },
+      "expected_price_range": [50000, 150000],
+      "expected_liq_min": 10000000
+    },
+    "JUP": {
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "addresses": {
+        "solana": "JUPyiwrYJFskz6F4i6g3V6ZjKjoJZ1rKcrT5H6M2"
+      },
+      "expected_price_range": [0.1, 5],
+      "expected_liq_min": 100000
+    },
+    "JTO": {
+      "symbol": "JTO",
+      "name": "Jito",
+      "addresses": {
+        "solana": "jtojtomepa8beP8AuQc6eXt5rjURfUTB8f2A8y4L"
+      },
+      "expected_price_range": [1, 10],
+      "expected_liq_min": 50000
+    },
+    "BONK": {
+      "symbol": "Bonk",
+      "name": "Bonk",
+      "addresses": {
+        "solana": "DezXAZ8z7PnrnRJjz3wXBoRgxK9Z5q1S7F7F8w6G1"
+      },
+      "expected_price_range": [0.000001, 0.0001],
+      "expected_liq_min": 100000
+    },
+    "WIF": {
+      "symbol": "WIF",
+      "name": "dogwifhat",
+      "addresses": {
+        "solana": "EKpQGSJtjMFqKZ9KQanSq7S1xNVwQp8E4p1"
+      },
+      "expected_price_range": [0.1, 5],
+      "expected_liq_min": 50000
+    },
+    "PEPE": {
+      "symbol": "PEPE",
+      "name": "Pepe",
+      "addresses": {
+        "ethereum": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+        "base": "0x0fB597D6cfe5be0D5258A7f017599c2A4Ece34c7"
+      },
+      "expected_price_range": [0.0000001, 0.00001],
+      "expected_liq_min": 50000
+    },
+    "DOGE": {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "addresses": {
+        "ethereum": "0x4206931337dc273a630d8d3e5b2e9c7e5b8c0"
+      },
+      "expected_price_range": [0.05, 0.5],
+      "expected_liq_min": 50000
+    },
+    "SHIB": {
+      "symbol": "SHIB",
+      "name": "Shiba Inu",
+      "addresses": {
+        "ethereum": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE"
+      },
+      "expected_price_range": [0.000001, 0.0001],
+      "expected_liq_min": 50000
+    },
+    "FLOKI": {
+      "symbol": "FLOKI",
+      "name": "FLOKI",
+      "addresses": {
+        "ethereum": "0xcf0C122c6b73ff809c693db76e1f9e0e"
+      },
+      "expected_price_range": [0.00001, 0.001],
+      "expected_liq_min": 50000
+    }
+  }
+}
