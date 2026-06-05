@@ -1,0 +1,16 @@
+{
+  "status": "ACTIVE",
+  "paper_trading": {
+    "trades": 5,
+    "target": 50,
+    "win_rate": 0,
+    "avg_profit": -17.3,
+    "wallet": 9.684,
+    "status": "IN_PROGRESS"
+  },
+  "pipeline": "v2",
+  "github": "Aleistercc66/swmas-core",
+  "skills_active": 8,
+  "skills_total": 53,
+  "timestamp": "2026-06-06 06:58"
+}
