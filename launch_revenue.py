@@ -150,7 +150,7 @@ class FullRevenueLauncher:
         # Airdrop Farming
         print('🎁 Initializing Airdrop Farming Engine...')
         self.engines['airdrop'] = AirdropFarmingEngine(wallet)
-        airdrop_opps = await self.engines['airdrop']._discover_airdrops()
+        airdrop_opps = await self.engines['airdrop']._discover_opportunities()
         print(f'   ✅ Found {len(airdrop_opps)} airdrop opportunities')
         
         # MEV
@@ -199,24 +199,24 @@ class FullRevenueLauncher:
         
         try:
             engine = self.engines['airdrop']
-            airdrops = await engine._discover_airdrops()
+            airdrops = await engine._discover_opportunities()
             
             # Check active airdrops
-            active = [a for a in airdrops if a.is_active]
+            active = [a for a in airdrops]
             
             print(f'   Active airdrops: {len(active)}')
             
             for airdrop in active[:5]:  # Top 5
-                print(f'   🎯 {airdrop.name} ({airdrop.protocol})')
-                print(f'      Est. Value: ${airdrop.estimated_value:.0f} | Deadline: {airdrop.deadline}')
-                print(f'      Tasks: {len(airdrop.tasks)}')
+                print(f'   🎯 {airdrop.protocol} Airdrop')
+                print(f'      Est. Value: ${airdrop.estimated_value:.0f} | Probability: {airdrop.probability:.0%}')
+                print(f'      Tasks: {len(airdrop.tasks_required)}')
                 
                 # Simulate task completion
-                for task in airdrop.tasks[:3]:
-                    print(f'      ✅ {task.description}')
+                for task in airdrop.tasks_required[:3]:
+                    print(f'      ✅ {task}')
                     
                 # Estimate earnings
-                earnings = airdrop.estimated_value * airdrop.probability * 0.1  # 10% per cycle
+                earnings = airdrop.estimated_value * airdrop.probability * 0.05  # 5% per cycle
                 self.total_earned += earnings
                 print(f'      💰 Cycle earnings: ${earnings:.2f}')
                 

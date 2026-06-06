@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-04T01:33:03.999Z",
+  "updatedAt": "2026-06-05T23:11:07.383Z",
   "entries": {
     "memory:memory/2026-05-09.md:1:28": {
       "key": "memory:memory/2026-05-09.md:1:28",
@@ -476,6 +476,130 @@
         "strategy-engine",
         "execution-layer",
         "risk-manager"
+      ]
+    },
+    "memory:memory/2026-05-15.md:194:229": {
+      "key": "memory:memory/2026-05-15.md:194:229",
+      "path": "memory/2026-05-15.md",
+      "startLine": 194,
+      "endLine": 229,
+      "source": "memory",
+      "snippet": "- `/root/.openclaw/workspace/agents/agents_v2/__init__.py` — Created empty package init - `/root/.openclaw/workspace/agents/requirements_v2.txt` — Added numpy>=1.26.0 ### Live Test Results ``` Portfolio: $10,000.00 Open position TEST_POSITION @ $0.001000 → Balance: $9,497.00 Close at $0.001500 (+50%) → Balance: $10,246.50 PnL: +$249.50 | Win rate: 100% | Total trades: 1 ``` ✅ **All atomic operations verified**: open deducts balance, close updates PnL, portfolio stats updated. ### System Status - **Core layer**: 9 files — all import + runtime pass - **Agents v2**: 7 files — all syntax + import pass - **Database**: SQLite async with SQLModel — operational - **Redis**: Offline graceful mode —",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36935885846614835,
+      "maxScore": 0.36935885846614835,
+      "firstRecalledAt": "2026-06-05T23:11:07.383Z",
+      "lastRecalledAt": "2026-06-05T23:11:07.383Z",
+      "queryHashes": [
+        "9939a2a36472"
+      ],
+      "recallDays": [
+        "2026-06-06"
+      ],
+      "conceptTags": [
+        "1.26.0",
+        "000.00",
+        "test-position",
+        "0.001000",
+        "497.00",
+        "0.001500",
+        "246.50",
+        "249.50"
+      ]
+    },
+    "memory:memory/2026-05-25.md:26:51": {
+      "key": "memory:memory/2026-05-25.md:26:51",
+      "path": "memory/2026-05-25.md",
+      "startLine": 26,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "- `/root/.openclaw/workspace/swarm_general/core/task_router.py` — Intelligent routing - `/root/.openclaw/workspace/swarm_general/core/agent_factory.py` — Dynamic agent creation - `/root/.openclaw/workspace/swarm_general/core/skill_registry.py` — 48 skills with leveling - `/root/.openclaw/workspace/swarm_general/core/context_engine.py` — 3-tier memory - `/root/.openclaw/workspace/swarm_general/core/autonomous_loop.py` — Self-directed ops **8 Agent Implementations:** - `/root/.openclaw/workspace/swarm_general/agents/research_agent.py` - `/root/.openclaw/workspace/swarm_general/agents/content_agent.py` - `/root/.openclaw/workspace/swarm_general/agents/automation_agent.py` - `/root/.openclaw/wo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36289559304714203,
+      "maxScore": 0.36289559304714203,
+      "firstRecalledAt": "2026-06-05T23:11:07.383Z",
+      "lastRecalledAt": "2026-06-05T23:11:07.383Z",
+      "queryHashes": [
+        "9939a2a36472"
+      ],
+      "recallDays": [
+        "2026-06-06"
+      ],
+      "conceptTags": [
+        "router",
+        "3-tier",
+        "self-directed",
+        "openclaw/wo",
+        "root",
+        "openclaw",
+        "swarm-general",
+        "core"
+      ]
+    },
+    "memory:memory/2026-05-07.md:97:131": {
+      "key": "memory:memory/2026-05-07.md:97:131",
+      "path": "memory/2026-05-07.md",
+      "startLine": 97,
+      "endLine": 131,
+      "source": "memory",
+      "snippet": "**7 agents, each with 1 responsibility, zero overlap:** | # | Agent | Job | Frequency | |---|-------|-----|-----------| | 1 | Scanner | Raw DexScreener data collection | 15 min | | 2 | Sentiment | Social mood & narrative shifts | 30 min | | 3 | Whale/Liquidity | Smart money & liquidity health | 30 min | | 4 | Validator | **THE GATEKEEPER** — quality control | 15 min | | 5 | Risk Manager | **Exact profit points** — entry/stop/TP/R:R | 15 min | | 6 | Performance | Track accuracy & improve continuously | 1 hour | | 7 | Master Controller | Orchestrate & send Telegram alerts | 15 min | ### Institutional Discipline Rules - **Quality > Quantity** — Better 1 great signal than 5 weak ones - **No tr",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36022995710372924,
+      "maxScore": 0.36022995710372924,
+      "firstRecalledAt": "2026-06-05T23:11:07.383Z",
+      "lastRecalledAt": "2026-06-05T23:11:07.383Z",
+      "queryHashes": [
+        "9939a2a36472"
+      ],
+      "recallDays": [
+        "2026-06-06"
+      ],
+      "conceptTags": [
+        "whale/liquidity",
+        "entry/stop/tp/r",
+        "agents",
+        "each",
+        "responsibility",
+        "zero",
+        "overlap",
+        "job"
+      ]
+    },
+    "memory:memory/2026-05-25.md:1:29": {
+      "key": "memory:memory/2026-05-25.md:1:29",
+      "path": "memory/2026-05-25.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# Memory Log — 2026-05-25 ## Session 21: General Purpose Swarm System (GPSS) v2.0 ### Key Events - **04:00** — User requested: \"1-2, και το σύστημα το θέλω προς όλες τις κατευθύνσεις όχι μόνο για trading\" - Meaning: Tracks 1-2, system should work in ALL directions, not just trading - **04:01-04:11** — Built complete General Purpose Swarm System with 8 directions: 1. 🕵️ Research & Intelligence (ResearchAgent) 2. ✍️ Content & Creation (ContentAgent) 3. 🤖 Automation & Execution (AutomationAgent) 4. 📊 Monitoring & Alerting (MonitorAgent) 5. 🗣️ Communication & Coordination (CommsAgent) 6. 🧮 Analysis & Decision Support (AnalysisAgent) 7. 🔧 Problem Solving & Debugging (Solv",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.35403916537761687,
+      "maxScore": 0.35403916537761687,
+      "firstRecalledAt": "2026-06-05T23:11:07.383Z",
+      "lastRecalledAt": "2026-06-05T23:11:07.383Z",
+      "queryHashes": [
+        "9939a2a36472"
+      ],
+      "recallDays": [
+        "2026-06-06"
+      ],
+      "conceptTags": [
+        "v2.0",
+        "1-2",
+        "01-04",
+        "log",
+        "general",
+        "purpose",
+        "swarm",
+        "system"
       ]
     }
   }
