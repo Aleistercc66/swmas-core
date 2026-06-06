@@ -2,6 +2,7 @@ import os
 import logging
 from typing import Optional, Dict, Tuple
 from dataclasses import dataclass
+from datetime import datetime, timedelta
 import base58
 
 # Solana imports
@@ -80,6 +81,7 @@ class LiveWalletConnector:
                 
         # 3. Verify balance
         balance = await self.get_balance()
+        self.balance = balance
         logger.info(f"💰 Wallet balance: {balance:.6f} SOL")
         
         if balance < 0.01:

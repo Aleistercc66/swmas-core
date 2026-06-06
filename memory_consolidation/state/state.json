@@ -22,10 +22,10 @@
     "last_skip": "stm_hash_unchanged"
   },
   "stm": {
-    "count": 112,
-    "last_ts": "2026-06-05T12:40:38.739758",
-    "last_sessions": 136,
-    "last_messages": 2002,
-    "last_chars": 30597
+    "count": 113,
+    "last_ts": "2026-06-06T10:09:25.392570",
+    "last_sessions": 122,
+    "last_messages": 787,
+    "last_chars": 30732
   }
 }

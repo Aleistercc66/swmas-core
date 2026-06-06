@@ -1,5 +1,5 @@
 {
-  "wallet": 9.952190463875954,
+  "wallet": 10.199274370577571,
   "positions": [
     {
       "id": "paper_0",
@@ -77,20 +77,25 @@
       "id": "paper_4",
       "symbol": "GEM/SOL",
       "entry": 0.003,
-      "current_price": 0.0058748942106670934,
+      "current_price": 0.015331961658193572,
       "tokens": 21.666666666666668,
       "size": 0.065,
       "stop_loss": 0.00255,
       "take_profit": 0.015,
       "entry_time": "2026-06-06T06:55:15.558591",
-      "status": "OPEN",
-      "volatility": 0.05
+      "status": "CLOSED",
+      "volatility": 0.05,
+      "exit": 0.015331961658193572,
+      "exit_time": "2026-06-06T11:00:09.135328",
+      "profit": 0.2671925025941941,
+      "profit_pct": 411.0653886064524,
+      "exit_reason": "TAKE_PROFIT"
     },
     {
       "id": "paper_5",
       "symbol": "GEM/SOL",
       "entry": 0.003,
-      "current_price": 0.008967854561224743,
+      "current_price": 0.006680726148394617,
       "tokens": 21.666666666666668,
       "size": 0.065,
       "stop_loss": 0.00255,
@@ -139,7 +144,7 @@
       "id": "paper_8",
       "symbol": "GEM/SOL",
       "entry": 0.003,
-      "current_price": 0.008993386969198425,
+      "current_price": 0.013012920208548022,
       "tokens": 21.666666666666668,
       "size": 0.065,
       "stop_loss": 0.00255,
@@ -152,12 +157,61 @@
       "id": "paper_9",
       "symbol": "GEM/SOL",
       "entry": 0.003,
-      "current_price": 0.002942328030886929,
+      "current_price": 0.0025390372107598307,
       "tokens": 21.666666666666668,
       "size": 0.065,
       "stop_loss": 0.00255,
       "take_profit": 0.015,
       "entry_time": "2026-06-06T07:00:06.474058",
+      "status": "CLOSED",
+      "volatility": 0.05,
+      "exit": 0.0025390372107598307,
+      "exit_time": "2026-06-06T09:30:05.874138",
+      "profit": -0.009987527100203668,
+      "profit_pct": -15.365426308005642,
+      "exit_reason": "STOP_LOSS"
+    },
+    {
+      "id": "paper_10",
+      "symbol": "GEM/SOL",
+      "entry": 0.003,
+      "current_price": 0.005624953954477945,
+      "tokens": 21.666666666666668,
+      "size": 0.065,
+      "stop_loss": 0.00255,
+      "take_profit": 0.015,
+      "entry_time": "2026-06-06T09:30:05.874223",
+      "status": "OPEN",
+      "volatility": 0.05
+    },
+    {
+      "id": "paper_11",
+      "symbol": "GEM/SOL",
+      "entry": 0.003,
+      "current_price": 0.00253287374804418,
+      "tokens": 21.666666666666668,
+      "size": 0.065,
+      "stop_loss": 0.00255,
+      "take_profit": 0.015,
+      "entry_time": "2026-06-06T11:00:09.135442",
+      "status": "CLOSED",
+      "volatility": 0.05,
+      "exit": 0.00253287374804418,
+      "exit_time": "2026-06-06T11:30:06.843501",
+      "profit": -0.0101210687923761,
+      "profit_pct": -15.570875065193999,
+      "exit_reason": "STOP_LOSS"
+    },
+    {
+      "id": "paper_12",
+      "symbol": "GEM/SOL",
+      "entry": 0.003,
+      "current_price": 0.002895082681483464,
+      "tokens": 21.666666666666668,
+      "size": 0.065,
+      "stop_loss": 0.00255,
+      "take_profit": 0.015,
+      "entry_time": "2026-06-06T11:30:06.843560",
       "status": "OPEN",
       "volatility": 0.05
     }
@@ -302,6 +356,45 @@
       "entry_time": "2026-06-06T07:00:06.474058",
       "status": "OPEN",
       "volatility": 0.05
+    },
+    {
+      "id": "paper_10",
+      "symbol": "GEM/SOL",
+      "entry": 0.003,
+      "current_price": 0.002723213072780646,
+      "tokens": 21.666666666666668,
+      "size": 0.065,
+      "stop_loss": 0.00255,
+      "take_profit": 0.015,
+      "entry_time": "2026-06-06T09:30:05.874223",
+      "status": "OPEN",
+      "volatility": 0.05
+    },
+    {
+      "id": "paper_11",
+      "symbol": "GEM/SOL",
+      "entry": 0.003,
+      "current_price": 0.0029972361334296817,
+      "tokens": 21.666666666666668,
+      "size": 0.065,
+      "stop_loss": 0.00255,
+      "take_profit": 0.015,
+      "entry_time": "2026-06-06T11:00:09.135442",
+      "status": "OPEN",
+      "volatility": 0.05
+    },
+    {
+      "id": "paper_12",
+      "symbol": "GEM/SOL",
+      "entry": 0.003,
+      "current_price": 0.002895082681483464,
+      "tokens": 21.666666666666668,
+      "size": 0.065,
+      "stop_loss": 0.00255,
+      "take_profit": 0.015,
+      "entry_time": "2026-06-06T11:30:06.843560",
+      "status": "OPEN",
+      "volatility": 0.05
     }
   ],
   "profits": [
@@ -310,7 +403,10 @@
     -15.891544176218671,
     -15.602914744342975,
     -18.62862215441828,
-    412.7423191492678
+    412.7423191492678,
+    -15.365426308005642,
+    411.0653886064524,
+    -15.570875065193999
   ],
-  "timestamp": "2026-06-06T09:00:07.393512"
+  "timestamp": "2026-06-06T11:30:09.273180"
 }
