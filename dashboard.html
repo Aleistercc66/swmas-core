@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🔥 Autonomous Revenue Engine Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #00ff00;
+            margin-bottom: 20px;
+        }
+        .header h1 { font-size: 2em; text-shadow: 0 0 10px #00ff00; }
+        .header .status { color: #ffaa00; font-size: 1.2em; margin-top: 10px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #111;
+            border: 1px solid #00ff00;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+        .card h2 {
+            color: #00ff00;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #222;
+        }
+        .metric .value {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .metric .value.green { color: #00ff00; }
+        .metric .value.yellow { color: #ffaa00; }
+        .metric .value.red { color: #ff4444; }
+        .revenue-stream {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background: #1a1a1a;
+            border-radius: 4px;
+            border-left: 3px solid #00ff00;
+        }
+        .revenue-stream .icon { font-size: 1.5em; margin-right: 10px; }
+        .revenue-stream .info { flex: 1; }
+        .revenue-stream .earnings {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        .log {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 0.8em;
+            color: #888;
+        }
+        .log .entry { padding: 2px 0; }
+        .log .entry.time { color: #ffaa00; }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .big-number {
+            font-size: 2.5em;
+            text-align: center;
+            color: #00ff00;
+            text-shadow: 0 0 20px #00ff00;
+            margin: 20px 0;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar .fill {
+            height: 100%;
+            background: #00ff00;
+            transition: width 0.5s;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #111;
+            border: 1px solid #00ff00;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        .connection-status.connected { border-color: #00ff00; color: #00ff00; }
+        .connection-status.disconnected { border-color: #ff4444; color: #ff4444; }
+    </style>
+</head>
+<body>
+    <div class="connection-status disconnected" id="connectionStatus">
+        🔴 Disconnected
+    </div>
+
+    <div class="header">
+        <h1>🔥 AUTONOMOUS REVENUE ENGINE</h1>
+        <div class="status" id="engineStatus">⏳ Initializing...</div>
+    </div>
+
+    <div class="grid">
+        <!-- Total Earnings -->
+        <div class="card">
+            <h2>💰 TOTAL EARNINGS</h2>
+            <div class="big-number" id="totalEarnings">$0.0000</div>
+            <div class="metric">
+                <span>Monthly Projection:</span>
+                <span class="value green" id="monthlyProjection">$0.00</span>
+            </div>
+            <div class="metric">
+                <span>Yearly Projection:</span>
+                <span class="value green" id="yearlyProjection">$0.00</span>
+            </div>
+            <div class="metric">
+                <span>Effective APR:</span>
+                <span class="value green" id="effectiveAPR">0.00%</span>
+            </div>
+        </div>
+
+        <!-- Capital -->
+        <div class="card">
+            <h2>💵 CAPITAL</h2>
+            <div class="big-number" id="capital">$0.00</div>
+            <div class="metric">
+                <span>SOL Balance:</span>
+                <span class="value" id="solBalance">0.00 SOL</span>
+            </div>
+            <div class="metric">
+                <span>USD Value:</span>
+                <span class="value" id="usdValue">$0.00</span>
+            </div>
+            <div class="metric">
+                <span>Phase:</span>
+                <span class="value yellow" id="phase">Phase 1</span>
+            </div>
+            <div class="progress-bar">
+                <div class="fill" id="phaseProgress" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Revenue Streams -->
+        <div class="card">
+            <h2>🚀 REVENUE STREAMS</h2>
+            <div class="revenue-stream">
+                <div class="icon">🌾</div>
+                <div class="info">Yield Farming</div>
+                <div class="earnings" id="yieldEarnings">$0.00</div>
+            </div>
+            <div class="revenue-stream">
+                <div class="icon">🎁</div>
+                <div class="info">Airdrop Farming</div>
+                <div class="earnings" id="airdropEarnings">$0.00</div>
+            </div>
+            <div class="revenue-stream">
+                <div class="icon">⚡</div>
+                <div class="info">MEV Extraction</div>
+                <div class="earnings" id="mevEarnings">$0.00</div>
+            </div>
+            <div class="revenue-stream">
+                <div class="icon">📱</div>
+                <div class="info">Social Tasks</div>
+                <div class="earnings" id="socialEarnings">$0.00</div>
+            </div>
+        </div>
+
+        <!-- Cycle Stats -->
+        <div class="card">
+            <h2>📊 CYCLE STATS</h2>
+            <div class="metric">
+                <span>Cycle #:</span>
+                <span class="value" id="cycleNumber">0</span>
+            </div>
+            <div class="metric">
+                <span>Last Cycle:</span>
+                <span class="value" id="lastCycle">--:--:--</span>
+            </div>
+            <div class="metric">
+                <span>Uptime:</span>
+                <span class="value" id="uptime">0m</span>
+            </div>
+            <div class="metric">
+                <span>Wallet:</span>
+                <span class="value" id="walletAddress">--</span>
+            </div>
+        </div>
+
+        <!-- Active Airdrops -->
+        <div class="card">
+            <h2>🎁 ACTIVE AIRDROPS</h2>
+            <div id="airdropList">
+                <div class="revenue-stream">
+                    <div class="icon">🎯</div>
+                    <div class="info">Jupiter</div>
+                    <div class="earnings">$400</div>
+                </div>
+                <div class="revenue-stream">
+                    <div class="icon">🎯</div>
+                    <div class="info">Drift</div>
+                    <div class="earnings">$210</div>
+                </div>
+                <div class="revenue-stream">
+                    <div class="icon">🎯</div>
+                    <div class="info">Kamino</div>
+                    <div class="earnings">$150</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yield Positions -->
+        <div class="card">
+            <h2>🌾 YIELD POSITIONS</h2>
+            <div id="yieldPositions">
+                <div class="revenue-stream">
+                    <div class="icon">💰</div>
+                    <div class="info">Marinade (5 SOL)</div>
+                    <div class="earnings">6.5%</div>
+                </div>
+                <div class="revenue-stream">
+                    <div class="icon">💰</div>
+                    <div class="info">Jito (5 SOL)</div>
+                    <div class="earnings">8.0%</div>
+                </div>
+                <div class="revenue-stream">
+                    <div class="icon">💰</div>
+                    <div class="info">Orca (3 SOL)</div>
+                    <div class="earnings">6.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Log -->
+        <div class="card" style="grid-column: 1 / -1;">
+            <h2>📝 LIVE LOG</h2>
+            <div class="log" id="liveLog">
+                <div class="entry">⏳ Waiting for connection...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // WebSocket connection
+        const ws = new WebSocket('ws://localhost:8080');
+        let startTime = Date.now();
+        let totalEarned = 0;
+
+        ws.onopen = () => {
+            document.getElementById('connectionStatus').textContent = '🟢 Connected';
+            document.getElementById('connectionStatus').className = 'connection-status connected';
+            document.getElementById('engineStatus').textContent = '✅ RUNNING - Autonomous Revenue Active';
+            addLog('🚀 Connected to revenue engine', 'time');
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            updateDashboard(data);
+        };
+
+        ws.onclose = () => {
+            document.getElementById('connectionStatus').textContent = '🔴 Disconnected';
+            document.getElementById('connectionStatus').className = 'connection-status disconnected';
+            document.getElementById('engineStatus').textContent = '❌ DISCONNECTED';
+            addLog('❌ Connection lost', 'error');
+        };
+
+        ws.onerror = (error) => {
+            addLog('❌ WebSocket error: ' + error, 'error');
+        };
+
+        function updateDashboard(data) {
+            // Update earnings
+            if (data.total_earned !== undefined) {
+                totalEarned = data.total_earned;
+                document.getElementById('totalEarnings').textContent = '$' + totalEarned.toFixed(4);
+            }
+            if (data.monthly_projection) document.getElementById('monthlyProjection').textContent = '$' + data.monthly_projection.toFixed(2);
+            if (data.yearly_projection) document.getElementById('yearlyProjection').textContent = '$' + data.yearly_projection.toFixed(2);
+            if (data.apr) document.getElementById('effectiveAPR').textContent = data.apr.toFixed(2) + '%';
+
+            // Update capital
+            if (data.capital) document.getElementById('capital').textContent = '$' + data.capital.toFixed(2);
+            if (data.sol_balance) document.getElementById('solBalance').textContent = data.sol_balance.toFixed(2) + ' SOL';
+            if (data.usd_value) document.getElementById('usdValue').textContent = '$' + data.usd_value.toFixed(2);
+
+            // Update phase
+            if (data.phase) {
+                const phaseNames = {1: '🔴 SURVIVAL', 2: '🟡 GROWTH', 3: '🟢 SCALE'};
+                document.getElementById('phase').textContent = phaseNames[data.phase] || 'Phase ' + data.phase;
+                document.getElementById('phaseProgress').style.width = Math.min(data.progress_pct, 100) + '%';
+            }
+
+            // Update streams
+            if (data.yield_earnings) document.getElementById('yieldEarnings').textContent = '$' + data.yield_earnings.toFixed(2);
+            if (data.airdrop_earnings) document.getElementById('airdropEarnings').textContent = '$' + data.airdrop_earnings.toFixed(2);
+            if (data.mev_earnings) document.getElementById('mevEarnings').textContent = '$' + data.mev_earnings.toFixed(2);
+            if (data.social_earnings) document.getElementById('socialEarnings').textContent = '$' + data.social_earnings.toFixed(2);
+
+            // Update cycle
+            if (data.cycle) document.getElementById('cycleNumber').textContent = data.cycle;
+            if (data.last_cycle) document.getElementById('lastCycle').textContent = data.last_cycle;
+            if (data.wallet) document.getElementById('walletAddress').textContent = data.wallet.substring(0, 10) + '...';
+
+            // Update uptime
+            const uptime = Math.floor((Date.now() - startTime) / 60000);
+            document.getElementById('uptime').textContent = uptime + 'm';
+
+            // Add log
+            if (data.log) addLog(data.log, 'time');
+        }
+
+        function addLog(message, type) {
+            const log = document.getElementById('liveLog');
+            const entry = document.createElement('div');
+            entry.className = 'entry ' + type;
+            const time = new Date().toLocaleTimeString();
+            entry.textContent = `[${time}] ${message}`;
+            log.insertBefore(entry, log.firstChild);
+            if (log.children.length > 50) log.removeChild(log.lastChild);
+        }
+
+        // Keep connection alive
+        setInterval(() => {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify({type: 'ping'}));
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
